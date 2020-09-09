@@ -1,0 +1,23 @@
+{
+  "name": "sig3",
+  "version": "1.0.0",
+  "description": "[/javascript](/javascript)",
+  "main": "index.html",
+  "dependencies": {
+    "reveal.js": "^4.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maltaesousa/sig3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maltaesousa/sig3/issues"
+  },
+  "homepage": "https://github.com/maltaesousa/sig3#readme"
+}

@@ -12,11 +12,78 @@ Apprendre les bases du JavaScript, un langage de programmation considéré comme
 
 <!--slide-->
 
+
+<img src="img/eshistory.svg" width="95%" class="center"/>
+
+
+
+<!--slide-->
+
 ## Comment suivre ce cours?
 
 * Un éditeur de texte (Notepad++, vscode, etc..)
 * Un navigateur (Firefox, Chrome, Edge)
 
-```html
+<!--slide-->
 
+Il est possible de tout mettre dans un seul fichier:
+
+`index.html`:
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Javascript</title>
+</head>
+<body>
+    <script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+    <script>
+        console.log('Hello World!');
+    </script>
+</body>
+</html>
 ```
+<!--slide-->
+
+Ou d'inclure un fichier externe:
+
+`index.html`:
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Javascript</title>
+</head>
+<body>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+`script.js`:
+
+```js
+console.log('Hello World!');
+```
+<!--slide-->
+
+Dans un navigateur (F12)
+
+<!--slide-->
+
+## Les primitives
+
+```js
+let aString = "JavaScript";
+let aNumber = 3.14;
+let aBoolean = true;
+let nullValue = null;
+let undefinedValue;
+let aSymbol = Symbol("foo");
+```
+
+<!--slide-->

@@ -1,3 +1,8 @@
 img.middle {
     vertical-align: -16%;
 }
+
+img.center {
+    position: absolute;
+    top: 0;
+}
