@@ -15,6 +15,7 @@ Apprendre les bases du JavaScript, un langage de programmation considéré comme
 
 <img src="img/eshistory.svg" width="95%" class="center"/>
 
+JavaScript évolue. Dans ce cours les exemples utiliseront ES6 supporté par les navigateurs récents.
 
 
 <!--slide-->
@@ -75,15 +76,31 @@ Dans un navigateur (F12)
 
 <!--slide-->
 
+## Déclarations de variables
+
+```js
+// pas bien -> variables globales
+name = "Rincevent";
+var age = 35;
+
+// bien
+const vat = 7.8;
+let price = null;
+```
+
+
+
 ## Les primitives
 
 ```js
 let aString = "JavaScript";
-let aNumber = 3.14;
+let aNumber = 3.14; // pas d'entiers 
 let aBoolean = true;
 let nullValue = null;
 let undefinedValue;
-let aSymbol = Symbol("foo");
+let aSymbol = Symbol("foo"); // ES6
+
+console.log(typeof aBoolean);
 ```
 
 <!--slide-->
