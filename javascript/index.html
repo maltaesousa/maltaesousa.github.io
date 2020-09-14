@@ -4,12 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Javascript</title>
-  <link rel="stylesheet" href="../node_modules/reveal.js/dist/reset.css">
-  <link rel="stylesheet" href="../node_modules/reveal.js/dist/reveal.css">
-  <link rel="stylesheet" href="../node_modules/reveal.js/dist/theme/white.css" id="theme">
-  <link rel="stylesheet" href="../node_modules/reveal.js/plugin/highlight/monokai.css">
   <link rel="stylesheet" href="../assets/style.css">
-  <link rel="stylesheet" href="../assets/github.css" id="highlight-theme">
+  <link rel="stylesheet" href="../assets/vs.css" id="highlight-theme">
 </head>
 
 <body>
@@ -22,20 +18,13 @@
       </section>
     </div>
   </div>
-
-  <script src="../node_modules/reveal.js/dist/reveal.js"></script>
-  <script src="../node_modules/reveal.js/plugin/search/search.js"></script>
-  <script src="../node_modules/reveal.js/plugin/markdown/markdown.js"></script>
-  <script src="../node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js" integrity="sha512-bj/tdW5m8Fiyt169efxoa7k2VvD4nE/IxHrBHagqhFleqZuFpmGD75RUrOta73Fw3vItyrwNKAVSeFY1CenpFQ==" crossorigin="anonymous"></script>
+  <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
   <script>
-    Reveal.initialize({
-      width: '100%',
-      height: '100%',
-      controls: true,
-      progress: true,
-      center: true,
-      hash: true,
-      plugins: [RevealSearch, RevealMarkdown, RevealHighlight]
+    const slideshow = remark.create({
+      sourceUrl: 'README.md',
+      ratio: '16:9',
+      highlightLines: true
     });
   </script>
 </body>

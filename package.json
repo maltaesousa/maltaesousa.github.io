@@ -4,7 +4,7 @@
   "description": "[/javascript](/javascript)",
   "main": "index.html",
   "dependencies": {
-    "reveal.js": "^4.0.2"
+    "remark": "^12.0.1"
   },
   "devDependencies": {},
   "scripts": {
