@@ -1,4 +1,4 @@
-# JavaScript <img class="middle" src="img/js.svg" width="70em"/>
+# JavaScript <img class="middle" src="img/js.svg" width="60em"/>
 
 Apprendre les bases du JavaScript, un langage de programmation considéré comme l'un des trois piliers du web.
 
@@ -10,7 +10,7 @@ Selon [@MDN:](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 
 ---
 
-# JavaScript évolue
+## JavaScript évolue
 
 <img src="img/eshistory.svg" width="95%"/>
 
@@ -18,7 +18,7 @@ Dans ce cours les exemples utiliseront la spécification ES6 supporté par les n
 
 ---
 
-# Comment suivre ce cours?
+## Comment suivre ce cours?
 
 Prérequis:
 
@@ -73,7 +73,7 @@ console.log('Hello World!');
 
 ---
 
-### Debug
+## Debug
 
 Les instructions telles que `console.log('blabla')` ou `console.error('blabla')` sont visibles dans la console du navigateur (<kbd>F12</kbd>).
 
@@ -203,33 +203,153 @@ if (temperature > 5 && temperature < 10) {
 
 ---
 
-# Les boucles
-
----
-
 ## Les objets
 
-JavaScript est un langage à objets. Si nous voulons représenter une voiture, par exemple, elle aurait
- * des *propriétés* telles que sa couleur ou sa marque 
- * des *méthodes* telles que démarrer et s'arrêter:
+JavaScript est un langage à objets. Si nous voulons représenter une voiture, par exemple, elle aurait des **propriétés** telles que sa couleur ou sa marque. Créons un objet et stockons-le dans une variable:
 
-| Propriétés          | Méthodes      |
-| --------------------| ------------- |
-| car.brand = Reliant | car.start()   |
-| car.model = Regal   | car.drive()   |
-| car.weight = 445kg  | car.brake()   |
-| car.color = Yellow  | car.stop()    |
+```js
+let car = {
+  brand: "Reliant",
+  model: "Regal",
+  year: 1962
+};
+```
+
+Les objets sont **dynamiques**, leur structure n'est pas figée. Ajoutons deux propriétés:
+
+```js
+car.color = "Yellow";
+car["weightKg"] = 445;
+```
+
+On peut également supprimer une propriété:
+
+```js
+delete car.year;
+```
 
 ---
 
-# Fonctions
+## Les tableaux sont des objets
+
+Les tableaux sont des objets dont les clés (noms des propriétés) sont numériques.
+
+```js
+let niceCities = ["Neuchâtel", "Fribourg", "Bern"];
+
+console.log(typeof niceCities); // "object"
+console.log(niceCities[0]); // "Neuchâtel"
+```
+
+Pour ajouter un élément à un tableau:
+```js
+niceCities.push("Yverdon");
+```
+
+Pour supprimer le dernier élément d'un tableau:
+```js
+niceCities.pop();
+```
+
+Pour extraire une partie du tableau:
+```js
+veryNiceCities = niceCities.splice(0,2);
+```
 
 ---
 
-# DOM
+## Boucles
+
+Nous souhaitons ajouter le pays à la liste des villes:
+
+```js
+let cities = ["Neuchâtel", "Fribourg", "Bern"];
+
+cities[0] += ", Suisse";
+console.log(`La ville ${cities[0]} est à la position 1 dans le tableau`);
+
+cities[1] += ", Suisse";
+console.log(`La ville ${cities[1]} est à la position 2 dans le tableau`);
+
+cities[2] += ", Suisse";
+console.log(`La ville ${cities[2]} est à la position 3 dans le tableau`);
+```
+
+Ce n'est pas très optimal, le code se répète! En programmation on applique un concept nommé DRY:
+
+**Don't Repeat Yourself**.
 
 ---
 
-# jQuery
+## Boucle while
+
+La boucle `while` s'exécute tant qu'une condition est vraie. Sa syntaxe est la suivante:
+
+```
+while (condition_est_vraie) {
+  Exécute ce qui est entre les acollades;
+}
+```
+
+On l'utilise quand on ne connaît pas la longueur d'un tableau. Imaginez dans l'exemple qu'au lieu des trois villes, il y ait toutes les villes de Suisse:
+
+```js
+let cities = ["Neuchâtel", "Fribourg", "Bern"];
+let cityPosition = 0;
+
+while (cityPosition < cities.length) { // tant que cityPosition et plus petit que 3
+  cities[cityPosition] += ", Suisse";
+  console.log(`La ville ${cities[cityPosition]} est à la position ${cityPosition} dans le tableau`);
+  cityPosition += 1; // on rajoute 1 à cityPosition pour passer à la boucle suivante
+}
+```
+
+---
+
+## Boucle for
+
+La boucle `for` s'utilise lorsqu'on connaît le nombre de fois que l'on veut exécuter la boucle. Sa syntaxe est la suivante:
+
+```
+for (initialisation; condition; expression_finale) {
+  Exécute ce qui est entre les acollades;
+}
+```
+
+Voici un exemple où l'on sait que l'on veut un tableau des trois meilleures villes.
+
+```js
+let cities = ["Neuchâtel", "Fribourg", "Bern", "Yverdon", "Moudon", "Lausanne", "Payerne"];
+let topCities = [];
+
+for (let i = 0; i < 3; i++) {
+  topCities.push(cities[i]);
+  console.log(`La ville ${cities[i]} a été ajoutée au tableau des meilleures villes.`);
+}
+
+console.log('Le tableau topCities:', topCities);
+```
+
+---
+
+## Autres types d'itérations
+
+Il existe d'autres formes de boucles. Vous en trouverez leur définition ici, sous la rubrique `Itérations`:
+
+[https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions]https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions
+
+Les boucles `while` et `for` suffiront pour l'ensemble des exercices de ce cours.
+
+---
+
+## Fonctions
+
+---
+
+## DOM
+
+---
+
+## jQuery
 
 ---
