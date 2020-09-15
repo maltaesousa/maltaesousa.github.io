@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript - Evénements</title>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            /**
+             * Affiche la valeur saisie
+             */
+            function afficheTexte(texte) {
+                document.getElementById("resultat").innerHTML = texte;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>JavaScript - Evénements</h1>
+        <h2>Objectifs</h2>
+        <ul>
+            <li>Trouver l'événement qui détecte le texte saisi</li>
+            <li>Ecrire une fonction qui va afficher ce texte en dessous</li>
+        </ul>
+        <p><input type="text" id="monText" onkeyup="afficheTexte(this.value)" /></p>
+        <p>Texte : <span id="resultat"></span></p>
+    </body>
+</html>

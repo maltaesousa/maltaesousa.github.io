@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JavaScript - Variables</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <h1>JavaScript - Variables</h1>
+  <script type="text/javascript">
+    // Déclaration de variables
+    let maVar1 = "Hello";
+    let aNumber = 3.14;
+    const maVar2 = "world !";
+    const maVar3 = maVar1 + " " + maVar2;
+
+    // Affiche la variable dans la console
+    console.log(maVar3);
+
+    // Concatène à la suite et enregistre le résultat dans maVar1
+    maVar1 += " " + maVar2;
+    console.log(maVar1);
+
+    // Les templates strings sont parfois plus lisibles quand il s'agit de concaténer du texte:
+    console.log(`La variable maVar1 contient ${maVar1} et la variable maVar2 contient ${maVar2}`);
+
+    // Si on a trop de console.log(), on commence à s'y perdre.
+    // On peut ajouter des messages à console.log:
+    console.log('Ligne 30:', maVar1);
+
+    // Testons maintenant si aNumber est un entier
+    console.log('aNumber est-il entier?', Number.isInteger(aNumber)); // false
+    console.log('Quel est sont type?', typeof 4); // "number"
+    console.log('Est-ce que 4 est entier?', Number.isInteger(4)); // true
+  </script>
+</body>
+
+</html>

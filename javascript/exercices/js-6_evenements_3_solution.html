@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript - Evénements</title>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            /**
+             * Affiche un texte en fonction de la liste
+             */
+            function afficheValeur(liste) {
+                var orientation = liste.value;
+                var activite;
+                
+                switch (orientation) {
+                    case "ggt":
+                        activite = "Webmapping"
+                        break;
+                    case "gci":
+                        activite = "Calculs statiques"
+                        break;
+                    case "gen":
+                        activite = "Mesure du bruit"
+                        break;
+                    default:
+                        activite = "Aucune"
+                }
+
+                document.getElementById("resultat").innerHTML = activite;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>JavaScript - Evénements</h1>
+        <h2>Objectifs</h2>
+        <ul>
+            <li>Trouver l'événement qui détecte le choix de la liste déroulante</li>
+            <li>Ecrire une fonction qui va afficher une valeur en fonction de ce choix <em>(p. ex. : GGT > Webmapping)</em></li>
+        </ul>
+        <p>Orientations :
+            <select id="maListe" onchange="afficheValeur(this)">
+                <option value="">---</option>
+                <option value="ggt">Géomatique et gestion du territoire</option>
+                <option value="gci">Construction et infrastructures</option>
+                <option value="gen">Génie de l'environnement</option>
+            </select>
+        </p>
+        <p>Activité : <span id="resultat"></span></p>
+    </body>
+</html>

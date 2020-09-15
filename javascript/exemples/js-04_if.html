@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JavaScript - if...else</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <h1>JavaScript - IF</h1>
+  <script type="text/javascript">
+    const monAge = 0;
+    const monAge2 = "48 ans";
+
+    // Comparaison avec IF
+    if (monAge === 0) {
+      console.log('La variable vaut 0!');
+    } else if (monAge < 18) {
+      console.log('Vous êtes mineur!');
+    } else {
+      console.log('Vous êtes majeur!');
+    }
+
+    // On peut imbriquer les IF
+    let message;
+    if (Number.isInteger(monAge2)) {
+      message = 'La variable est un entier';
+      if (monAge2 === 0) {
+        message += ' et vaut 0!';
+      } else if (monAge2 < 18) {
+        message += ' et vous êtes mineur!';
+      } else {
+        message += ' et vous êtes majeur!';
+      }
+    } else {
+      message = 'La variable n\'est pas un entier!';
+    }
+    console.log(message);
+
+    // N'oubliez pas, la comparaison stricte === est préférable à ==
+  </script>
+</body>
+
+</html>

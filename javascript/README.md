@@ -16,7 +16,6 @@ Selon [@MDN:](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 
 Dans ce cours les exemples utiliseront la spécification ES6 supporté par les navigateurs récents.
 
-
 ---
 
 # Comment suivre ce cours?
@@ -72,6 +71,8 @@ Ou d'inclure un fichier externe:
 console.log('Hello World!');
 ```
 
+---
+
 ### Debug
 
 Les instructions telles que `console.log('blabla')` ou `console.error('blabla')` sont visibles dans la console du navigateur (<kbd>F12</kbd>).
@@ -115,12 +116,94 @@ L'instruction `typeof` révèle le type de la variable:
 console.log(typeof aBoolean); // "boolean"
 ```
 
+*Voir: js-01_variables.html*
+
+---
+
+## Les opérateurs de comparaison
+
+L'opérateur `==` compare si les valeurs sont égales tandis que l'opérateur `===` compare si les valeurs et le type (comparaison stricte) sont égaux. Cela vaut aussi pour `!=` et `!==` (pas égal et strictement pas égal).
+
+```js
+console.log(2.3 == "2.3"); // true
+console.log(2.3 === "2.3"); // false
+let aNumber = 2.3;
+console.log(2.3 === aNumber); // true
+```
+
+Les autres opérateurs de comparaison sont `>`, `<`, `>=` et `<=`.
+
 Même si le type entier n'existe pas, on peut vérifier si un nombre est un entier:
 ```js
 console.log(Number.isInteger(aNumber)); // false
 console.log(typeof 4); // "number"
 console.log(Number.isInteger(4)); // true
 ```
+
+---
+
+## Les faux amis!
+
+**Attention!** 
+
+Certaines valeurs sont évaluées en tant que false: `0`, `""`, `null`, `undefined`, `NaN`, et bien entendu `false`.
+
+```js
+console.log(false == []); // true
+console.log(0 == []); // true
+console.log(false == 0); // true
+
+// mais
+console.log(false === []); // false
+```
+
+*Voir: js-02_operateurs.html*
+
+---
+
+## Les opérateurs arithmétiques
+
+En plus des opérations arithmétiques standards `+`, `-`, `*` et `/`, JavaScript fournit d'autres opérateurs:
+
+| Opérateur           | Description                                    |
+| --------------------| -----------------------------------------------|
+| Incrément `++`      | Ajoute 1 (*ne pas utiliser*)                   |
+| Décrément `--`      | Soustrait 1 (*ne pas utiliser*)                |
+| Reste `%`           | Renvoie le reste entier de la division         |
+| Exponentiation `**` | Calcule un nombre élevé à une puissance donnée |
+
+*Voir: js-03_math.html*
+
+---
+
+## Contrôle de flux if...else
+
+L'instruction if exécute une instruction si une condition donnée est vraie ou équivalente à vrai. Si la condition n'est pas vérifiée, il est possible d'utiliser une autre instruction.
+
+```js
+let temperature = -10;
+if (temperature > 5) {
+  console.log('Ok');
+} else {
+  console.log('Risque de gel!');
+}
+```
+
+Dans un if, on peut combiner plusieurs conditions avec `&&` qui signifie `et` et `||` pour `ou`
+```js
+let temperature = 6;
+if (temperature > 5 && temperature < 10) {
+  console.log('Pas de risque de gel mais il fait frisquet.');
+} else if (temperature > 57 || temperature < -90) {
+  console.log('La sonde est probablement cassée');
+}
+```
+
+*Voir: js-04_if.html*
+
+---
+
+# Les boucles
 
 ---
 
@@ -131,7 +214,7 @@ JavaScript est un langage à objets. Si nous voulons représenter une voiture, p
  * des *méthodes* telles que démarrer et s'arrêter:
 
 | Propriétés          | Méthodes      |
-| -------------       | ------------- |
+| --------------------| ------------- |
 | car.brand = Reliant | car.start()   |
 | car.model = Regal   | car.drive()   |
 | car.weight = 445kg  | car.brake()   |
@@ -139,26 +222,7 @@ JavaScript est un langage à objets. Si nous voulons représenter une voiture, p
 
 ---
 
-## Les opérateurs de comparaison
-
-L'opérateur `==` compare les valeurs tandis que l'opérateur `===` compare les valeurs et le type.
-
-```js
-console.log(2.3 == "2.3"); // true
-console.log(2.3 === "2.3"); // false
-let aNumber = 2.3;
-console.log(2.3 === aNumber); // true
-```
-
-**Attention! Certaines valeurs sont évaluées en tant que false**: `0`, `""`, `null`, `undefined`, `NaN`, et bien entendu `false`.
-
----
-
 # Fonctions
-
----
-
-# Boucle / conditions
 
 ---
 
