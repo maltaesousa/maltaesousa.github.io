@@ -344,6 +344,67 @@ Les boucles `while` et `for` suffiront pour l'ensemble des exercices de ce cours
 
 ## Fonctions
 
+Les fonctions servent à stocker une logique et à y faire appel quand on en a besoin en évitant des répétitions de code (**DRY**):
+
+```js
+function doSomething() {
+    console.log("It's done!");
+}
+doSomething();
+```
+
+On peut stocker une fonction dans une variable. Les fonctions peuvent renvoyer une valeur à l'aide du mot clé `return`:
+
+```js
+let addNumbers = function(num1, num2) { // la fonction s'attend à recevoir deux arguments num1 et num2
+    return num1 + num2
+}
+console.log(typeof addNumbers); //function
+let result = addNumbers(10, 20);
+console.log(`${result} est de type ${typeof result}`); // 30 est de type number
+```
+
+On peut également stocker des fonctions dans un objet. Souvenez-vous de notre objet voiture créé précédemment. Ajoutons-lui une fonction:
+
+```js
+let car = {
+  brand: "Reliant",
+  model: "Regal",
+  year: 1962
+  start: function () {
+      return "VROOOM!"
+  }
+};
+```
+
+## La portée des variables déclarées avec `var` (scope)
+
+Les variables déclarés avec `var` dans une fonctions sont utilisables / modifiables dans toute la fonction:
+
+```js
+function showCities(cities) {
+  var numberOfCities = cities.length;
+
+  for (var i = 0; i < numberOfCities; i++) {
+    var city = cities[i];
+    console.log(city);
+  }
+
+  console.log(`Il y a ${numberOfCities} villes.`);
+  console.log(`La dernière ville est ${city} et le compteur est à ${i}.`);
+}
+
+showCities(["Neuchâtel", "Fribourg", "Bern"]);
+
+// Neuchâtel
+// Fribourg
+// Bern
+// Il y a 3 villes.
+// La dernière ville est Bern et le compteur est à 3.
+```
+
+## Portée
+
 ---
 
 ## DOM
