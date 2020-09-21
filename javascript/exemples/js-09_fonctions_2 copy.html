@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" href="../../assets/favicon.png" />
+  <title>JavaScript - Fonctions 2</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <script type="text/javascript">
+    // Création d'une fonction qui calcule l'aire d'un cercle
+    // la fonction accepte un cercle en argument et part du principe que ce cercle
+    // contiendra une propriété r.
+    function circleArea(circle) {
+      return Math.PI * circle.r ** 2;
+    }
+
+    // idem pour un rectangle
+    function rectangleArea(rectangle) {
+      return rectangle.l * rectangle.h;
+    }
+
+    // Créons trois formes chacune a une propriété getArea contenant une
+    // référence à la fonction (son nom) à appeler quand on veut avoir calculer l'aire
+    const myCircle1 = {
+      r: 8,
+      getArea: circleArea,
+    };
+    
+    const myCircle2 = {
+      r: 2,
+      getArea: circleArea,
+    };
+
+    const myRectangle = {
+      l: 4,
+      h: 5,
+      getArea: rectangleArea,
+    };
+
+    // Mettons ces trois formes dans un tableau
+    const myShapes = [myCircle1, myCircle2, myRectangle];
+    // on initialise une variable qui contiendra notre aire totale
+    let totalArea = 0;
+
+    // Une autre manière de parcourir un tableau.
+    // On peut remplacer par une boucle for qu'on a vu en cours.
+    // pour plus d'infos recherchez sur Google: array.foreach
+    myShapes.forEach(function (shape) {
+      const area = shape.getArea(shape);
+      totalArea += area;
+      console.log(`Area is ${area} and totalArea is ${totalArea}`);
+    });
+  </script>
+</body>
+
+</html>

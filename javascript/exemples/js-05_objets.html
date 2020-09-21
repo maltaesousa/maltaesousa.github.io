@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" href="../../assets/favicon.png" />
+  <title>JavaScript - Object</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <script type="text/javascript">
+    // Création d'un objet
+    const person = {
+      firstName: "Esméralda",
+      lastName: "Ciredutemps",
+    };
+
+    // Ajout de propriétés
+    person.gender = "Femme";
+    person["children"] = 0;
+    let property = "city";
+    person[property] = "Lancre";
+
+    // Suppression d'une propriété
+    delete person.firstName;
+
+    // Liste des propriétés
+    // for...in est une boucle supplémentaire qui n'est pas dans le cours.
+    // for...in montre toutes les propriétés d'un objet, y compris des propriétés "cachées"
+    for (const key in person) {
+      console.log(key + ": " + person[key]);
+    }
+  </script>
+</body>
+
+</html>

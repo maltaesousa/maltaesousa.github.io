@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" href="../../assets/favicon.png" />
+  <title>JavaScript - For</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <script type="text/javascript">
+    const citiesVaud = ["Yverdon", "Moudon", "Lausanne", "Payerne"];
+    const citiesNeuch = ["Neuchâtel", "Le Locle", "La Chaux-de-Fonds"];
+    // contiendra toutes mes villes
+    const allCities = [];
+
+    // Création des villes vaudoises
+    for (let i = 0; i < citiesVaud.length; i++) {
+      // création d'un objet
+      const city = {
+        name: citiesVaud[i],
+        canton: "Vaud",
+      };
+      allCities.push(city);
+    }
+
+    // Création des villes neuchâteloises
+    for (let i = 0; i < citiesNeuch.length; i++) {
+      // création d'un objet
+      const city = {
+        name: citiesNeuch[i],
+        canton: "Neuchâtel",
+      };
+      allCities.push(city);
+    }
+    
+    // Pour chaque objet ville, ajoutons-lui une propriété country
+    for (let i = 0; i < allCities.length; i++) {
+      allCities[i].country = "Suisse";
+    }
+
+    console.log("Mon tableau de villes:", allCities);
+  </script>
+</body>
+
+</html>

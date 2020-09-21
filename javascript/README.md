@@ -228,6 +228,8 @@ On peut également supprimer une propriété:
 delete car.year;
 ```
 
+*Voir: js-05_objets.html*
+
 ---
 
 ## Les tableaux sont des objets
@@ -304,6 +306,8 @@ while (cityPosition < cities.length) { // tant que cityPosition et plus petit qu
 }
 ```
 
+*Voir: js-06_while.html*
+
 ---
 
 ## Boucle for
@@ -330,6 +334,8 @@ for (let i = 0; i < 3; i++) {
 console.log('Le tableau topCities:', topCities);
 ```
 
+*Voir: js-07_for.html*
+
 ---
 
 ## Autres types d'itérations
@@ -353,6 +359,8 @@ function doSomething() {
 doSomething();
 ```
 
+*Voir: js-08_fonctions_1.html*
+
 On peut stocker une fonction dans une variable. Les fonctions peuvent renvoyer une valeur à l'aide du mot clé `return`:
 
 ```js
@@ -375,23 +383,58 @@ let car = {
       return "VROOOM!"
   }
 };
+
+console.log("Car will start:" car.start());
 ```
 
-## La portée des variables déclarées avec `var` (scope)
+*Voir: js-09_fonctions_2.html*
+---
 
-Les variables déclarés avec `var` dans une fonctions sont utilisables / modifiables dans toute la fonction:
+## Portée (scope) des variables déclarées avec `var`
+
+Les variables déclarés avec `var` dans une fonction sont utilisables / modifiables dans toute la fonction:
 
 ```js
 function showCities(cities) {
   var numberOfCities = cities.length;
 
-  for (var i = 0; i < numberOfCities; i++) {
-    var city = cities[i];
+  for (var i = 0; i < numberOfCities; i++) { // i est définie dans le bloc for
+    var city = cities[i]; // city est définie dans le bloc for
     console.log(city);
   }
 
   console.log(`Il y a ${numberOfCities} villes.`);
-  console.log(`La dernière ville est ${city} et le compteur est à ${i}.`);
+  console.log(`La dernière ville est ${city} et le compteur est à ${i}.`); // on accède aux deux variables ici
+}
+
+showCities(["Neuchâtel", "Fribourg", "Bern"]);
+console.log(`Il y a ${numberOfCities} villes.`); // erreur
+
+// Neuchâtel
+// Fribourg
+// Bern
+// Il y a 3 villes.
+// La dernière ville est Bern et le compteur est à 3.
+// ReferenceError: numberOfCities is not defined
+```
+
+---
+
+## Portée (scope) des  variables déclarées avec `let` ou `const`
+
+Les variables déclarés avec `let` et `const` ont une portée de bloc
+
+```js
+function showCities(cities) {
+  const numberOfCities = cities.length;
+
+  for (let i = 0; i < numberOfCities; i++) { // i est définie dans le bloc for
+    let city = cities[i]; // city est définie dans le bloc for
+    console.log(city);
+  }
+
+  console.log(`Il y a ${numberOfCities} villes.`);
+  console.log(`La dernière ville est ${city} et le compteur est à ${i}.`); // erreur
 }
 
 showCities(["Neuchâtel", "Fribourg", "Bern"]);
@@ -400,12 +443,43 @@ showCities(["Neuchâtel", "Fribourg", "Bern"]);
 // Fribourg
 // Bern
 // Il y a 3 villes.
-// La dernière ville est Bern et le compteur est à 3.
+// ReferenceError: city is not defined
 ```
 
-## Portée
-
 ---
+
+## Protée (scope) globale
+
+Les variables déclarés avec `var` en dehors d'une fonction, ont une portée globale.
+
+```js
+var city = "Bern"
+
+function showCity() {
+  console.log(`Vous êtes à ${city}.`); // city est accessible
+  city = "Lausanne"; // city est réaffectable
+}
+
+showCity();
+showCity();
+
+// Vous êtes à Bern.
+// Vous êtes à Lausanne.
+```
+
+Il est fortement recommandé de ne pas utilisé `var` si vous le pouvez. Les seules raisons d'utiliser `var` sont:
+* Votre code doit être compatible avec un version ECMAscript inférieure à 6.
+* Vous créez votre propre librairie.
+
+Utilisez `let` et `const` dès que vous le pouvez:
+
+```js
+let city = "Bern"
+
+function showCity() {
+  console.log(`Vous êtes à ${city}.`); // erreur
+}
+```
 
 ## DOM
 
@@ -414,3 +488,5 @@ showCities(["Neuchâtel", "Fribourg", "Bern"]);
 ## jQuery
 
 ---
+
+## JSON

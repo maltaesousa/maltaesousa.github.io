@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" href="../../assets/favicon.png" />
+  <title>JavaScript - Fonctions 2</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <script type="text/javascript">
+    // Déclarons cette variable globale super importante.
+    var i = 42;
+
+    // Cette fonction logue tout ce qu'on lui donne
+    function logThings(things) {
+      // Oops, on a oublié "var" ou "let"
+      for (i = 0; i < things.length; i++) {
+        console.log(things[i]);
+      }
+    }
+
+    var fruits = ['apple', 'banana', 'pear'];
+    logThings(fruits);
+
+    // Oops, on a modifié une variable globale depuis une fonction
+    console.log(i); // 3
+  </script>
+</body>
+
+</html>
