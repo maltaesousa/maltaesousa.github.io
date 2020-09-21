@@ -1,12 +1,18 @@
+class: center middle
+
 # JavaScript <img class="middle" src="img/js.svg" width="60em"/>
 
 Apprendre les bases du JavaScript, un langage de programmation considéré comme l'un des trois piliers du web.
 
-## Qu'est-ce JavaScript?
+---
+
+Un site web sans javascript:
+
+.center[<img class="" src="img/no_js.jpg" width="400px"/>]
 
 Selon [@MDN:](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 
-> JavaScript (« JS ») est un langage de script léger, orienté objet. Le code JavaScript est **interprété ou compilé à la volée**. C'est un langage à **objets** utilisant le concept de **prototype**, disposant d'un **typage faible** et **dynamique**.
+> JavaScript (« JS ») est un langage de script léger, orienté objet. Le code JavaScript est **interprété ou compilé à la volée**. C'est un langage à **objets** disposant d'un **typage faible** et **dynamique**.
 
 ---
 
@@ -176,7 +182,7 @@ En plus des opérations arithmétiques standards `+`, `-`, `*` et `/`, JavaScrip
 
 ---
 
-## Contrôle de flux if...else
+## if...else
 
 L'instruction if exécute une instruction si une condition donnée est vraie ou équivalente à vrai. Si la condition n'est pas vérifiée, il est possible d'utiliser une autre instruction.
 
@@ -342,7 +348,7 @@ console.log('Le tableau topCities:', topCities);
 
 Il existe d'autres formes de boucles. Vous en trouverez leur définition ici, sous la rubrique `Itérations`:
 
-[https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions]https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions
+[https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions)
 
 Les boucles `while` et `for` suffiront pour l'ensemble des exercices de ce cours.
 
@@ -361,24 +367,33 @@ doSomething();
 
 *Voir: js-08_fonctions_1.html*
 
+---
+
 On peut stocker une fonction dans une variable. Les fonctions peuvent renvoyer une valeur à l'aide du mot clé `return`:
 
 ```js
 let addNumbers = function(num1, num2) { // la fonction s'attend à recevoir deux arguments num1 et num2
     return num1 + num2
 }
+
 console.log(typeof addNumbers); //function
+
 let result = addNumbers(10, 20);
+
 console.log(`${result} est de type ${typeof result}`); // 30 est de type number
 ```
 
-On peut également stocker des fonctions dans un objet. Souvenez-vous de notre objet voiture créé précédemment. Ajoutons-lui une fonction:
+---
+
+On peut également stocker des fonctions dans un objet.
+
+Souvenez-vous de notre objet voiture créé précédemment. Ajoutons-lui une fonction:
 
 ```js
 let car = {
   brand: "Reliant",
   model: "Regal",
-  year: 1962
+  year: 1962,
   start: function () {
       return "VROOOM!"
   }
@@ -420,7 +435,7 @@ console.log(`Il y a ${numberOfCities} villes.`); // erreur
 
 ---
 
-## Portée (scope) des  variables déclarées avec `let` ou `const`
+## Portée (scope) des variables déclarées avec `let` ou `const`
 
 Les variables déclarés avec `let` et `const` ont une portée de bloc
 
@@ -448,7 +463,7 @@ showCities(["Neuchâtel", "Fribourg", "Bern"]);
 
 ---
 
-## Protée (scope) globale
+## Portée (scope) globale
 
 Les variables déclarés avec `var` en dehors d'une fonction, ont une portée globale.
 
@@ -466,6 +481,7 @@ showCity();
 // Vous êtes à Bern.
 // Vous êtes à Lausanne.
 ```
+---
 
 Il est fortement recommandé de ne pas utilisé `var` si vous le pouvez. Les seules raisons d'utiliser `var` sont:
 * Votre code doit être compatible avec un version ECMAscript inférieure à 6.
@@ -480,6 +496,16 @@ function showCity() {
   console.log(`Vous êtes à ${city}.`); // erreur
 }
 ```
+
+*Voir: js-10_scope.html*
+
+---
+
+## Exercices
+
+.center[<img class="" src="img/exo.jpg" width="500px"/>]
+
+---
 
 ## DOM
 
