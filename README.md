@@ -1,3 +1,3 @@
 # SIG 3
 
-[/javascript](/javascript)
+[/javascript1](/javascript1)

@@ -22,6 +22,16 @@ Selon [@MDN:](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 
 Dans ce cours les exemples utiliseront la spécification ES6 supporté par les navigateurs récents.
 
+En cas de doute:
+
+[https://caniuse.com/](https://caniuse.com/)
+
+---
+
+## Support ES6
+
+<img src="img/browsers_es6.png" width="95%"/>
+
 ---
 
 ## Comment suivre ce cours?
@@ -152,7 +162,7 @@ console.log(Number.isInteger(4)); // true
 
 **Attention!** 
 
-Certaines valeurs sont évaluées en tant que false: `0`, `""`, `null`, `undefined`, `NaN`, et bien entendu `false`.
+Certaines valeurs sont évaluées en tant que false: `0`, `""`, `[]`, `null`, `undefined`, `NaN`, et bien entendu `false`.
 
 ```js
 console.log(false == []); // true
@@ -399,7 +409,7 @@ let car = {
   }
 };
 
-console.log("Car will start:" car.start());
+console.log("Car will start:", car.start());
 ```
 
 *Voir: js-09_fonctions_2.html*
@@ -505,14 +515,3 @@ function showCity() {
 
 .center[<img class="" src="img/exo.jpg" width="500px"/>]
 
----
-
-## DOM
-
----
-
-## jQuery
-
----
-
-## JSON

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Javascript</title>
+  <link rel="icon" href="../assets/favicon.png" />
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/vs.css" id="highlight-theme">
+</head>
+
+<body>
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <section data-markdown="README.md"
+      data-transition="none"
+      data-separator="^&lt;!--slide--&gt;$">
+      </section>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js" integrity="sha512-bj/tdW5m8Fiyt169efxoa7k2VvD4nE/IxHrBHagqhFleqZuFpmGD75RUrOta73Fw3vItyrwNKAVSeFY1CenpFQ==" crossorigin="anonymous"></script>
+  <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+  <script>
+    const slideshow = remark.create({
+      sourceUrl: 'README.md',
+      ratio: '16:9',
+      highlightLines: true,
+    });
+  </script>
+</body>
+
+</html>
