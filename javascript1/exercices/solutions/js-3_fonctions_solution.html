@@ -3,19 +3,20 @@
     <head>
         <title>JavaScript - Boucles</title>
         <meta charset="utf-8">
-        <script type="text/javascript">
+        <script>
             function calcul(nb, lim) {
-                delta = nb;
+                let delta = nb;
                 
                 while(nb < lim) {
-                    console.log(nb);
+                    console.log("Nombre:", nb);
                     nb = nb + delta;
-                }   
+                }
             }
 
-            var nombre = 5;
-            var limite = 100;
+            const nombre = 5;
+            const limite = 100;
             console.log("nombre = " + nombre + "\n"+ "limite = " + limite)
+            console.log(`nombre = ${nombre}\nlimite = ${limite}`);
 
             calcul(nombre, limite);
         </script>
@@ -24,7 +25,8 @@
         <h1>JavaScript - Boucles</h1>
         <h2>Objectif</h2>
         <ul>
-            <li>Créer une fonction JavaScript qui affiche dans la console les multiples d'un nombre (variable <em>nombre</em>) inférieurs à une limite (variable <em>limite</em>).</li>
+            <li>Créer une fonction JavaScript qui affiche dans la console les multiples
+                d'un nombre (variable <em>nombre</em>) inférieurs à une limite (variable <em>limite</em>).</li>
         </ul>
     </body>
 </html>

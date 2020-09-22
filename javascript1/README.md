@@ -132,6 +132,33 @@ L'instruction `typeof` révèle le type de la variable:
 console.log(typeof aBoolean); // "boolean"
 ```
 
+---
+
+## Syntaxe des chaînes de caractères
+
+En JavaScript, il y a 3 façons d'écrire des châines de caractères:
+
+```js
+// Entre apostrophes ou "quote" en anglais.
+// Si vous avez besoin d'une apostrophe, il faut l'échaper
+let strQuote = 'I\'m a ' + 'string.';
+
+// Entre guillemets ou "double quotes" en anglais.
+// Si vous avez besoin d'un guillemet, il faut l'échaper.
+let strDouble = "This is a \"double quoted\" " + "string.";
+
+// Nouveauté ES6
+// Entre "backticks" où il n'y a plus besoin d'utiliser "+" pour concaténer.
+// On peut directement y utiliser des expressions qui seront évaluées avant d'êtres concaténées.
+let result = 5;
+let strTemplate = `This string has ${result} words`;
+
+```
+
+Le caractère <kbd>&#96;</kbd> est en fait l'accent grave d'un clavier QWERTZ. Pour l'écrire:
+
+<kbd>Maj</kbd> + <kbd>&#96;</kbd> suivi d'un espace.
+
 *Voir: js-01_variables.html*
 
 ---
