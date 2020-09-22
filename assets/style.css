@@ -71,3 +71,10 @@ kbd {
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+
+  div.remark-slide-number {
+    top: 12px;
+    opacity: .5;
+    position: absolute;
+    right: 20px;
+}
