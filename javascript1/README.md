@@ -442,7 +442,7 @@ console.log("Car will start:", car.start());
 *Voir: js-09_fonctions_2.html*
 ---
 
-## Portée (scope) des variables déclarées avec `var`
+## Portée (scope) des variables déclarées avec `var` <a name="var-scope"></a>
 
 Les variables déclarés avec `var` dans une fonction sont utilisables / modifiables dans toute la fonction:
 

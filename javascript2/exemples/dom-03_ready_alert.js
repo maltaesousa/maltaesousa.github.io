@@ -24,8 +24,5 @@ document.onreadystatechange = () => {
   }
 };
 
-/**
- * Exercice:
- * 
- * Essayez à l'aide d'une boucle d'ajouter 10 div au lieu de 1.
- */
+// Exercice:
+// Essayez à l'aide d'une boucle d'ajouter 10 div au lieu de 1.

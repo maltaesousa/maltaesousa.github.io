@@ -4,12 +4,15 @@ body {
     font-family: 'Libre Franklin';
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Libre Franklin';
     font-weight: 100google;
 }
 
-.remark-code, .remark-inline-code {
+.remark-code,
+.remark-inline-code {
     font-family: 'Ubuntu Mono';
 }
 
@@ -41,12 +44,9 @@ kbd {
     cursor: pointer;
     font-variant: small-caps;
     font-weight: 600;
-  
     /* This two work */
     /* letter-spacing: 0.5px; */
     letter-spacing: 1px;
-  
-  
     /* Prevent selection */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -54,27 +54,34 @@ kbd {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
+}
 
-  table {
+table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-  }
-  
-  td, th {
+}
+
+td,
+th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
+}
 
-  div.remark-slide-number {
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+div.remark-slide-number {
     top: 12px;
     opacity: .5;
     position: absolute;
     right: 20px;
+}
+
+.pink {
+    background-color: pink;
+    width: 100px;
+    height: 1em;
 }

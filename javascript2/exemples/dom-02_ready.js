@@ -1,7 +1,7 @@
 // Création d'un objet qui a deux propriétés de type string
 const myContent = {
   alertText: "Le document est chargé",
-  alertLink: "https://developer.mozilla.org/fr/docs/Web/API"
+  alertLink: "https://developer.mozilla.org/fr/docs/Web/API",
 };
 
 // Utilisation du DOM!
@@ -14,4 +14,4 @@ document.onreadystatechange = function() {
     console.log(myContent.alertText);
     console.log(myContent.alertLink);
   }
-}
+};
