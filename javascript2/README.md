@@ -21,8 +21,40 @@ Le DOM:
 
 .center[<img src="img/tree_html.png" width="95%"/>]
 
+
 ---
 
+# Gestion d'événements
+
+Une page HTML se charge -> le `document` se créé. Comment savoir quand la page a terminé de se charger?
+
+```js
+// Création d'un objet qui a deux propriétés de type string
+const myContent = {
+  alertText: "Le document est chargé",
+  alertLink: "https://developer.mozilla.org/fr/docs/Web/API"
+};
+
+// Utilisation du DOM!
+document.onreadystatechange = function() {
+  console.log("L'état du document a changé:", document.readyState);
+  if (document.readyState === "complete") {
+    console.log(myContent.alertText);
+  }
+}
+```
+
+---
+
+# Modification du DOM
+
+L'exemple précédent se contentait d'écouter le DOM et d'afficher des messages dans la console. On peut faire mieux, on directement modifier le DOM.
+
+```js
+document.getElementById("modification-du-dom").textContent="TOTO"
+```
+
+---
 
 
 ## jQuery
