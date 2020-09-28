@@ -218,6 +218,8 @@ Une liste exhaustive des actions possibles dans jQuery n'aurait pas de sens. Je 
 
 https://www.w3schools.com/jquery/jquery_examples.asp
 
+*Voir jq-02_actions.html*
+
 ---
 
 ## Exercices
