@@ -128,10 +128,9 @@ Pour inclure une librairie dans un projet, on peut utiliser un CDN (*Content Del
 ```html
 <body>
 ...
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-  integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
 </body>
 ```
 
@@ -146,12 +145,20 @@ Vous pouvez également [télécharger ici](https://jquery.com/download/) la dern
 </body>
 ```
 
+Créez ensuite un fichier `script.js` et chargez-le **après** jQuery. Copiez-collez cette ligne dans votre fichier `script.js`
+
+```js
+console.log($("body")); // Object
+```
+
+*Voir jq-01_load_jquery.html*
+
 ---
 
 ## Pourquoi mettre les `<script>` juste avant la fin du `<body>`?
 
 C'est une bonne pratique de charger les fichiers JavaScript à la fin de la page HTML:
-* Le Navigateur parcourt les fichiers JavaScript quand il les charge. Pendant qu'il fait ça, il ne fait rien d'autre. Sur de grands projets, la page web peut donner des impressions de lenteur.
+* Le navigateur parcourt les fichiers JavaScript quand il les charge. Pendant qu'il fait ça, il ne fait rien d'autre. Sur de grands projets, la page web peut donner des impressions de lenteur.
 * Avec le script en fin de page, pratiquement tout le DOM est prêt à être utilisé par le votre script, il n'y a donc pas besoin d'attendre des événements `document.readyState`
 
 L'ordre des `<script>` est important! Si vous faites un script dans lequel vous utilisez jQuery par exemple, alors votre script devra être chargé **après** jQuery
@@ -160,14 +167,61 @@ L'ordre des `<script>` est important! Si vous faites un script dans lequel vous 
 <body>
 ...
 <script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/monscript.js"></script>
+<script src="js/script.js"></script>
 </body>
 ```
 
 ---
 
-## JSON
+## Très bien, mais jQuery c'est quoi?
+
+<img src="img/jquery-logo.png"/>
+
+jQuery est une librairie JavaScript créée en 2006 facilitant la manipulation du DOM. Elle facilite également les appels asynchrones à des ressources web (ajax), nous verrons cela plus tard.
+
+jQuery est la librairie JavaScript la plus utilisée pour du développement web. Aujourd'hui, il est possible de s'en passer en utilisant des frameworks (collections de librairies) tels que Angular ou Vue mais les principes de jQuery restent les mêmes dans ces frameworks.
+
+La documentation est très riche avec plusieurs exemples pour chaque fonctionnalité. [N'hésitez pas à la consulter!](https://api.jquery.com/)
+
+---
+
+## Comment utiliser jQuery?
+
+La plupart des librairies exposent une variable globale comme point d'entrée pour son utilisation. Dans le cadre de jQuery c'est `$`.
+
+### Sélectionner dans le DOM
+
+C'est le but premier de jQuery: pour sélectionner dans le DOM on utilise la syntaxe `$(...)` en remplaçant les `...` par un [**sélecteur CSS**](https://www.w3schools.com/cssref/css_selectors.asp)!
+
+| Exemples      | Signification                                                        |
+| --------------| ---------------------------------------------------------------------|
+| `$("p")`      | Sélectionne tout les éléments `<p>`                                  |
+| `$(".test")`  | Sélectionne tout les éléments qui ont une classe test `class="test"` |
+| `$("#test")`  | Sélectionne l'élément qui a un id test `id="test"`                   |
+
+*Voir https://www.w3schools.com/jquery/trysel.asp*
+
+---
+
+### Modifier le DOM
+
+Une fois qu'on sait sélectionner des éléments, on va vouloir en faire quelque chose. Pour modifier le DOM la syntaxe est `$("sélecteur css").action()` en remplaçant `action()` par une méthode jQuery.
+
+| Exemples                                | Signification                                                             |
+| ----------------------------------------| --------------------------------------------------------------------------|
+| `$("p").hide()`                         | Fait disparaître tous les éléments `<p>`                                  |
+| `$(".test").show()`                     | Fait apparaître tout les éléments qui ont une classe test `class="test"`  |
+| `$("#test")addClass('pink')`            | Ajoute une classe pink à l'élément qui a un id test `id="test"`           |
+| `$("h1.principal").append("Du texte");` | Ajoute `Du Texte` à un élément `<h1 class="principal"></h1>`              |
+
+Une liste exhaustive des actions possibles dans jQuery n'aurait pas de sens. Je vous invite à consulter ces exemples:
+
+https://www.w3schools.com/jquery/jquery_examples.asp
 
 ---
 
 ## Exercices
+
+Faites les exercices préfixés `jq-`.
+
+.center[<img src="img/bob.gif"/>]
