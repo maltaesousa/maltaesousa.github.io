@@ -226,6 +226,6 @@ https://www.w3schools.com/jquery/jquery_examples.asp
 
 ## Exercices
 
-Faites les exercices préfixés `jq-`.
+Parcourez les exemples préfixés `jq-` et faites l'exercice jq-chat.
 
 .center[<img src="img/bob.gif"/>]
