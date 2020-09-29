@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JavaScript - Evénements</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="favicon.png" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <h1>JavaScript - Evénements</h1>
+    <h2>Objectifs</h2>
+    <ul>
+      <li>Trouver l'événement qui détecte le survol par la souris des images</li>
+      <li>Ecrire une fonction qui va inverser les deux images</li>
+    </ul>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="http://placekitten.com/300/300" id="img1"  onmouseover="changeCats()"/>
+      </div>
+      <div class="col-md-6">
+        <img src="http://placekitten.com/g/300/300" id="img2"  onmouseover="changeCats()"/>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const objImg1 = document.getElementById("img1");
+    const objImg2 = document.getElementById("img2");
+    /**
+     * Echange les images
+     */
+    function changeCats() {
+      const src1 = objImg1.src;
+      const src2 = objImg2.src;
+
+      objImg1.src = src2;
+      objImg2.src = src1;
+    }
+  </script>
+</body>
+
+</html>

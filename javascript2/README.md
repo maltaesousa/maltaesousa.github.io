@@ -45,6 +45,8 @@ document.onreadystatechange = function() {
 }
 ```
 
+*Voir dom-01_document.html*
+
 ---
 
 ## Quelques autres événements

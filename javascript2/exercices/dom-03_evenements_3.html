@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JavaScript - Evénements</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="favicon.png" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <h1>JavaScript - Evénements</h1>
+    <h2>Objectifs</h2>
+    <ul>
+      <li>Trouver l'événement qui détecte un choix dans la liste déroulante</li>
+      <li>Ecrire une fonction qui va afficher le domaine d'études le plus important en fonction du choix dans la
+        liste<em>(p. ex. : Géomatique et gestion du territoire > Acquisition et gestion de géodonnées)</em>
+      </li>
+    </ul>
+    <form>
+      <div class="form-gourp">
+        <label for="maListe">Orientation</label>
+        <select id="maListe" class="form-control">
+          <option selected>Choisissez une orientation...</option>
+          <option value="ggt">Géomatique et gestion du territoire</option>
+          <option value="gci">Construction et infrastructures</option>
+          <option value="gen">Génie de l'environnement</option>
+        </select>
+      </div>
+    </form>
+    <p>Domaine d'études : <span id="resultat"></span></p>
+  </div>
+</body>
+
+</html>
