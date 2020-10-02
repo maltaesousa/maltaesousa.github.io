@@ -14,4 +14,8 @@ module.exports = {
     "no-unused-vars": "off",
     "quotes": "off",
   },
+  globals: {
+    "$": "readonly",
+    "ol": "readonly",
+  },
 };
