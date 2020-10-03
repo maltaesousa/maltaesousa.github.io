@@ -138,11 +138,13 @@
       // on sélection les value des input dont les ids sont lat et long à l'aide de la méthode jQuery .val()
       const latValue = $("#lat").val();
       const longValue = $("#long").val();
-      // comme on saisit des latitudes et des longitudes mais que la carte est en EPSG:3857, il nous faut reprojeter les valeurs
-      // saisies
+      // comme on saisit des latitudes et des longitudes mais que la carte est en EPSG:3857,
+      // il nous faut reprojeter les valeurs saisies
       view.setCenter(ol.proj.fromLonLat([latValue, longValue]));
-      $("#result").html(`view.setCenter(${ol.proj.fromLonLat([latValue, longValue])}) a été appelé avec les valeurs suivantes:
-        ${latValue}, ${longValue}`);
+      $("#result").html(
+        `view.setCenter(${ol.proj.fromLonLat([latValue, longValue])}) a été appelé avec les valeurs suivantes:
+        ${latValue}, ${longValue}`
+      );
       $("#result").show();
     }
 
@@ -154,8 +156,8 @@
 
     function changeRotation(rotationInDegrees) {
       // les angles en JavaScript sont souvent en radians, openlayers ne fait pas exception à la règle...
-      view.setRotation(rotationInDegrees * Math.PI / 180);
-      $("#result").html(`view.setRotation(${rotationInDegrees * Math.PI / 180}) a été appelée. La rotation
+      view.setRotation((rotationInDegrees * Math.PI) / 180);
+      $("#result").html(`view.setRotation(${(rotationInDegrees * Math.PI) / 180}) a été appelée. La rotation
         est de ${rotationInDegrees}°.`);
       $("#result").show();
     }
