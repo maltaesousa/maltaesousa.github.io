@@ -23,7 +23,7 @@
     <h1>Quelques méthodes de Vue</h1>
 
     <!--Boutons d'affichage d'informations-->
-    <div class="row mb-4">
+    <div class="row my-4">
       <div class="col-md-12">
         <div id="affichage" class="btn-group d-flex">
           <button class="btn btn-outline-dark" type="button" onclick="afficheCentre()">Affiche le
@@ -41,18 +41,18 @@
     <div class="row mb-4">
       <div class="col-auto">
         <form class="form-inline">
-          <label class="my-1 mr-2" for="lat">Lat.</label>
-          <input id="lat" class="form-control" type="number" step="0.0000001" placeholder="6.66">
+          <label class="my-1 mr-2" for="long">Long.</label>
+          <input id="long" class="form-control mr-2" type="number" step="0.0000001" value="6.66">
         </form>
       </div>
       <div class="col-auto">
         <form class="form-inline">
-        <label class="my-1 mx-2" for="long">Long.</label>
-        <input id="long" class="form-control" type="number" step="0.0000001" placeholder="46.78">
+          <label class="my-1 mr-2" for="lat">Lat.</label>
+          <input id="lat" class="form-control" type="number" step="0.0000001" value="46.78">
         </form>
       </div>
       <div class="col-auto">
-        <button class="btn btn-primary mx-2" type="button" onclick="changeCentre()">Recentrer la carte!</button>
+          <button class="btn btn-primary" type="button" onclick="changeCentre()">Recentrer la carte!</button>
       </div>
     </div>
 
@@ -60,7 +60,8 @@
     <div class="row">
       <div class="col-md-6">
         <label for="rotation">Change zoom</label>
-        <input type="range" class="custom-range" min="6" max="21" value="10" step="0.1" id="rotation" oninput="changeZoom(this.value)">
+        <input type="range" class="custom-range" min="6" max="21" value="10" step="0.1" id="rotation"
+          oninput="changeZoom(this.value)">
       </div>
       <div class="col-md-6">
         <label for="rotation">Change la rotation</label>
@@ -140,9 +141,9 @@
       const longValue = $("#long").val();
       // comme on saisit des latitudes et des longitudes mais que la carte est en EPSG:3857,
       // il nous faut reprojeter les valeurs saisies
-      view.setCenter(ol.proj.fromLonLat([latValue, longValue]));
+      view.setCenter(ol.proj.fromLonLat([longValue, latValue]));
       $("#result").html(
-        `view.setCenter(${ol.proj.fromLonLat([latValue, longValue])}) a été appelé avec les valeurs suivantes:
+        `view.setCenter( ${ol.proj.fromLonLat([latValue, longValue])}) a été appelé avec les valeurs suivantes:
         ${latValue}, ${longValue}`
       );
       $("#result").show();
