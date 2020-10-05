@@ -19,7 +19,7 @@
   <script type="text/javascript">
     // Map
     const map = new ol.Map({
-      target: "map",
+      target: "map", // la cible où l'on veut charger la Map
 
       // Couches
       layers: [
@@ -29,7 +29,7 @@
         }),
       ],
 
-      // Vue
+      // Vue (contrôle l'échelle, le centre, etc..)
       view: new ol.View({
         center: ol.proj.fromLonLat([6.6, 46.6]),
         zoom: 10,
