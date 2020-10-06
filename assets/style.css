@@ -85,3 +85,17 @@ div.remark-slide-number {
     width: 100px;
     height: 1em;
 }
+
+table.custom-table {
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: #F0F0F0;
+}
+
+table.custom-table td {
+    border: none;
+    margin: 0;
+    vertical-align: bottom;
+    padding: 0;
+}

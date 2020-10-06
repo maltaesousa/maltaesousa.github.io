@@ -1,3 +1,5 @@
 # SIG 3
 
-[/javascript1](/javascript1)
+http://ogc.heig-vd.ch/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+
+Events!
