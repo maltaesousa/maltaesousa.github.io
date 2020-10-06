@@ -4,8 +4,8 @@
 
 .center[<img src="img/leaflet.png" width="70%"/>]
 
-* Simple
-* Grande communauté, beaucoup d'exemples
+* Simple de base mais peut-être étendue par des plugins
+* Grande communauté, beaucoup d'exemples sur le web
 * Adapaté pour des projets où la carte n'a pas une place prépondérante
 
 ---
@@ -14,9 +14,9 @@
 
 .center[<img src="img/ol.svg" width="30%"/>]
 
-* Beaucoup de fonctionnalités
+* Beaucoup de fonctionnalités de base + plugins
 * Évolue rapidement
-* Très présente en Suisse
+* Très présente sur le marché Suisse
 
 ---
 
@@ -78,7 +78,18 @@ https://openlayers.org/
 
 ---
 
-## import ?
+## `new` ?
+
+JavaScript n'a pas de classes, c'est un langage à objets. On peut cependant utiliser le mot-clé `new` sur des fonctions. Les fonctions se comportent comme des constructeurs et créent des instances de la fonction:
+
+```js
+function Car() {}
+
+const myCar = new Car();
+console.log(myCar instanceof Car); // true
+```
+
+## `import` ?
 
 Les exemples d'OpenLayers utilisent [les modules JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Modules). Les modules permettent de ne charger qu'une partie d'OpenLayers mais cela sort du périmètre de ce cours.
 
@@ -92,7 +103,8 @@ Prenons cet [exemple]()
 <table class="custom-table">
   <tr>
     <td>
-      <pre><code class="js">import 'ol/ol.css';
+    <pre><code class="js">// ES6 imports
+import 'ol/ol.css';
 import Map from 'ol/Map';
 import OSM from 'ol/source/OSM';
 import TileLayer from 'ol/layer/Tile';
@@ -110,7 +122,8 @@ const map = new Map({
   }),
 });</code></pre>
     </td>
-    <td><pre><code class="js">const map = new ol.Map({
+    <td><pre><code class="js">// Variable globale ol
+const map = new ol.Map({
   layers: [
     new ol.layer.Tile({
       source: new ol.source.OSM(),
@@ -125,7 +138,7 @@ const map = new Map({
   </tr>
 </table>
 
-Pour utiliser OpenLayers de manière traditionnelle (avec la variable globale `ol`), on ignore les lignes d'import et on apeller les classes et le méthodes à l'aide d'une notation complète basée sur le chemin des `import`.
+Pour utiliser OpenLayers de manière traditionnelle (avec la variable globale `ol`), on ignore les lignes d'import et on apeller les classes et les méthodes à l'aide d'une notation complète basée sur le chemin des `import`.
 
 ---
 
