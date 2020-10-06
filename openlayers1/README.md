@@ -95,7 +95,7 @@ Les exemples d'OpenLayers utilisent [les modules JavaScript](https://developer.m
 
 Bonne nouvelle, OpenLayers s'utilise aussi de façon traditionnelle et il est possible de "traduire" la syntaxe `import` en syntaxe de type `ol.module.classe`.
 
-Prenons cet [exemple]()
+Prenons cet [exemple](https://openlayers.org/en/latest/examples/simple.html)
 
 ---
 
