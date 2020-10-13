@@ -63,14 +63,14 @@ En JSON, les propriétés et les valeurs de type string sont obligatoirement **e
 
 ---
 
-Le **GeoJSON** est du **JSON**. Le SRID d'un GeoJSON est 4326 (WGS84)
+Le **GeoJSON** est du **JSON**. Le SRID d'un GeoJSON est 4326 (WGS84). Voir [geojson.io](https://geojson.io)
 
 ```json
 {
   "type": "FeatureCollection",
   "features": [{
       "type": "Feature",
-    "properties": {"id": 28},
+      "properties": {"id": 28},
       "geometry": {
         "type": "LineString",
         "coordinates": [
@@ -88,7 +88,7 @@ Le **GeoJSON** est du **JSON**. Le SRID d'un GeoJSON est 4326 (WGS84)
         ]
       }
     }
-  ]
+  ] //features
 }
 ```
 
