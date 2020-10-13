@@ -1,5 +1,5 @@
 background-image: url(../assets/fairy.jpg)
-# Webmapping 2
+# OpenLayers 2
 
 
 
