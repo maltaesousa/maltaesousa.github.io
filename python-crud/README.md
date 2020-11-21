@@ -26,7 +26,7 @@ Ouvrir le dossier front dans vscode et cliquer sur Go-Live. Ouvrir l'exemple jso
 
 ## Pré-requis
 
-* Prostgresql avec PostGIS
+* PostgreSQL avec PostGIS
 * Vérifiez que le dossier contenant psql.exe soit dans votre PATH afin de pouvoir lancer les scritps de création de base de données, sinon ouvrez les fichiers sql à la main.
 
 Installez psycopg:
