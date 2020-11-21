@@ -12,15 +12,18 @@ module.exports = {
   rules: {
     "no-console": "off",
     "no-unused-vars": "off",
-    "quotes": "off",
+    quotes: "off",
     "no-multiple-empty-lines": "off",
-    "max-len": ["error", { "code": 120 }],
+    "max-len": ["error", { code: 120 }],
     "comma-dangle": "off",
-    "prefer-arrow-callback": "off"
+    "prefer-arrow-callback": "off",
+    "object-shorthand": "off",
+    "func-names": "off",
+    "space-before-function-paren": "off"
   },
   globals: {
-    "$": "readonly",
-    "ol": "readonly",
-    "proj4": "readonly",
+    $: "readonly",
+    ol: "readonly",
+    proj4: "readonly",
   },
 };
