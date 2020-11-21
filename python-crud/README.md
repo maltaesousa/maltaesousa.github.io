@@ -7,7 +7,8 @@ cd back
 python 01-dummy-web-server.py
 ```
 
-Ouvrez votre navigateur et allez à la page http://localhost:8000, c'est votre fichier python qui répond. Vous pouvez arrêter le serveur avec <kbd>CTRL</kbd> + <kbd>C</kbd>
+Ouvrez votre navigateur et allez à la page http://localhost:8000, c'est votre fichier python qui répond.
+Vous pouvez arrêter le serveur avec <kbd>CTRL</kbd> + <kbd>C</kbd>
 
 ## Exemple 2
 
@@ -37,7 +38,7 @@ python -m pip install psycopg2-binary
 
 Soit vous créez une base de données à l'aide de pgAdmin, soit en ligne de commandes avec les instructions ci-dessous:
 
-````cmd
+```cmd
 psql -U postgres -d postgres -f database\01-dummy-database.sql
 psql -U postgres -d dummy_database -f database\02-dummy-data.sql
 ```
