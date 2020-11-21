@@ -20,7 +20,7 @@ cd back
 python 02-json-web-server.py
 ```
 
-Ouvrir le dossier front dans vscode et cliquer sur Go-Live. Ouvrir l'exemple json-GET-POST.html à l'aide du Go-Live. Si vous ne souhaitez pas utiliser de live-server, vous pouvez également utiliser Apache pour servir le fichier HTML.
+Ouvrir le dossier front dans vscode et cliquer sur Go-Live. Ouvrir l'exemple `json-GET-POST.html` à l'aide du Go-Live. Si vous ne souhaitez pas utiliser de live-server, vous pouvez également utiliser Apache pour servir le fichier HTML.
 
 ## Exemple 3
 
@@ -53,4 +53,4 @@ cd back
 python 03-database-web-server.py
 ```
 
-Ouvrir le dossier front dans vscode et cliquer sur Go-Live. Ouvrir l'exemple database-GET-POST à l'aide du Go-Live. Vous pouvez également utiliser Apache pour servir le fichier HTML.
+Ouvrir le dossier front dans vscode et cliquer sur Go-Live. Ouvrir l'exemple `database-GET-POST.html` à l'aide du Go-Live. Vous pouvez également utiliser Apache pour servir le fichier HTML.
