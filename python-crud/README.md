@@ -7,7 +7,7 @@ cd back
 python 01-dummy-web-server.py
 ```
 
-Ouvrez votre navigateur et allez à la page http://localhost:8000, c'est votre fichier python qui répond. Vous pouvez arrêter le serveur avec <kbd>CTRL</kbd>
+Ouvrez votre navigateur et allez à la page http://localhost:8000, c'est votre fichier python qui répond. Vous pouvez arrêter le serveur avec <kbd>CTRL</kbd> + <kbd>C</kbd>
 
 ## Exemple 2
 
