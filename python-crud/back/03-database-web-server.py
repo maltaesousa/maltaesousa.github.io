@@ -57,6 +57,8 @@ class MyServer(BaseHTTPRequestHandler):
 			"INSERT INTO dummy.cities VALUES (DEFAULT, %s, %s, 'SRID=2056;POINT(%s %s)')",
 			(new_city["nom"], new_city["img"], new_city["E"], new_city["N"])
 		)
+		# Le commit est nécessaire pour sauver les modifications dans la base de données
+		self.conn.commit()
 		self.cursor.execute("SELECT name, img, ST_AsText(geom) from dummy.cities")
 		self.data = self.cursor.fetchall()
 
