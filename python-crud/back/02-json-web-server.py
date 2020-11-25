@@ -51,7 +51,8 @@ class MyServer(BaseHTTPRequestHandler):
 
 		print("Le serveur a reçu un POST!", self.path, post_data)
 
-		# on lit le JSON et on ajoute l'objet au tableau des personnages
+		# on lit le JSON et on ajoute l'objet au tableau des personnages (data)
+		# notez qu'une fois le serveur tué, les modifications dans data seront perdues!
 		new_characters = json.loads(post_data.decode('utf8'))
 		self.data["personnages"].append(new_characters)
 
