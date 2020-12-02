@@ -16,8 +16,8 @@ Le DOM:
 
 * fournit une représentation structurée d'un **document** en arbre
 * expose des méthodes permettant d'accéder au document et d'y apporter des modifications dans sa **structure**, son **style** et son **contenu**.
-* représente le document en **noeuds** et **objets** ayant chacuns leurs propriétés
-* Permet d'écouter et de gérer des **événements** sur les noeuds.
+* représente le document en **nœuds** et **objets** ayant chacun leurs propriétés
+* Permet d'écouter et de gérer des **événements** sur les nœuds.
 
 .center[<img src="img/tree_html.png" width="95%"/>]
 
@@ -123,7 +123,7 @@ Faites les exercices dom-01 à dom-04.
 
 ## jQuery
 
-jQuery est une librairie JavaScript qui facilite les intéractions avec le DOM et apporte d'autres fonctionnalités utiles dont nous parlerons plus tard.
+jQuery est une librairie JavaScript qui facilite les interactions avec le DOM et apporte d'autres fonctionnalités utiles dont nous parlerons plus tard.
 
 Pour inclure une librairie dans un projet, on peut utiliser un CDN (*Content Delivery Network*). Un **CDN** est un réseau de serveurs internet hébergeant des librairies JavaScript, des CSS ou des polices. Les CDN sont fiables et disposent d'une haute disponibilité:
 
