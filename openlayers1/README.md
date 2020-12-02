@@ -6,7 +6,7 @@
 
 * Simple de base mais peut-être étendue par des plugins
 * Grande communauté, beaucoup d'exemples sur le web
-* Adapaté pour des projets où la carte n'a pas une place prépondérante
+* Adapté pour des projets où la carte n'a pas une place prépondérante
 
 ---
 
@@ -138,7 +138,7 @@ const map = new ol.Map({
   </tr>
 </table>
 
-Pour utiliser OpenLayers de manière traditionnelle (avec la variable globale `ol`), on ignore les lignes d'import et on apeller les classes et les méthodes à l'aide d'une notation complète basée sur le chemin des `import`.
+Pour utiliser OpenLayers de manière traditionnelle (avec la variable globale `ol`), on ignore les lignes d'import et on appeler les classes et les méthodes à l'aide d'une notation complète basée sur le chemin des `import`.
 
 ---
 
@@ -230,7 +230,7 @@ Quelques exemples de couches tuilées `ol.layer.Tile` et leurs sources:
   * `key` : clé à obtenir sur *bingmapsportal.com*
 * Stamen : `ol.source.Stamen`
   * `layer` : *terrain*, *toner*, *toner-lite*, *watercolor*, *terrain-labels*
-* etc...
+* etc.
 
 *Voir ol-4_couches_tuiles.html*
 
@@ -241,19 +241,19 @@ Quelques exemples de couches tuilées `ol.layer.Tile` et leurs sources:
 Il y a deux façons de lire du WMS avec OpenLayers:
 
 #### `ol.layer.Tile` avec `ol.source.TileWMS`
-* OpenLayers découpe l'étendue de la vue en une mosaique d'imagettes carrées qu'il va demander au serveur
+* OpenLayers découpe l'étendue de la vue en une mosaïque d'imagettes carrées qu'il va demander au serveur
 * Performant sur des WMS raster, les imagettes sont mises en cache
 * Plus lent lorsque le serveur doit calculer un rendu complexe
 
 #### `ol.layer.Image` avec `ol.source.ImageWMS`
-* Openlayers demande au serveur WMS une image de la taille de la carte
+* OpenLayers demande au serveur WMS une image de la taille de la carte
 * Pas de cache, à chaque zoom, une nouvelle image est demandée
 * Intéressant quand le rendu d'une couche est complexe
 
 Une source WMS demandra toujours:
 * une `url` du service WMS
-* les `params` standards WMS, c'est-à-dire les paramètres GetMap tels que `LAYERS`, `FORMAT`, etc..
-* si le WMS est soumis à des droits d'utilisation, il faut intiquer les `attributions`
+* les `params` standards WMS, c'est-à-dire les paramètres GetMap tels que `LAYERS`, `FORMAT`, etc.
+* si le WMS est soumis à des droits d'utilisation, il faut indiquer les `attributions`
 
 *Voir ol-5_couches_wms.html*
 
