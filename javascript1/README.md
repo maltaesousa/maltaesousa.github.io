@@ -410,7 +410,7 @@ On peut stocker une fonction dans une variable. Les fonctions peuvent renvoyer u
 
 ```js
 let addNumbers = function(num1, num2) { // la fonction s'attend à recevoir deux arguments num1 et num2
-    return num1 + num2
+    return num1 + num2;
 }
 
 console.log(typeof addNumbers); //function
@@ -432,7 +432,7 @@ let car = {
   model: "Regal",
   year: 1962,
   start: function () {
-      return "VROOOM!"
+      return "VROOOM!";
   }
 };
 
@@ -505,7 +505,7 @@ showCities(["Neuchâtel", "Fribourg", "Bern"]);
 Les variables déclarés avec `var` en dehors d'une fonction, ont une portée globale.
 
 ```js
-var city = "Bern"
+var city = "Bern";
 
 function showCity() {
   console.log(`Vous êtes à ${city}.`); // city est accessible
@@ -527,7 +527,7 @@ Il est fortement recommandé de ne pas utilisé `var` si vous le pouvez. Les seu
 Utilisez `let` et `const` dès que vous le pouvez:
 
 ```js
-let city = "Bern"
+let city = "Bern";
 
 function showCity() {
   console.log(`Vous êtes à ${city}.`); // erreur
