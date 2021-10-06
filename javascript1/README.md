@@ -6,7 +6,7 @@ Apprendre les bases du JavaScript, un langage de programmation considéré comme
 
 ---
 
-Un site web sans javascript:
+Un site web sans JavaScript:
 
 .center[<img class="" src="img/no_js.jpg" width="400px"/>]
 
@@ -38,12 +38,12 @@ En cas de doute:
 
 Prérequis:
 
-* Un éditeur de texte (Visual Studio Code, Notepad++, etc..)
+* Un éditeur de texte (Visual Studio Code, Notepad++, etc.)
 * Un navigateur (Firefox, Chrome, Edge)
 
 ---
 
-Pour exécuter du javascript, il est possible de tout mettre dans un seul fichier:
+Pour exécuter du JavaScript, il est possible de tout mettre dans un seul fichier:
 
 `./index.html`:
 
@@ -136,7 +136,7 @@ console.log(typeof aBoolean); // "boolean"
 
 ## Syntaxe des chaînes de caractères
 
-En JavaScript, il y a 3 façons d'écrire des châines de caractères:
+En JavaScript, il y a 3 façons d'écrire des chaînes de caractères:
 
 ```js
 // Entre apostrophes ou "quote" en anglais.
@@ -521,7 +521,7 @@ showCity();
 ---
 
 Il est fortement recommandé de ne pas utilisé `var` si vous le pouvez. Les seules raisons d'utiliser `var` sont:
-* Votre code doit être compatible avec un version ECMAscript inférieure à 6.
+* Votre code doit être compatible avec une version ECMAscript inférieure à 6.
 * Vous créez votre propre librairie.
 
 Utilisez `let` et `const` dès que vous le pouvez:
