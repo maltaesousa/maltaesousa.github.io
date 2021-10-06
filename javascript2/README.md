@@ -71,7 +71,7 @@ https://developer.mozilla.org/fr/docs/Web/Events
 Les exemples précédents se contentaient d'écouter le DOM et d'afficher des messages dans la console. On peut faire mieux, on directement modifier le DOM:
 
 ```js
-document.getElementById("modification-du-dom").textContent="Le titre de cette page s'est modifié!"
+document.getElementById("modification-du-dom").textContent="Le titre de cette page s'est modifié!";
 ```
 
 * `getElementById` est une méthode de `Document` qui retourne un `Element`.
@@ -213,7 +213,7 @@ Une fois qu'on sait sélectionner des éléments, on va vouloir en faire quelque
 | ----------------------------------------| --------------------------------------------------------------------------|
 | `$("p").hide()`                         | Fait disparaître tous les éléments `<p>`                                  |
 | `$(".test").show()`                     | Fait apparaître tout les éléments qui ont une classe test `class="test"`  |
-| `$("#test")addClass('pink')`            | Ajoute une classe pink à l'élément qui a un id test `id="test"`           |
+| `$("#test").addClass('pink')`            | Ajoute une classe pink à l'élément qui a un id test `id="test"`           |
 | `$("h1.principal").append("Du texte");` | Ajoute `Du Texte` à un élément `<h1 class="principal"></h1>`              |
 
 Une liste exhaustive des actions possibles dans jQuery n'aurait pas de sens. Je vous invite à consulter ces exemples:
