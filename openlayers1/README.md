@@ -37,7 +37,7 @@
 ```html
 ...
   <div id="map"></div>
-  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/build/ol.js"></script>
   <script type="text/javascript">
     const map = new ol.Map({
       target: "map", // l'id de l'élément HTML où on veut mettre la carte
@@ -70,7 +70,7 @@
       width: 100%;
     }
    ```
-3. JavaScript pour créer la carte en utilisant la variable globale `ol`.
+3. Avec JavaScript on crée la carte en utilisant la variable globale `ol`.
 
 ### API & exemples
 
@@ -138,7 +138,7 @@ const map = new ol.Map({
   </tr>
 </table>
 
-Pour utiliser OpenLayers de manière traditionnelle (avec la variable globale `ol`), on ignore les lignes d'import et on appeler les classes et les méthodes à l'aide d'une notation complète basée sur le chemin des `import`.
+Pour utiliser OpenLayers de manière traditionnelle (avec la variable globale `ol`), on ignore les lignes d'import et on appelle les constructeurs (new) et les méthodes à l'aide d'une notation complète basée sur le chemin des `import`.
 
 ---
 
@@ -261,7 +261,7 @@ Une source WMS demandra toujours:
 
 ## Exercices
 
-Exercice *ol-1_fond_plan.html*. Pas de solution donnée mais les exemples contiennent tout ce qui est nécessaire pour faire l'exercice.
+Exercice *ol-1_fond_plan.html*. Inspirez-vous des exemples!
 
 .center[<video width="400" autoplay loop>
   <source src="img/cat.mp4" type="video/mp4">
