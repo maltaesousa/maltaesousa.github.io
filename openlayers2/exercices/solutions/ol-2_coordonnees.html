@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>OpenLayers - Affichage des coordonnées en temps réel</title>
+  <link rel="icon" href="favicon.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <!-- Ajout de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Copié-collé depuis l'exemple ol-3_controles.html, CSS d'OpenLayers-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/css/ol.css"
+    type="text/css">
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- class 'container' de bootstrap qui ajoute les marges-->
+  <div class="container">
+    <h1>Affichage de coordonnées en temps réel</h1>
+    <ul>
+      <li>Créer une carte avec un fond de carte par défaut. Faites en sorte que la carte s'initialise en Suisse.
+      </li>
+      <li>Afficher les coordonnées de la souris <a
+          href="https://openlayers.org/en/latest/apidoc/module-ol_control_MousePosition-MousePosition.html">ol.control.MousePosition()</a>
+        en coordonnées suisses</li>
+      <li>Styliser l'affichage des coordonnées. Soit sur la carte, dans ce cas vous créez une nouvelle CSS et vous
+        lui donnez votre CSS, soit en dehors de la carte, dans l'HTML.</li>
+      <li>Changer le format des coordonnées, par défaut, OpenLayers a tendance à mettre trop de chiffres après la
+        virgule par exemple.</li>
+    </ul>
+
+    <!-- le point d'accorche pour la carte -->
+    <div id="map"></div>
+  </div>
+
+  <!-- On en a terminé avec l'HTML, à partir d'ici, place au JavaScript -->
+  <!-- OpenLayers -->
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/build/ol.js"></script>
+
+  <!-- Mon Javascript -->
+  <script>
+    /**
+     * Copié-collé toujours depuis ol-3_controles.html
+     * Quoi qu'on fasse on aura toujours besoin des 3 éléments essentiels:
+     * une instance de ol.Map, une de ol.View et d'au moins un layer.
+     */
+    const source = new ol.source.OSM();
+    const map = new ol.Map({
+      target: "map",
+      layers: [
+        new ol.layer.Tile({
+          source
+        })
+      ],
+      view: new ol.View({
+        center: ol.proj.fromLonLat([6.6, 46.6]), // c'est en suisse
+        zoom: 10
+      })
+    });
+
+    // Toujours une copie du fichier de contrôles
+    const mousePositionControl = new ol.control.MousePosition({
+      projection: "EPSG:4326",
+      // on peut donner un format à ce contrôle qui s'occupe de tronquer tous ces chiffres
+      // après la virgule
+      coordinateFormat: ol.coordinate.createStringXY(4)
+    });
+
+    // Il nous reste plus qu'à ajouter le contrôle à la carte, pour cela:
+    // copie de la ligne 114
+    map.addControl(mousePositionControl);
+
+    /**
+     * Dernière étape, styliser ces paires de coordonnées. Avec le sélecteur d'éléments
+     * de la console du navigateur, on peut voir que cet élément est un div avec une classe
+     * ol-mouse-position. Il suffit donc d'ajouter dans la feuille de styles ou dans la balise
+     * style comme c'est le cas dans cet exemple, un sélecteur .ol-mouse-position et de lui
+     * donner les styles voulus.
+     */
+  </script>
+</body>
+
+</html>
