@@ -37,7 +37,7 @@
 ```html
 ...
   <div id="map"></div>
-  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/build/ol.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ol@v7.1.0/dist/ol.js"></script>
   <script type="text/javascript">
     const map = new ol.Map({
       target: "map", // l'id de l'élément HTML où on veut mettre la carte
