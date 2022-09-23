@@ -54,6 +54,22 @@ Exercice: copier-coller cet exemple dans un fichier nommé `index.html` et l'ouv
 
 ---
 
+# Visual Studio Code
+
+* Recommandé pour ce cours mais pas obligatoire
+
+* Plus qu'un éditeur de texte, c'est un éditeur de code (Emmet, JSLint, etc.)
+
+* Orienté projet: on ouvre un dossier et pas seulement un fichier
+
+* Extensible: Live Server 
+
+---
+
+<img class="middle" src="img/vscode_interface.png" width="100%"/>
+
+---
+
 ## HTML - terminologie
 
 Nous pouvons ajouter des commentaires dans un fichier HTML à l'aide de `<!-- blablabla -->`
@@ -77,7 +93,7 @@ Nous pouvons ajouter des commentaires dans un fichier HTML à l'aide de `<!-- bl
 
 ## HTML - Quelques tags les plus utilisés
 
-| Opérateur             | Description                                                 |
+| Balise                | Description                                                 |
 | ----------------------| ----------------------------------------------------------  |
 | `<h1>` - `<h6>`       | Titre                                                       |
 | `<p>`                 | Paragraphe                                                  |
@@ -90,6 +106,93 @@ Nous pouvons ajouter des commentaires dans un fichier HTML à l'aide de `<!-- bl
 Liste complète: https://www.w3schools.com/tags/
 
 Exercice: utiliser ces tags dans le fichier précédemment créé
+
+
+---
+
+## HTML - Formulaires
+
+<table>
+  <tr>
+    <td>
+      <form>
+        <label for="fname">Nom:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="Entrez votre nom"><br>
+        <label for="lname">Prénom:</label><br>
+        <input type="text" id="lname" name="lname" placeholder="Entrez votre prénom"><br>
+        <label for="country">Pays:</label><br>
+        <input type="text" id="country" name="country" value="Suisse"><br><br>
+        <input type="button" value="Envoyer">
+      </form>
+    </td>
+    <td>
+      <pre><code class="html">&lt;form&gt;
+  &lt;label for="fname"&gt;Nom:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="fname" name="fname" placeholder="Entrez votre nom"&gt;&lt;br&gt;
+  &lt;label for="lname"&gt;Prénom:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="lname" name="lname" placeholder="Entrez votre prénom"&gt;&lt;br&gt;
+  &lt;label for="country"&gt;Pays:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="country" name="country" value="Suisse"&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type="button" value="Envoyer"&gt;
+&lt;/form&gt;
+</code></pre>
+    </td>
+  </tr>
+</table>
+
+---
+
+## HTML - Tags de formulaires
+
+* Texte court
+```html
+<input id="input1" name="input1" type="text">
+```
+<input id="input1" name="input1" type="text">
+
+* Grand champ de saisie texte
+```html
+<textarea id="input2" name="input1" rows="4" cols="50"></textarea>
+```
+<textarea id="input2" name="input1" rows="4" cols="50"></textarea>
+
+* Nombre
+```html
+<input id="input3" name="input3" type="number">
+```
+<input id="input3" name="input3" type="number">
+
+---
+
+* Date
+```html
+<input id="input4" name="input4" type="date">
+```
+<input id="input4" name="input4" type="date">
+
+* Menu déroulant
+```html
+<select name="days" id="days">
+  <option value="lundi">Lundi</option>
+  <option value="mardi">Mardi</option>
+  <option value="mercredi">Mercredi</option>
+  <option value="jeudi">Jeudi</option>
+</select>
+```
+<select name="days" id="days">
+  <option value="lundi">Lundi</option>
+  <option value="mardi">Mardi</option>
+  <option value="mercredi">Mercredi</option>
+  <option value="jeudi">Jeudi</option>
+</select>
+
+* Bouton
+```html
+<button id="clicker" type="button" onclick="faisQuelqueChose()">Ne cliquez pas, svp</button>
+```
+<button id="clicker" type="button" onclick="faisQuelqueChose()">Ne cliquez pas, svp</button>
+
+<div id="clickerResult" hidden>Bravo, vous avez cliqué <span id="clickerCount">1</span> fois inutilement sur ce bouton!</div>
 
 ---
 
@@ -117,12 +220,6 @@ Mais:
 * On mélange les rôles: l'HTML doit contenir les données de la page, pas ses styles
 
 * On ne peut pas avoir plusieurs styles pour la même page
-
----
-
-# Forms
-
-A faire
 
 ---
 
