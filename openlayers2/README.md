@@ -122,16 +122,6 @@ Pour pouvoir utiliser le système de coordonnées suisses: **EPSG 2056**, nous a
 *Voir [ol-07_projections.html](exemples/ol-07_projections.html)*
 
 ---
-class: inverse
-
-## Exercices
-
-Faites les exercices `ol-2_coordonnees.html` et `ol-3_popup.html`. Pour l'exercice 3, Visual Studio avec "Go Live" de Live Server permettra de lire le fichier GeoJSON. Sans Visual Studio, vous aurez besoin d'un serveur web.
-
-.center[<video autoplay loop>
-  <source src="../assets/mercator.mp4" >
-</video>]
----
 
 ## Quelques exemples pour aller plus loin
 * **GetFeatureInfo**: *voir [ol-08_get_feature_info_text.html](exemples/ol-08_get_feature_info_text.html)* et *[ol-09_get_feature_info_gml.html](exemples/ol-09_get_feature_info_gml.html)*
@@ -144,3 +134,14 @@ Faites les exercices `ol-2_coordonnees.html` et `ol-3_popup.html`. Pour l'exerci
 [ol.format.KML]: https://openlayers.org/en/latest/apidoc/module-ol_format_KML-KML.html
 [ol.format.GPX]: https://openlayers.org/en/latest/apidoc/module-ol_format_GPX-GPX.html
 [ol.format.GeoJSON]: https://openlayers.org/en/latest/apidoc/module-ol_format_GeoJSON-GeoJSON.html
+
+---
+class: inverse
+
+## Exercices
+
+Faites les exercices `ol-2_coordonnees.html` et `ol-3_popup.html`. Pour l'exercice 3, Visual Studio avec "Go Live" de Live Server permettra de lire le fichier GeoJSON. Sans Visual Studio, vous aurez besoin d'un serveur web.
+
+.center[<video autoplay loop>
+  <source src="../assets/mercator.mp4" >
+</video>]

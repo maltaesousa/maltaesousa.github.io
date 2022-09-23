@@ -60,7 +60,7 @@
       const pointWgs84 = ol.proj.transform(pointCh1903p, 'EPSG:2056', 'EPSG:4326');
 
       // Affichage du résultat
-      $('#result-proj').html(`EPSG:4326 : <strong>${pointWgs84}</strong>`);
+      $('#result-proj').html(`EPSG:4326 les coordonées sont: <strong>${pointWgs84}</strong>`);
       $('#result-proj').show();
     }
   </script>

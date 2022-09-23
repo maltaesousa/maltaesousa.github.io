@@ -102,8 +102,10 @@
     };
 
     function changeSource(listElement, formatName) {
+      console.log('formatName est:', formatName);
       $('#layer-selector *').removeClass('active');
       $(listElement).addClass('active');
+      console.log(namedSource[formatName].source);
       vectorLayer.setSource(namedSource[formatName].source);
       // Recentrage de la carte
       view.setCenter(ol.proj.fromLonLat(namedSource[formatName].center));
