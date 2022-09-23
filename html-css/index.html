@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML + CSS</title>
+  <link rel="icon" href="../assets/favicon.png" />
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/vs.css" id="highlight-theme">
+
+</head>
+
+<body>
+  <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+  <script>
+    const slideshow = remark.create({
+      sourceUrl: 'README.md',
+      ratio: '16:9',
+      highlightLines: true,
+    });
+
+    function faisQuelqueChose() {
+      document.getElementById('clickerResult').hidden = false;
+      document.getElementById('clickerCount').innerText++;
+    }
+
+
+  </script>
+</body>
+
+</html>
