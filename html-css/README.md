@@ -140,37 +140,52 @@ Exercice: utiliser ces tags dans le fichier précédemment créé
   </tr>
 </table>
 
+* Les attributs `id` et `name` sont importants pour l'accès aux données.
+
+* `placeholder` permet d'afficher une aide à la saisie mais n'est pas une valeur du formulaire
+
+* `value` contient la valeur du formulaire, peut-être utilisé comme valeur par défaut.
+
 ---
 
 ## HTML - Tags de formulaires
 
-* Texte court
+#### Texte court
+
 ```html
 <input id="input1" name="input1" type="text">
 ```
+
 <input id="input1" name="input1" type="text">
 
-* Grand champ de saisie texte
+#### Grand champ de saisie texte
+
 ```html
 <textarea id="input2" name="input1" rows="4" cols="50"></textarea>
 ```
+
 <textarea id="input2" name="input1" rows="4" cols="50"></textarea>
 
-* Nombre
+#### Nombre
+
 ```html
 <input id="input3" name="input3" type="number">
 ```
+
 <input id="input3" name="input3" type="number">
 
 ---
 
-* Date
+#### Date
+
 ```html
 <input id="input4" name="input4" type="date">
 ```
+
 <input id="input4" name="input4" type="date">
 
-* Menu déroulant
+#### Menu déroulant
+
 ```html
 <select name="days" id="days">
   <option value="lundi">Lundi</option>
@@ -186,13 +201,12 @@ Exercice: utiliser ces tags dans le fichier précédemment créé
   <option value="jeudi">Jeudi</option>
 </select>
 
-* Bouton
+#### Bouton
+
 ```html
 <button id="clicker" type="button" onclick="faisQuelqueChose()">Ne cliquez pas, svp</button>
 ```
-<button id="clicker" type="button" onclick="faisQuelqueChose()">Ne cliquez pas, svp</button>
-
-<div id="clickerResult" hidden>Bravo, vous avez cliqué <span id="clickerCount">1</span> fois inutilement sur ce bouton!</div>
+<button id="clicker" type="button" onclick="faisQuelqueChose()">Ne cliquez pas, svp</button> <div id="clickerResult" hidden>Bravo, vous avez cliqué <span id="clickerCount">0</span> fois inutilement sur ce bouton!</div>
 
 ---
 
@@ -251,10 +265,12 @@ selecteur {
 
 ## CSS - Où l'écrit-on?
 
-1. Dans le `head` de l'HTML avec la balise `<style>`
+#### 1. Dans le `head` de l'HTML avec la balise `<style>`
+
+./index.html
 
 ```html
-...
+  ...
   <head> 
     <title>Titre</title>
     <style>
@@ -263,39 +279,92 @@ selecteur {
       }
     </style>
   </head>
-...
+    <body>
+    <div class="alert">
+      ...
 ```
 
-2. Dans un ficher à par qu'on référence de le fichier HTML
+---
 
-2. Dans le body de l'HTML
+#### 2. Dans un ficher à par qu'on référence dans le fichier HTML
+
+./index.html
+
+```html
+  ...
+  <head> 
+    <title>Titre</title>
+    <link rel="stylesheet" href="./mon-style.css">
+  </head>
+  <body>
+    <div class="alert">
+      ...
+```
+
+./mon-style.css
+
+```css
+.alert {
+  color: red;
+}
+```
+
+#### 3. Du `<style>` Dans le `<body>` de l'HTML?
+
+Utilisé dans des cas particuliers (webcomponents). Sort du périmètre de ce cours.
 
 ---
 
-Les sélecteurs
+## CSS - Les sélecteurs
+
+Les sélecteurs les plus utilisés:
+
+| Syntaxe          | Descritpion                                                |
+| -----------------| -----------------------------------------------------------|
+| .nom-de-class    | Sélectionne tous les éléments ayant `class="nom-de-class"` |
+| p                | Sélectionne tous les éléments `<p>`                        |
+| #identifiant     | Sélection l'élément `id="identifiant"`                     |
+| p.nom-de-class   | Sélectionne tous les éléments `<p class="nom-de-class">`   |
+| div, p           | Sélectionne tous les `<div>` et les `<p>`                  |
+
+https://www.w3schools.com/cssref/css_selectors.asp
+
+Exercice: Appliquer des styles de base en utilisant différents sélecteurs sur `./exemples/index.html`
 
 ---
 
-Les propriétés
+## CSS - Display
 
-Quelques exemples
+Il y a deux types d'éléments au niveau de l'affichage:
+
+* Des éléments de type `block`:
+  - `<div>`
+  - `<h1> - <h6>`
+  - `<p>`
+  - `<form>`
+  - ...
+
+* Des éléments de type `inline`:
+  - `<span>`
+  - `<a>`
+  - `<img>`
+
+Exercice: Faites un style avec une bordure et appliquez le une fois sur un `<span>` et une fois sur un `<p>`.
+
+Ces types d'affichage par défaut peuvent être changés avec la propriété `display`.
 
 ---
 
-CSS display
+## CSS - Unités
 
 ---
 
-Unités
-
----
-
-CSS Specificity
+## CSS - Specificity
 
 !important
 
 ---
 
-Bootstrap
+# Bootstrap
 
 ---
