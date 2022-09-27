@@ -161,10 +161,10 @@ Exercice: utiliser ces tags dans le fichier précédemment créé
 #### Grand champ de saisie texte
 
 ```html
-<textarea id="input2" name="input1" rows="4" cols="50"></textarea>
+<textarea id="input2" name="input1" rows="2" cols="50"></textarea>
 ```
 
-<textarea id="input2" name="input1" rows="4" cols="50"></textarea>
+<textarea id="input2" name="input1" rows="2" cols="50"></textarea>
 
 #### Nombre
 
@@ -351,17 +351,78 @@ Il y a deux types d'éléments au niveau de l'affichage:
 
 Exercice: Faites un style avec une bordure et appliquez le une fois sur un `<span>` et une fois sur un `<p>`.
 
-Ces types d'affichage par défaut peuvent être changés avec la propriété `display`.
+Ces types d'affichage par défaut peuvent être changés avec la propriété `display`. On peut également cacher des éléments html à l'aide de `display: none;`
 
 ---
 
-## CSS - Unités
+## CSS - Box
+
+La position du contenu va être influencée par les marges, bordures et écarts de remplissage. La boîte de marges CSS est visible dans la console développeur de votre navigateur (F12).
+
+<img class="middle" src="img/css_box.svg" width="80%"/>
 
 ---
 
-## CSS - Specificity
+## CSS - Unités les plus utilisées
 
-!important
+| unité |  type    | description                                                          |
+| ------| ---------|----------------------------------------------------------------------|
+| cm    | absolue  | centimètres, pour l'impression                                       |
+| mm    | absolue  | milimètres, pour l'impression                                        |
+| pt    | absolue  | points                                                               |
+| px    | mixte    | pixel, dépend du support                                             |
+| em    | relative | multiplicateur par rapport à la taille de police                     |
+| rem   | relative | multiplicateur par rapport à la taille de police de l'élément racine |
+| vh    | relative | 1% de la hauteur de la fenêtre                                       |
+| vw    | relative | 1% de la largeur de la fenêtre                                       |
+| %     | relative | par rapport à l'élément parent                                       |
+
+---
+
+## CSS - Specificité
+
+Si deux sélecteurs css définissent un style différent pour un élément, la règle CSS ayant la plus haute spécifité sera appliquée.
+
+| Sélecteur                  | valeur   | Description          |
+| ---------------------------| ---------|----------------------|
+| p                          | 1        |                      |
+| .class                     | 10       |                      |
+| #id                        | 100      |                      |
+| `<p style="color: pink;">` | 1000     | à proscrire!         |
+| p.class                    | 11       | 1 + 10               |
+| p.class.class2             | 21       | 1 + 10 + 10          |
+| p#class                    | 101      | 1 + 100              |
+| #navbar p#demo             | 201      | 100 + 1 + 100        |
+
+
+Le mot clé `!important` permet d'écraser toute spécifité et sera appliqué en dernier.
+
+---
+
+```css
+p {
+  color: blue;
+  margin-top: 2em;
+}
+
+p.red {
+  color: red !important;
+}
+
+#alert {
+  color: blue;
+}
+```
+
+```html
+<p class="pink alert">
+  <span id="alert">Attention:</span> Message Important<span style="color: yellow;">!</span>
+</p>
+```
+
+Exercice: De quelle(s) couleur(s) sera le message?
+
+NB: N'utilisez `!important` qu'en dernier recours, c'est une très mauvaise pratique de recourir à ce mot clé.
 
 ---
 
