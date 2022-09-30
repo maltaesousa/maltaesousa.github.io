@@ -359,7 +359,7 @@ Ces types d'affichage par défaut peuvent être changés avec la propriété `di
 
 La position du contenu va être influencée par les marges, bordures et écarts de remplissage. La boîte de marges CSS est visible dans la console développeur de votre navigateur (F12).
 
-<img class="middle" src="img/css_box.svg" width="80%"/>
+<img src="img/css_box.svg" width="80%"/>
 
 ---
 
@@ -428,4 +428,76 @@ NB: N'utilisez `!important` qu'en dernier recours, c'est une très mauvaise prat
 
 # Bootstrap
 
+<img class="centered" src="img/bootstrap-logo-shadow.png" width="200px"/>
+
+Bootstrap est un framework mettant à disposition une série de styles basés sur des éléments HTML et des classes. Le but de Bootstrap est:
+
+* De faire économiser du temps aux développeurs
+
+* De fournir une certaine consistance de style entre différentes pages
+
+* d'être *responsive*: un seul html pour un navigateur de bureau, tablette ou smartphone
+
+On peut dire que Bootstrap est finalement un grand fichier CSS à inclure dans votre projet.
+
 ---
+
+## Bootstrap - comment l'utiliser?
+
+Pour inclure une librairie dans un projet, on peut utiliser un CDN (*Content Delivery Network*). Un **CDN** est un réseau de serveurs internet hébergeant des librairies JavaScript, des CSS ou des polices. Les CDN sont fiables et disposent d'une haute disponibilité:
+
+```html
+<head>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+  ...
+
+```
+
+---
+
+Vous pouvez également [télécharger ici](https://getbootstrap.com/docs/5.2/getting-started/download/) la dernière version de Bootstrap et l'inclure comme n'importe quel autre fichier css:
+
+```html
+<head>
+  <script src="css/bootstrap.min.css"></script>
+  ...
+```
+
+A noter que le zip contient plusieurs fichiers mais pour l'instant seul `bootstrap.min.css` est nécessaire
+
+Exercice: Faire une copie du ficher exemples/index.html et y inclure Bootstrap selon la méthode de votre choix
+
+---
+
+## Bootstrap - Styles par défaut sur les éléments
+
+---
+
+## Bootstrap - Documentation
+
+## Bootstrap - Accessibilité
+
+---
+
+## Bootstrap - Mise en page
+
+---
+
+## Bootstrap - Tables
+
+---
+
+## Bootstrap - Couleurs
+
+---
+
+## Bootstrap - Composants
+
+#### Boutons
+#### Formulaires
+#### Listes
+#### Icônes
