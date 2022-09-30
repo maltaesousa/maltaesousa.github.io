@@ -1,18 +1,27 @@
+class: center middle
+
+<img class="middle" src="img/html5.svg" height="200em"/> <img class="middle" src="img/css3.svg" height="200em"/>
+
+# Révision HTML et CSS
+
+---
+
 # Introduction
 
 But de ce cours:
 
 * Revoir les bases HTML et CSS
-* Introduction à Visual Studio Code
-* Présentation de Bootstrap, le framework HTML + CSS le plus populaire
 
----
+* Introduction à Visual Studio Code
+
+* Présentation de Bootstrap, le framework HTML + CSS le plus populaire
 
 ## Comment suivre ce cours?
 
 Prérequis:
 
 * Un éditeur de texte (Visual Studio Code, Notepad++, etc.)
+
 * Un navigateur (Firefox, Chrome, Edge)
 
 ---
@@ -51,6 +60,8 @@ Voici un exemple de fichier HTML minimal valide capable d'être lu par un naviga
 ```
 
 Exercice: copier-coller cet exemple dans un fichier nommé `index.html` et l'ouvrir avec un navigateur
+
+On peut valider son HTML en ligne: https://validator.w3.org/#validate_by_input
 
 ---
 
@@ -94,10 +105,10 @@ Nous pouvons ajouter des commentaires dans un fichier HTML à l'aide de `<!-- bl
 ## HTML - Quelques tags les plus utilisés
 
 | Balise                | Description                                                 |
-| ----------------------| ----------------------------------------------------------  |
+| --------------------- | ----------------------------------------------------------- |
 | `<h1>` - `<h6>`       | Titre                                                       |
 | `<p>`                 | Paragraphe                                                  |
-| `<a href="url">`      | Lien (anchor ⚓)                                            |
+| `<a href="url">`      | Lien (anchor ⚓)                                             |
 | `<br>`                | Retour à la ligne (line **br**eak), pas besoin de le fermer |
 | `<ul>` et `<li>`      | Liste à puces, **U**nordered **l**ist et **l**ist **i**tem  |
 | `<img src="img.jpg">` | Image, pas besoin de le fermer, `alt="Description"`         |
@@ -319,13 +330,13 @@ Utilisé dans des cas particuliers (webcomponents). Sort du périmètre de ce co
 
 Les sélecteurs les plus utilisés:
 
-| Syntaxe          | Descritpion                                                |
-| -----------------| -----------------------------------------------------------|
-| .nom-de-class    | Sélectionne tous les éléments ayant `class="nom-de-class"` |
-| p                | Sélectionne tous les éléments `<p>`                        |
-| #identifiant     | Sélection l'élément `id="identifiant"`                     |
-| p.nom-de-class   | Sélectionne tous les éléments `<p class="nom-de-class">`   |
-| div, p           | Sélectionne tous les `<div>` et les `<p>`                  |
+| Syntaxe        | Descritpion                                                |
+| -------------- | ---------------------------------------------------------- |
+| .nom-de-class  | Sélectionne tous les éléments ayant `class="nom-de-class"` |
+| p              | Sélectionne tous les éléments `<p>`                        |
+| #identifiant   | Sélection l'élément `id="identifiant"`                     |
+| p.nom-de-class | Sélectionne tous les éléments `<p class="nom-de-class">`   |
+| div, p         | Sélectionne tous les `<div>` et les `<p>`                  |
 
 https://www.w3schools.com/cssref/css_selectors.asp
 
@@ -365,8 +376,8 @@ La position du contenu va être influencée par les marges, bordures et écarts 
 
 ## CSS - Unités les plus utilisées
 
-| unité |  type    | description                                                          |
-| ------| ---------|----------------------------------------------------------------------|
+| unité | type     | description                                                          |
+| ----- | -------- | -------------------------------------------------------------------- |
 | cm    | absolue  | centimètres, pour l'impression                                       |
 | mm    | absolue  | milimètres, pour l'impression                                        |
 | pt    | absolue  | points                                                               |
@@ -383,16 +394,16 @@ La position du contenu va être influencée par les marges, bordures et écarts 
 
 Si deux sélecteurs css définissent un style différent pour un élément, la règle CSS ayant la plus haute spécifité sera appliquée.
 
-| Sélecteur                  | valeur   | Description          |
-| ---------------------------| ---------|----------------------|
-| p                          | 1        |                      |
-| .class                     | 10       |                      |
-| #id                        | 100      |                      |
-| `<p style="color: pink;">` | 1000     | à proscrire!         |
-| p.class                    | 11       | 1 + 10               |
-| p.class.class2             | 21       | 1 + 10 + 10          |
-| p#class                    | 101      | 1 + 100              |
-| #navbar p#demo             | 201      | 100 + 1 + 100        |
+| Sélecteur                  | valeur | Description   |
+| -------------------------- | ------ | ------------- |
+| p                          | 1      |               |
+| .class                     | 10     |               |
+| #id                        | 100    |               |
+| `<p style="color: pink;">` | 1000   | à proscrire!  |
+| p.class                    | 11     | 1 + 10        |
+| p.class.class2             | 21     | 1 + 10 + 10   |
+| p#class                    | 101    | 1 + 100       |
+| #navbar p#demo             | 201    | 100 + 1 + 100 |
 
 
 Le mot clé `!important` permet d'écraser toute spécifité et sera appliqué en dernier.
@@ -444,6 +455,8 @@ On peut dire que Bootstrap est finalement un grand fichier CSS à inclure dans v
 
 ## Bootstrap - comment l'utiliser?
 
+#### Variante 1 - Utilisation du CDN
+
 Pour inclure une librairie dans un projet, on peut utiliser un CDN (*Content Delivery Network*). Un **CDN** est un réseau de serveurs internet hébergeant des librairies JavaScript, des CSS ou des polices. Les CDN sont fiables et disposent d'une haute disponibilité:
 
 ```html
@@ -459,6 +472,8 @@ Pour inclure une librairie dans un projet, on peut utiliser un CDN (*Content Del
 
 ---
 
+#### Variante 2 - Téléchargement
+
 Vous pouvez également [télécharger ici](https://getbootstrap.com/docs/5.2/getting-started/download/) la dernière version de Bootstrap et l'inclure comme n'importe quel autre fichier css:
 
 ```html
@@ -469,35 +484,143 @@ Vous pouvez également [télécharger ici](https://getbootstrap.com/docs/5.2/get
 
 A noter que le zip contient plusieurs fichiers mais pour l'instant seul `bootstrap.min.css` est nécessaire
 
-Exercice: Faire une copie du ficher exemples/index.html et y inclure Bootstrap selon la méthode de votre choix
+**Exercice**: Faire une copie du ficher exemples/index.html et y inclure Bootstrap selon la variante choisie.
 
 ---
 
-## Bootstrap - Styles par défaut sur les éléments
+### Bootstrap - Styles par défaut sur les éléments
+
+La première chose que l'on constate lors de l'ajout de Bootstrap à notre projet, est la présence de styles par défaut sur les tags html de base (`<h1>`, `<p>`, etc.)
+
+
+### Bootstrap - Documentation
+
+Tout ce qui sera présenté ici peut-être retrouvé sur la documentation en ligne sur laquelle on peut également trouver de nombreuses implémentations concrètes:
+
+https://getbootstrap.com/docs/
 
 ---
 
-## Bootstrap - Documentation
+### Bootstrap - Attributs d'accessibilité
 
-## Bootstrap - Accessibilité
+Il est courant de tomber sur des attributs tels que `aria-label` et `visually-hidden` dans la documentation de Bootstrap.
+
+Ce sont des attributs d'aide à la lecture utilisés pour personnes en situation de handicap. ARIA signifiant: *Accessible Rich Internet Applications*.
+
+```html
+<div class="input-group mb-3">
+  <span class="input-group-text">$</span>
+  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+  <span class="input-group-text">.00</span>
+</div>
+
+<p class="text-danger">
+  <span class="visually-hidden">Danger: </span>
+  This action is not reversible
+</p>
+```
+
+<img alt="aria example" src="img/aria.png"/>
 
 ---
 
-## Bootstrap - Mise en page
+### Bootstrap - Mise en page
+
+D'une manière générale, on met en page à l'aide d'éléments `<div>` car ces éléments n'ont pas de valeur syntaxique.
+
+**Exercice**: Copier le fichier `exemples/index.html` et mettre le contenu de `<body>` dans un `<div>`
+
+```html
+...
+<body>
+  <div>
+    <h1 class="titles">Titre 1</h1>
+    <p>...
+    ...
+  </div>
+</body>
+</html>
+```
+
+**Exercice**: Sur ce `<div>`, ajouter la classe `container`.
+
+**Exercice**: Sur ce `<div>`, remplacer la classe `container` par `container-fluid`.
+
+Ces deux classes permettent de créer une marge agréable à la lecture, `container` fixe une largeur maximale que le contenu ne pourra pas dépasser.
 
 ---
 
-## Bootstrap - Tables
+### Bootstrap - Grille (*Grid* )
+
+La grille Bootstrap offre une solution simple pour diviser l'espace disponible sur la largeur de l'écran. La grille est divisée en **12 colonnes**, peu importe la taille de l'écran.
+
+<img alt="aria example" class="centered" src="img/grid-example.jpg" width="450px"/>
 
 ---
 
-## Bootstrap - Couleurs
+Pour l'utiliser, il faut d'abord créer une **ligne** à l'aide d'un `<div class="row">`. Il est recommandé d'utiliser les grilles à l'intérieur d'un `container` ou d'un `container-fluid`.
+
+Par exemple, toujours dans notre `index.html`, admettons que nous voulons les paragraphes en colonnes comme dans un journal. Commençons par mettre les trois paragraphes sur une ligne de la grille:
+
+```html
+  <div class="row">
+    <h1 class="titles">Titre 1</h1>
+    <p class="paragraph first-paragraph">
+      ...
+    </p>
+    ...
+  </div>
+```
+
+Ajoutons maintenant des colonnes `<div class="col">` à chaque paragraphe avec son titre:
+
+```html
+  <div class="row">
+    <div class="col">
+      <h1 class="titles">Titre 1</h1>
+      <p class="paragraph first-paragraph">...
+      </p>
+    </div>
+    <div class="col">
+      <h1 class="titles">Titre 2</h1>
+      <p class="paragraph first-paragraph">...
+    etc..
+```
 
 ---
 
-## Bootstrap - Composants
+Les paragraphes sont maintenant répartis sur trois colonnes dont la largeur est automatique.
 
-#### Boutons
-#### Formulaires
-#### Listes
-#### Icônes
+Admettons que nous voulons maximum deux colonnes, nous pouvons demander à la colonne de prendre de 1 à 12 emplacements sur la grille.
+Comme nous voulons deux colonnes sur toute la largeur de l'écran, une colonne devra mesurer **6** emplacements, remplaçons les classes `col` par `col-6`.
+
+```html
+  <div class="row">
+    <div class="col-6">
+      <h1 class="titles">Titre 1</h1>
+      <p class="paragraph first-paragraph">...
+      </p>
+    </div>
+    <div class="col-6">
+      <h1 class="titles">Titre 2</h1>
+      <p class="paragraph first-paragraph">...
+    etc..
+```
+
+---
+
+### Bootstrap - *Responsive*
+
+
+Le rendu est pas mal sur un ordinateur de bureau, mais qu'en est-il sur mobile?
+
+Dans la console développeur (F12), cliquer sur la vue mobile ![Mobile dev view](./img/mobile-dev.jpg) (ou CTRL + MAJ + M) et redimensionner la fenêtre afin quelle corresponde à la taille d'un smartphone.
+
+Les deux paragraphes côte à côte ne sont pas très agréables à cette taille d'écran, mais Bootstrap est *Responsive*. Remplacer les classes `col-6` par `col-sm-6` permet d'ajouter un point de rupture (*breakpoint*).
+
+#### 
+
+`col-sm-6` signifie: ce `<div>` sera une colonne de taille 6 depuis une largeur d'écran *small* (576px) en dessous, ce n'est plus une colonne.
+
+Pour plus d'infos sur la grille et les points de rupture: https://getbootstrap.com/docs/5.2/layout/grid/
+
