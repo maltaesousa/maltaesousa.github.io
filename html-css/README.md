@@ -268,7 +268,7 @@ Conceptuellement nous avons un structure telle que:
 
 ```css
 selecteur {
-  propriete: valeur
+  propriete: valeur;
 }
 ```
 
