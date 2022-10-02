@@ -268,7 +268,7 @@ Conceptuellement nous avons un structure telle que:
 
 ```css
 selecteur {
-  propriete: valeur
+  propriete: valeur;
 }
 ```
 
@@ -478,7 +478,7 @@ Vous pouvez également [télécharger ici](https://getbootstrap.com/docs/5.2/get
 
 ```html
 <head>
-  <script src="css/bootstrap.min.css"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   ...
 ```
 
