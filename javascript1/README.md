@@ -20,7 +20,7 @@ Selon [@MDN:](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 
 <img src="img/eshistory.svg" width="95%"/>
 
-Dans ce cours les exemples utiliseront la spécification ES6 supporté par les navigateurs récents.
+Dans ce cours les exemples utiliseront la spécification ES6 largement supporté par les navigateurs récents.
 
 En cas de doute:
 
@@ -28,20 +28,7 @@ En cas de doute:
 
 ---
 
-## Support ES6
-
-<img src="img/browsers_es6.png" width="95%"/>
-
----
-
-## Comment suivre ce cours?
-
-Prérequis:
-
-* Un éditeur de texte (Visual Studio Code, Notepad++, etc.)
-* Un navigateur (Firefox, Chrome, Edge)
-
----
+## Javascript - où placer son code?
 
 Pour exécuter du JavaScript, il est possible de tout mettre dans un seul fichier:
 
@@ -93,6 +80,8 @@ console.log('Hello World!');
 
 Les instructions telles que `console.log('blabla')` ou `console.error('blabla')` sont visibles dans la console du navigateur (<kbd>F12</kbd>).
 
+<img src="img/console.png" width="100%"/>
+
 ---
 
 ## Déclarations de variables
@@ -100,16 +89,18 @@ Les instructions telles que `console.log('blabla')` ou `console.error('blabla')`
 Il y a plusieurs façons de déclarer des variables.
 
 ```js
-// ES5
+// Avant ES6
 name = "Rincevent"; // équivaut à var name = "Rincevent";
 var age = 35;
 
-// Seulement valable en ES6
+// Maintenant
 const vat = 7.8;
 let price = null;
 ```
 
 Les variables déclarées à l'aide de `var` et `let` sont dynamiques: leurs valeurs peuvent changer. Les variables déclarées avec avec `const` ne peuvent être affectées qu'une fois. Ce sont des **constantes**.
+
+💡 De manière générale, `let` et `const` sont recommandés pour déclarer les variables dans ce cours.
 
 ---
 
@@ -123,7 +114,7 @@ let aNumber = 3.14; // pas d'entiers
 let aBoolean = true;
 let nullValue = null;
 let undefinedValue;
-let aSymbol = Symbol("foo"); // ES6
+let aSymbol = Symbol("foo"); // ES6, pas utile dans ce cours
 ```
 
 L'instruction `typeof` révèle le type de la variable:
@@ -140,7 +131,7 @@ En JavaScript, il y a 3 façons d'écrire des chaînes de caractères:
 
 ```js
 // Entre apostrophes ou "quote" en anglais.
-// Si vous avez besoin d'une apostrophe, il faut l'échaper
+// Si vous avez besoin d'une apostrophe dans la châine finale, il faut l'échaper
 let strQuote = 'I\'m a ' + 'string.';
 
 // Entre guillemets ou "double quotes" en anglais.
@@ -187,7 +178,7 @@ console.log(Number.isInteger(4)); // true
 
 ## Les faux amis!
 
-**Attention!** 
+⚠️ **Attention!** ⚠️
 
 Certaines valeurs sont évaluées en tant que false: `0`, `""`, `[]`, `null`, `undefined`, `NaN`, et bien entendu `false`.
 
@@ -221,7 +212,7 @@ En plus des opérations arithmétiques standards `+`, `-`, `*` et `/`, JavaScrip
 
 ## if...else
 
-L'instruction if exécute une instruction si une condition donnée est vraie ou équivalente à vrai. Si la condition n'est pas vérifiée, il est possible d'utiliser une autre instruction.
+L'instruction `if` exécute une instruction si une condition donnée est vraie ou équivalente à vrai. Si la condition n'est pas vérifiée, il est possible d'utiliser une autre instruction.
 
 ```js
 let temperature = -10;
