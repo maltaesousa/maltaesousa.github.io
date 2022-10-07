@@ -28,7 +28,7 @@ En cas de doute:
 
 ---
 
-## Javascript - où placer son code?
+## JavaScript - où placer son code?
 
 Pour exécuter du JavaScript, il est possible de tout mettre dans un seul fichier:
 
@@ -38,13 +38,14 @@ Pour exécuter du JavaScript, il est possible de tout mettre dans un seul fichie
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Javascript</title>
+  <meta charset="utf-8">
+  <title>JavaScript</title>
 </head>
 <body>
-    <script>
-        console.log('Hello World!');
-    </script>
+  <!-- En général, juste avant la fermeture de body -->
+  <script>
+    console.log('Hello World!');
+  </script>
 </body>
 </html>
 ```
@@ -59,11 +60,12 @@ Ou d'inclure un fichier externe:
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Javascript</title>
+  <meta charset="utf-8">
+  <title>JavaScript</title>
 </head>
 <body>
-    <script src="script.js"></script>
+  <!-- En général, juste avant la fermeture de body -->
+  <script src="script.js"></script>
 </body>
 </html>
 ```
@@ -397,7 +399,9 @@ doSomething();
 
 ---
 
-On peut stocker une fonction dans une variable. Les fonctions peuvent renvoyer une valeur à l'aide du mot clé `return`:
+On peut stocker une fonction dans une variable. 
+
+Les fonctions peuvent renvoyer une valeur à l'aide du mot clé `return`:
 
 ```js
 let addNumbers = function(num1, num2) { // la fonction s'attend à recevoir deux arguments num1 et num2
@@ -515,7 +519,7 @@ Il est fortement recommandé de ne pas utilisé `var` si vous le pouvez. Les seu
 * Votre code doit être compatible avec une version ECMAscript inférieure à 6.
 * Vous créez votre propre librairie.
 
-Utilisez `let` et `const` dès que vous le pouvez:
+Utilisez `let` et `const`:
 
 ```js
 let city = "Bern";

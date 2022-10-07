@@ -90,7 +90,7 @@ Pour naviguer dans le DOM, rien de mieux l'**outil de sélection d'éléments** 
 
 ## Le mot-clé `this` dans l'HTML
 
-En JavaScript, `this` se réfère au contexte dans lequel on se trouve. [Voir le chapitre sur la portée des variables](../javascript1#25)
+En JavaScript, `this` se réfère au contexte dans lequel on se trouve. [Voir le chapitre sur la portée des variables](../javascript1#23)
 
 Utilisé comme argument dans le *callback* d'un *event*, il permet de passer l'élément actuel au *callback*:
 
