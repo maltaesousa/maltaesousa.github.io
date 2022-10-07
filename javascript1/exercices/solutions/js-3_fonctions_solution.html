@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>JavaScript - Boucles</title>
-        <meta charset="utf-8">
-        <script>
-            function calcul(nb, lim) {
-                let delta = nb;
-                
-                while(nb < lim) {
-                    console.log("Nombre:", nb);
-                    nb = nb + delta;
-                }
-            }
 
-            const nombre = 5;
-            const limite = 100;
-            console.log("nombre = " + nombre + "\n"+ "limite = " + limite);
-            console.log(`nombre = ${nombre}\nlimite = ${limite}`);
+<head>
+  <title>JavaScript - Boucles</title>
+  <meta charset="utf-8">
+</head>
 
-            calcul(nombre, limite);
-        </script>
-    </head>
-    <body>
-        <h1>JavaScript - Boucles</h1>
-        <h2>Objectif</h2>
-        <ul>
-            <li>Créer une fonction JavaScript qui affiche dans la console les multiples
-                d'un nombre (variable <em>nombre</em>) inférieurs à une limite (variable <em>limite</em>).</li>
-        </ul>
-    </body>
+<body>
+  <h1>JavaScript - Boucles</h1>
+  <h2>Objectif</h2>
+  <p>Le but de cet exercice est de créer une fonction:</p>
+  <ul>
+    <li>La fonction doit être capable d'afficher dans la console les multiples
+      d'un nombre (variable en entrée <strong><em>nombre</em></strong>) inférieurs à une limite (variable en entrée <strong><em>limite</em></strong>).</li>
+    <li>Tester la fonction au moins une fois, soit dans le code soit en l'appelant dans la console.</li>
+  </ul>
+  <script>
+    function calcul(nb, lim) {
+      const delta = nb;
+
+      while (nb < lim) {
+        console.log("Nombre:", nb);
+        nb += delta;
+      }
+    }
+
+    const nombre = 5;
+    const limite = 100;
+    console.log(`nombre = ${nombre}\nlimite = ${limite}`);
+
+    calcul(nombre, limite);
+  </script>
+</body>
+
 </html>

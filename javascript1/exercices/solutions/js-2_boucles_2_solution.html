@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>JavaScript - Boucles</title>
-        <meta charset="utf-8">
-        <script>
-            for (let i = 1; i < 30; i++) {
-                if (i < 10) {
-                    console.log(`*${i}`);
-                }
-                else if (i < 20) {
-                    console.log(`${i}*`);
-                }
-                else {
-                    console.log(`*${i}*`);
-                }
-            }
-        </script>
-    </head>
-    <body>
-        <h1>JavaScript - Boucles</h1>
-        <h2>Objectif</h2>
-        <ul>
-            <li>Créer un script JavaScript qui affiche dans la console les résultats suivants :<br/>
-            *1, *2, *3, ..., *8, *9, 10*, 11*, 12*, ..., 18*, 19*, *20*, *21*, .., *28*, *29*</li>
-        </ul>
-    </body>
+
+<head>
+  <title>JavaScript - Boucles</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <h1>JavaScript - Boucles</h1>
+  <h2>Objectif</h2>
+  <p>On vous demande de crééer un code JavaScript qui affiche dans la console des entiers selon les règles suivantes:</p>
+  <ul>
+    <li>Tous les entiers de 1 à 30 doivent être visibles dans la console</li>
+    <li>De 1 à 9 y compris, les entiers ont une astérisque à gauche (par ex *5)</li>
+    <li>De 10 à 19 y compris, les entiers ont une astérisque à droite (par ex 15*)</li>
+    <li>De 20 à 30 y compris, les entiers ont une astérisque de chaque côté (*25*)</li>
+  </ul>
+  <script>
+    for (let i = 1; i < 30; i += 1) {
+      if (i < 10) {
+        console.log(`*${i}`);
+      } else if (i < 20) {
+        console.log(`${i}*`);
+      } else {
+        console.log(`*${i}*`);
+      }
+    }
+  </script>
+</body>
+
 </html>

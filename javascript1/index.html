@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Javascript</title>
+  <title>JavaScript</title>
   <link rel="icon" href="../assets/favicon.png" />
   <link rel="stylesheet" href="../assets/style.css">
   <link rel="stylesheet" href="../assets/vs.css" id="highlight-theme">
@@ -19,11 +19,12 @@
     });
 
     slideshow.on('showSlide', () => {
+      // Référence de page dans le README de javascript2
       const pageNumber = document.getElementsByName("var-scope")
         .item(0).parentElement.parentElement.parentElement
         .getElementsByClassName("remark-slide-number").item(0).textContent;
-      if (pageNumber.slice(0, 2) !== '25') {
-        console.error("var-scope n'est plus à la page 25!");
+      if (pageNumber.slice(0, 2) !== '23') {
+        console.error("var-scope n'est plus à la page 23!");
       }
     });
   </script>
