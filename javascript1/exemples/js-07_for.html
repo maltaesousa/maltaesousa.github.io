@@ -15,7 +15,7 @@
     const allCities = [];
 
     // Création des villes vaudoises
-    for (let i = 0; i < citiesVaud.length; i++) {
+    for (let i = 0; i < citiesVaud.length; i += 1) {
       // création d'un objet
       const city = {
         name: citiesVaud[i],
@@ -25,7 +25,7 @@
     }
 
     // Création des villes neuchâteloises
-    for (let i = 0; i < citiesNeuch.length; i++) {
+    for (let i = 0; i < citiesNeuch.length; i += 1) {
       // création d'un objet
       const city = {
         name: citiesNeuch[i],
@@ -35,7 +35,7 @@
     }
     
     // Pour chaque objet ville, ajoutons-lui une propriété country
-    for (let i = 0; i < allCities.length; i++) {
+    for (let i = 0; i < allCities.length; i += 1) {
       allCities[i].country = "Suisse";
     }
 

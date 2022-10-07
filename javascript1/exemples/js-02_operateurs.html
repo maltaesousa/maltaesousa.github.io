@@ -13,13 +13,13 @@
     let maVar1 = "Hello";
     const aNumber = 3.14;
     const maVar2 = "world !";
-    const maVar3 = maVar1 + " " + maVar2;
+    const maVar3 = `${maVar1} ${maVar2}`;
 
     // Affiche la variable dans la console
     console.log(maVar3);
 
     // Concatène à la suite et enregistre le résultat dans maVar1
-    maVar1 += " " + maVar2;
+    maVar1 += ` ${maVar2}`;
     console.log(maVar1);
 
     // Les templates strings sont parfois plus lisibles quand il s'agit de concaténer du texte:

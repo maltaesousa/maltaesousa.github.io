@@ -360,7 +360,7 @@ Voici un exemple où l'on sait que l'on veut un tableau des trois meilleures vil
 let cities = ["Neuchâtel", "Fribourg", "Bern", "Yverdon", "Moudon", "Lausanne", "Payerne"];
 let topCities = [];
 
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 3; i += 1) {
   topCities.push(cities[i]);
   console.log(`La ville ${cities[i]} a été ajoutée au tableau des meilleures villes.`);
 }
@@ -441,7 +441,7 @@ Les variables déclarés avec `var` dans une fonction sont utilisables / modifia
 function showCities(cities) {
   var numberOfCities = cities.length;
 
-  for (var i = 0; i < numberOfCities; i++) { // i est définie dans le bloc for
+  for (var i = 0; i < numberOfCities; i += 1) { // i est définie dans le bloc for
     var city = cities[i]; // city est définie dans le bloc for
     console.log(city);
   }
@@ -471,7 +471,7 @@ Les variables déclarés avec `let` et `const` ont une portée de bloc
 function showCities(cities) {
   const numberOfCities = cities.length;
 
-  for (let i = 0; i < numberOfCities; i++) { // i est définie dans le bloc for
+  for (let i = 0; i < numberOfCities; i += 1) { // i est définie dans le bloc for
     let city = cities[i]; // city est définie dans le bloc for
     console.log(city);
   }

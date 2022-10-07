@@ -15,12 +15,12 @@
     // Cette fonction logue tout ce qu'on lui donne
     function logThings(things) {
       // Oops, on a oublié "var" ou "let"
-      for (i = 0; i < things.length; i++) {
+      for (i = 0; i < things.length; i += 1) {
         console.log(things[i]);
       }
     }
 
-    var fruits = ['apple', 'banana', 'pear'];
+    const fruits = ['apple', 'banana', 'pear'];
     logThings(fruits);
 
     // Oops, on a modifié une variable globale depuis une fonction

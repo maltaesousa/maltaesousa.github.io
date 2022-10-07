@@ -26,7 +26,7 @@ let tableTemplate = `<table class="table">
 `;
 
 // pour chaque objet dans notre tableau
-for (let i = 0; i < tableData.length; i++) {
+for (let i = 0; i < tableData.length; i += 1) {
   tableTemplate += '<tr>';
   // pour Object.values transforme un objet en tableau de ses valeurs
   for (let j = 0; j < Object.values(tableData[i]).length; j++) {
