@@ -435,6 +435,7 @@ console.log("Car will start:", car.start());
 ```
 
 *Voir: js-09_fonctions_2.html*
+
 ---
 
 ## Portée (scope) des variables déclarées avec `var` <a name="var-scope"></a>
