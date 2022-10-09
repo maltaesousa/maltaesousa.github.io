@@ -5,13 +5,27 @@ Toujours selon [@MDN:](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 
 > JavaScript (« JS ») est un langage de script léger, orienté objet. Le code JavaScript est **interprété ou compilé à la volée**. C'est un langage à **objets** disposant d'un **typage faible** et **dynamique**.
 
+```js
+let car = {
+  brand: "Reliant"
+  year: 1962
+};
+
+car = "Reliant";
+```
+
+---
+
 ## Document Object Model (DOM)
 
-Le DOM est une interface de programmation (API) pour l'HTML, le XML et le SVG. Dans le cadre de ce cours, le DOM sert à connecter une page web au JavaScript.
+Le DOM est une interface de programmation (API) pour l'HTML, le XML et le SVG. Dans le cadre de ce cours, le DOM sert à "connecter" une page web au JavaScript.
 
 Même si le DOM est essentiellement utilisé en JavaScript, ce n'est pas du JavaScript.
 
+Le DOM doit être distingué du HTML initial, il peut être modifié par le navigateur.
+
 ---
+
 Le DOM:
 
 * fournit une représentation structurée d'un **document** en arbre
@@ -51,13 +65,7 @@ document.onreadystatechange = function() {
 
 ## Quelques autres événements
 
-| Nom         | Code exemple                                                                | Test                                                                   |
-| ------------| ----------------------------------------------------------------------------| -----------------------------------------------------------------------|
-| onclick     | `<button onclick="console.log('click')">Cliquez-moi!</button>`              |<button onclick="console.log('click')">Cliquez-moi!</button>            |
-| onchange    | `<input type="checkbox" value="vrai" onchange="console.log('change!')">`    |<input type="checkbox" value="vrai" onchange="console.log('change!')">  |
-| onmouseover | `<div class="pink" onmouseover="console.log('onmouseover!')">`              |<div class="pink" onmouseover="console.log('onmouseover!')">            |
-| onselect    | `<input type="text" onselect="console.log('select!')" value="Select me!">`  |<input type="text" onselect="console.log('select!')" value="Select me!">|
-| onkeyup     | `<input type="text" onkeyup="console.log(this.value)">`                     |<input type="text" onkeyup="console.log(this.value)">                   |
+<iframe src="./events.html" width="100%" height="320px"></iframe>
 
 Plein d'autres événements existent:
 https://developer.mozilla.org/fr/docs/Web/Events
