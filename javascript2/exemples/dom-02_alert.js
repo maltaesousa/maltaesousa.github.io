@@ -1,4 +1,4 @@
-const welcomeMessage = "Le chargement de la page est terminé. Jusqu'ici tout va bien.";
+const welcomeMessage = "Mon JavaScript fonctionne. Jusqu'ici tout va bien.";
 
 function showMessage() {
   // création d'un élément div
@@ -18,11 +18,7 @@ function showMessage() {
   mainContainer.appendChild(newDiv);
 }
 
-document.onreadystatechange = () => {
-  if (document.readyState === "complete") {
-    showMessage();
-  }
-};
+showMessage();
 
 // Exercice:
 // Essayez à l'aide d'une boucle d'ajouter 10 div au lieu de 1.

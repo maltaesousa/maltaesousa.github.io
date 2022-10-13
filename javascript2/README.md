@@ -1,9 +1,11 @@
 
-## JavaScript 2<sup>ème</sup> partie
+# JavaScript 2<sup>ème</sup> partie
 
 Toujours selon [@MDN:](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 
 > JavaScript (« JS ») est un langage de script léger, orienté objet. Le code JavaScript est **interprété ou compilé à la volée**. C'est un langage à **objets** disposant d'un **typage faible** et **dynamique**.
+
+Rappel: Dans cet exemple on instancie une variable appelée `car` en lui affectant un objet, puis on lui affecte une chaîne de caractères.
 
 ```js
 let car = {
@@ -39,7 +41,47 @@ Le DOM:
 
 ---
 
-## Gestion d'événements
+### Modification du DOM
+
+Les exemples précédents se contentaient d'écouter le DOM et d'afficher des messages dans la console. On peut faire mieux, on directement modifier le DOM:
+
+```js
+document.getElementById("modification-du-dom").textContent="Le titre de cette page s'est modifié!";
+```
+
+* `getElementById` est une méthode de `Document` qui retourne un `Element`.
+* `textContent` est un propriété de `Node` héritée par `Element`.
+
+La console ou certains éditeurs de code proposent de l'autocomplétion de méthodes et propriétés de DOM.
+
+Pour naviguer dans le DOM, rien de mieux l'**outil de sélection d'éléments** dans les outils de développement du navigateur!
+
+<img src="img/element_selector.png" width="80%"/>
+
+
+*Voir dom-02_alert.js*
+
+---
+
+### Sélecteurs les plus courants
+
+| Exemples                     | Signification                                                        |
+| -----------------------------| ---------------------------------------------------------------------|
+| `.getElementById()`          | Sélectionne l'élément avec l'id en paramètre                         |
+| `.getElementsByTagName()`    | Sélectionne tout les éléments selon le tag donné (par exemple `'p'`) |
+| `.getElementsByName()`       | Sélectionne tout les éléments selon l'attribut name                  |
+| `.getElementsByClassName()`  | Sélectionne tout les éléments selon ayant la classe donnée           |
+| `.children`                  | Sélectionne tout les enfants                                         |
+| `.textContent`               | Sélectionne le texte à l'intérieur de l'élément                      |
+| `.querySelector()`           | Sélectionne des éléments selon la syntaxe CSS                        |
+
+
+ * Les sélecteurs peuvent être chaînés, par ex `document.getElementById("s-lecteurs-les-plus-courants").children`
+ * L'autocomplétion dans la console vous aide à connaître les méthodes disponibles sur un élément
+
+---
+
+### Gestion d'événements
 
 Une page HTML se charge -> le `document` se créé. Comment savoir quand la page a terminé de se charger?
 
@@ -59,44 +101,22 @@ document.onreadystatechange = function() {
 }
 ```
 
-*Voir dom-01_document.html*
-
 ---
 
-## Quelques autres événements
+### Quelques autres événements
 
-<iframe src="./events.html" width="100%" height="320px"></iframe>
+Ouvrez la console avec <kbd>F12</kbd> pour voir ce qui s'y passe.
+
+<iframe src="./events.html" width="100%" height="330px"></iframe>
 
 Plein d'autres événements existent:
 https://developer.mozilla.org/fr/docs/Web/Events
 
-*Voir dom-02_ready.js*
+*Voir dom-03_ready.js*
 
 ---
 
-## Modification du DOM
-
-Les exemples précédents se contentaient d'écouter le DOM et d'afficher des messages dans la console. On peut faire mieux, on directement modifier le DOM:
-
-```js
-document.getElementById("modification-du-dom").textContent="Le titre de cette page s'est modifié!";
-```
-
-* `getElementById` est une méthode de `Document` qui retourne un `Element`.
-* `textContent` est un propriété de `Node` héritée par `Element`.
-
-La console ou certains éditeurs de code proposent de l'autocomplétion de méthodes et propriétés de DOM.
-
-Pour naviguer dans le DOM, rien de mieux l'**outil de sélection d'éléments** dans les outils de développement du navigateur!
-
-<img src="img/element_selector.png" width="80%"/>
-
-
-*Voir dom-03_ready_alert.js*
-
----
-
-## Le mot-clé `this` dans l'HTML
+### Le mot-clé `this` dans l'HTML
 
 En JavaScript, `this` se réfère au contexte dans lequel on se trouve. [Voir le chapitre sur la portée des variables](../javascript1#23)
 
@@ -121,7 +141,7 @@ https://www.w3schools.com/js/js_this.asp
 
 ---
 
-## Exercices
+### Exercices
 
 Faites les exercices dom-01 à dom-04.
 
@@ -165,7 +185,7 @@ console.log($("body")); // Object
 
 ---
 
-## Pourquoi mettre les `<script>` juste avant la fin du `<body>`?
+### Pourquoi mettre les `<script>` juste avant la fin du `<body>`?
 
 C'est une bonne pratique de charger les fichiers JavaScript à la fin de la page HTML:
 * Le navigateur parcourt les fichiers JavaScript quand il les charge. Pendant qu'il fait ça, il ne fait rien d'autre. Sur de grands projets, la page web peut donner des impressions de lenteur.
@@ -183,19 +203,19 @@ L'ordre des `<script>` est important! Si vous faites un script dans lequel vous 
 
 ---
 
-## Très bien, mais jQuery c'est quoi?
+### Très bien, mais jQuery c'est quoi?
 
 <img src="img/jquery-logo.png"/>
 
 jQuery est une librairie JavaScript créée en 2006 facilitant la manipulation du DOM. Elle facilite également les appels asynchrones à des ressources web (ajax), nous verrons cela plus tard.
 
-jQuery est la librairie JavaScript la plus utilisée pour du développement web. Aujourd'hui, il est possible de s'en passer en utilisant des frameworks (collections de librairies) tels que Angular ou Vue mais les principes de jQuery restent les mêmes dans ces frameworks.
+jQuery est une librairie très populaire. Aujourd'hui, il est possible de s'en passer en utilisant des frameworks (collections de librairies) tels que React ou Angular mais les principes de jQuery restent les mêmes dans ces frameworks.
 
 La documentation est très riche avec plusieurs exemples pour chaque fonctionnalité. [N'hésitez pas à la consulter!](https://api.jquery.com/)
 
 ---
 
-## Comment utiliser jQuery?
+### Comment utiliser jQuery?
 
 La plupart des librairies exposent une variable globale comme point d'entrée pour son utilisation. Dans le cadre de jQuery c'est `$`.
 
@@ -232,7 +252,7 @@ https://www.w3schools.com/jquery/jquery_examples.asp
 
 ---
 
-## Exercices
+### Exercices
 
 Parcourez les exemples préfixés `jq-` et faites l'exercice jq-chat.
 
