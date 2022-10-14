@@ -1,0 +1,86 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/vs.css" id="highlight-theme">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <style>
+    .pink {
+      background-color: pink;
+      width: 100px;
+      height: 1em;
+    }
+  </style>
+
+  <title>Document</title>
+</head>
+
+<body>
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Code exemple</th>
+        <th>Test</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>onclick</th>
+        <td>
+          <pre><code class="language-html">&lt;button onclick=&quot;console.log('click')&quot;&gt;Cliquez-moi!&lt;/button&gt;</code></pre>
+        </td>
+        <td>
+          <button onclick="console.log('click')">Cliquez-moi!</button>
+        </td>
+      </tr>
+      <tr>
+        <th>onchange</th>
+        <td>
+          <pre><code class="language-html">&lt;input type=&quot;checkbox&quot; value=&quot;vrai&quot; onchange=&quot;console.log('change!')&quot;&gt;</code></pre>
+        </td>
+        <td>
+          <input type="checkbox" value="vrai" onchange="console.log('change!')">
+        </td>
+      </tr>
+      <tr>
+        <th>onmouseover</th>
+        <td>
+          <pre><code class="language-html">&lt;div onmouseover=&quot;console.log('onmouseover!')&quot;&gt;</code></pre>
+        </td>
+        <td>
+          <div class="pink" onmouseover="console.log('onmouseover!')">
+        </td>
+      </tr>
+      <tr>
+        <th>onselect</th>
+        <td>
+          <pre><code class="language-html">&lt;input type=&quot;text&quot; onselect=&quot;console.log('select!')&quot; value=&quot;Select me!&quot;&gt;</code></pre>
+        </td>
+        <td>
+          <input type="text" onselect="console.log('select!')" value="Select me!">
+        </td>
+      </tr>
+      <tr>
+        <th>onkeyup</th>
+        <td>
+          <pre><code class="language-html">&lt;input type=&quot;text&quot; onkeyup=&quot;console.log(this.value)&quot;&gt;</code></pre>
+        </td>
+        <td>
+          <input type="text" onkeyup="console.log(this.value)">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"
+    integrity="sha512-gU7kztaQEl7SHJyraPfZLQCNnrKdaQi5ndOyt4L4UPL/FHDd/uB9Je6KDARIqwnNNE27hnqoWLBq+Kpe4iHfeQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+
+</html>
