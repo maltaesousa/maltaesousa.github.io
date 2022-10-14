@@ -43,7 +43,7 @@ Le DOM:
 
 ### Modification du DOM
 
-Les exemples précédents se contentaient d'écouter le DOM et d'afficher des messages dans la console. On peut faire mieux, on directement modifier le DOM:
+Le DOM peut-être modifié, par exemple en JavaScript:
 
 ```js
 document.getElementById("modification-du-dom").textContent="Le titre de cette page s'est modifié!";
