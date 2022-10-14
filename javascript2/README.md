@@ -76,14 +76,17 @@ Pour naviguer dans le DOM, rien de mieux l'**outil de sélection d'éléments** 
 | `.querySelector()`           | Sélectionne des éléments selon la syntaxe CSS                        |
 
 
- * Les sélecteurs peuvent être chaînés, par ex `document.getElementById("s-lecteurs-les-plus-courants").children`
+ * Les sélecteurs peuvent être chaînés, par ex:
+    
+    `document.getElementById("s-lecteurs-les-plus-courants").children`
+
  * L'autocomplétion dans la console vous aide à connaître les méthodes disponibles sur un élément
 
 ---
 
 ### Gestion d'événements
 
-Une page HTML se charge -> le `document` se créé. Comment savoir quand la page a terminé de se charger?
+Une page HTML se charge ➜ le `document` se créé. Comment savoir quand la page a terminé de se charger?
 
 ```js
 // Création d'un objet qui a deux propriétés de type string

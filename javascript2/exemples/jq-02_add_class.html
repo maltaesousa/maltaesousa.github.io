@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -6,6 +7,8 @@
   <link rel="icon" href="../../assets/favicon.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- Chargement des icônes bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <title>Document</title>
 </head>
 
@@ -13,9 +16,9 @@
   <div class="container">
     <h1>Lorem Ipsum</h1>
     <div class="btn-group" role="group" aria-label="Basic example">
-      <button onclick="align(this)" type="button" class="btn btn-secondary">Left</button>
-      <button onclick="align(this)" type="button" class="btn btn-secondary">Center</button>
-      <button onclick="align(this)" type="button" class="btn btn-secondary">Right</button>
+      <button onclick="align(this)" type="button" class="btn btn-secondary" name="left"><i class="bi-text-left"></i></button>
+      <button onclick="align(this)" type="button" class="btn btn-secondary" name="center"><i class="bi-text-center"></i></button>
+      <button onclick="align(this)" type="button" class="btn btn-secondary" name="right"><i class="bi-text-right"></i></button>
     </div>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
