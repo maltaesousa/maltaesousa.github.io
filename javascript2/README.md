@@ -150,6 +150,9 @@ Faites les exercices dom-01 à dom-04.
 
 <img src="img/mind_js.jpg" width="40%"/>
 
+Pour vous aider, cette page peut servir de "dictionnaire" de tags HTML avec chaque fois un détail des événements et attributs disponibles:
+https://www.w3schools.com/tags/default.asp
+
 ---
 
 ## jQuery
