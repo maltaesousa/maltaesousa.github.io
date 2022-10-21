@@ -4,7 +4,7 @@ background-size: cover
 
 ---
 
-### Librairies JavaScript
+### Librairies JavaScript de Webmapping
 
 Deux librairies principales pour du webmapping 2D open source:
 
