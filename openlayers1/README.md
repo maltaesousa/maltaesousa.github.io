@@ -1,22 +1,42 @@
-## Webmapping
-
-### Leaflet
-
-.center[<img src="img/leaflet.png" width="70%"/>]
-
-* Simple de base mais peut-être étendue par des plugins
-* Grande communauté, beaucoup d'exemples sur le web
-* Adapté pour des projets où la carte n'a pas une place prépondérante
+background-image: url(img/background.png)
+background-size: cover
+# OpenLayers 1
 
 ---
 
-### OpenLayers
+### Librairies JavaScript
 
-.center[<img src="img/ol.svg" width="30%"/>]
+Deux librairies principales pour du webmapping 2D open source:
 
-* Beaucoup de fonctionnalités de base + plugins
-* Évolue rapidement
-* Très présente sur le marché Suisse
+<table>
+  <tr>
+    <th style="width:50%">
+      <img class="centered" src="img/leaflet.png" width="200px">
+    </th>
+    <th style="width:50%">
+      <img class="centered" src="img/ol.svg" height="70px" width="200px"/>
+    </th>
+  </tr>
+  <tr>
+    <td>Simple de base mais peut-être étendue par des plugins</td>
+    <td>Beaucoup de fonctionnalités de base + plugins</td>
+  </tr>
+  <tr>
+    <td>Grande communauté, beaucoup d'exemples sur le web</td>
+    <td>Moins grande communauté mais évolue rapidement</td>
+  </tr>
+  <tr>
+    <td>Projection suisse peu supportée</td>
+    <td>Très présente sur le marché Suisse</td>
+  </tr>
+</table>
+
+D'autres librairies existent:
+
+* Mapbox et MapLibre: plutôt pour des vector tiles
+* Cesium: globe 3D
+* Here Maps API, Google Maps API: propriétaire
+* Carto: styliser des cartes avec CSS
 
 ---
 

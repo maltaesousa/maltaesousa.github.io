@@ -1,4 +1,5 @@
 background-image: url(../assets/fairy.jpg)
+background-size: cover
 # OpenLayers 2
 
 
