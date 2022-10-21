@@ -282,7 +282,3 @@ Une source WMS demandra toujours:
 ## Exercices
 
 Exercice *ol-1_fond_plan.html*. Inspirez-vous des exemples!
-
-.center[<video width="400" autoplay loop>
-  <source src="img/cat.mp4" type="video/mp4">
-</video>]
