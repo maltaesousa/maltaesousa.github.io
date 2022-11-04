@@ -47,15 +47,15 @@
     });
     const geojsonSource = new ol.source.Vector({
       format: new ol.format.GeoJSON(),
-      url: "https://openlayers.org/en/master/examples/data/geojson/countries.geojson"
+      url: "countries.json"
     });
     const kmlSource = new ol.source.Vector({
       format: new ol.format.KML(),
-      url: "https://openlayers.org/en/master/examples/data/kml/2012-02-10.kml"
+      url: "https://openlayers.org/en/latest/examples/data/kml/2012-02-10.kml"
     });
     const gpxSource = new ol.source.Vector({
       format: new ol.format.GPX(),
-      url: "https://openlayers.org/en/master/examples/data/gpx/fells_loop.gpx"
+      url: "https://openlayers.org/en/latest/examples/data/gpx/fells_loop.gpx"
     });
 
     // Création de la constante `view` pour pouvoir y accéder ultérieurement
