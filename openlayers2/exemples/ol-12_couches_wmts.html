@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+  <title>OpenLayers - Couche WMTS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.1.0/ol.css">
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="my-4">OpenLayers - Couche WMTS</h1>
+    <p>WMTS de la confédération avec une configuration "manuelle", sans chargement du GetCapabilities</p>
+    <div id="map"></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.2/proj4.js"
+    integrity="sha512-cgJnZ1VX2G0MAN4C5OGShwI3zHhfQ6RLriXuukhblNu+T082/ZRGoWLP/0xMKObvB6AUKdnm27hQKj8hKZPjXA=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ol@v7.1.0/dist/ol.js"></script>
+  <script>
+    proj4.defs(
+      "EPSG:2056",
+      "+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1"
+      + " +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs"
+    );
+    ol.proj.proj4.register(proj4);
+
+    const extent = [2420000, 130000, 2900000, 1350000];
+    const projection = new ol.proj.Projection({
+      code: 'EPSG:2056',
+      extent,
+    });
+
+    const resolutions = [
+      4000, 3750, 3500, 3250, 3000, 2750, 2500, 2250, 2000, 1750, 1500, 1250,
+      1000, 750, 650, 500, 250, 100, 50, 20, 10, 5, 2.5, 2, 1.5, 1, 0.5
+    ];
+    const matrixIds = [];
+    for (let i = 0; i < resolutions.length; i += 1) {
+      matrixIds.push(i);
+    }
+
+    const tileGrid = new ol.tilegrid.WMTS({
+      origin: [extent[0], extent[3]],
+      resolutions,
+      matrixIds
+    });
+
+    const wmtsLayer = new ol.layer.Tile({
+      source: new ol.source.WMTS({
+        layer: 'ch.kantone.cadastralwebmap-farbe',
+        crossOrigin: 'anonymous',
+        attributions: '<a target="new" href="https://www.swisstopo.admin.ch/'
+          + 'internet/swisstopo/en/home.html">swisstopo</a>',
+        projection,
+        url: '//wmts10.geo.admin.ch/1.0.0/{Layer}/default/current/2056/{TileMatrix}/{TileCol}/{TileRow}.png',
+        tileGrid: tileGrid,
+        requestEncoding: 'REST'
+      })
+    });
+
+    const map = new ol.Map({
+      target: "map",
+      layers: [wmtsLayer],
+      view: new ol.View({
+        center: [2540500, 1181200],
+        projection,
+        resolution: 1
+      })
+    });
+
+  </script>
+</body>
+
+</html>
