@@ -11,7 +11,7 @@ class MyServer(BaseHTTPRequestHandler):
 
 	def _set_headers(self):
 		self.send_header('Access-Control-Allow-Origin', '*')
-		self.send_header('Content-Type', 'application/json')
+		self.send_header('Content-Type', 'text/plain')
 		self.send_header('Access-Control-Allow-Methods', 'GET, OPTIONS, POST')
 		self.send_header('Access-Control-Allow-Headers', 'X-Requested-With')
 		self.send_header('Access-Control-Allow-Headers', 'Content-Type')
