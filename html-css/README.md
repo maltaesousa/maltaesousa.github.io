@@ -99,7 +99,7 @@ Nous pouvons ajouter des commentaires dans un fichier HTML à l'aide de `<!-- bl
 
 * Toutes les balises n'exigent pas à d'être fermées
 
-* Le HTML est un language à indentation facultative mais recommandée
+* Le HTML est un langage à indentation facultative mais recommandée
 
 ---
 
