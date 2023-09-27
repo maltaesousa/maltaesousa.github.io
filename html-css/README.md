@@ -16,31 +16,16 @@ But de ce cours:
 
 * Présentation de Bootstrap, le framework HTML + CSS le plus populaire
 
-## Comment suivre ce cours?
-
-Prérequis:
-
-* Un éditeur de texte (Visual Studio Code, Notepad++, etc.)
-
-* Un navigateur (Firefox, Chrome, Edge)
-
 ---
 
 class: center
 
 ## Les trois pilliers du web
 
-<img class="middle" src="img/html5.svg" height="100em"/>
+| <img class="middle" src="img/html5.svg" height="300em"/> | <img class="middle" src="img/css3.svg" height="300em"/> | <img class="middle" src="img/js.svg" height="300em"/> |
+| :---------------------: | :--: | :---------------------------------------------------------: |
+| Les données avec HTML  | Le style avec CSS | La logique avec JavaScript |
 
-Les données avec HTML 
-
-<img class="middle" src="img/css3.svg" height="100em"/>
-
-Le style avec CSS
-
-<img class="middle" src="img/js.svg" height="100em"/>
-
-La logique avec JavaScript 
 
 ---
 
@@ -73,11 +58,27 @@ On peut valider son HTML en ligne: https://validator.w3.org/#validate_by_input
 
 * Orienté projet: on ouvre un dossier et pas seulement un fichier
 
-* Extensible: Live Server 
+* Raccourcis clavier très présents
+
+* Extensible: par exemple *Live Server* permet d'avoir un mini serveur web
 
 ---
 
 <img class="middle" src="img/vscode_interface.png" width="100%"/>
+
+---
+
+## Visual Studio Code - exercice
+
+1. Créez un dossier
+
+2. Ouvrez le dossier dans Visual Studio Code deux options:
+   * Clic droit sur le dossier -> *Ouvrir avec Code*
+   * Ouvrez Code puis *Fichier* -> *Ouvrir le dossier*
+
+3. Créez un fichier index.html avec du contenu
+
+4. Installez et lancez Live Server.
 
 ---
 
@@ -128,11 +129,11 @@ Exercice: utiliser ces tags dans le fichier précédemment créé
     <td>
       <form>
         <label for="fname">Nom:</label><br>
-        <input type="text" id="fname" name="fname" placeholder="Entrez votre nom"><br>
+        <input class="prevent-default" type="text" id="fname" name="fname" placeholder="Entrez votre nom"><br>
         <label for="lname">Prénom:</label><br>
-        <input type="text" id="lname" name="lname" placeholder="Entrez votre prénom"><br>
+        <input class="prevent-default" type="text" id="lname" name="lname" placeholder="Entrez votre prénom"><br>
         <label for="country">Pays:</label><br>
-        <input type="text" id="country" name="country" value="Suisse"><br><br>
+        <input class="prevent-default" type="text" id="country" name="country" value="Suisse"><br><br>
         <input type="button" value="Envoyer">
       </form>
     </td>
@@ -164,36 +165,36 @@ Exercice: utiliser ces tags dans le fichier précédemment créé
 #### Texte court
 
 ```html
-<input id="input1" name="input1" type="text">
+<input class="prevent-default" id="input1" name="input1" type="text">
 ```
 
-<input id="input1" name="input1" type="text">
+<input class="prevent-default" id="input1" name="input1" type="text">
 
 #### Grand champ de saisie texte
 
 ```html
-<textarea id="input2" name="input1" rows="2" cols="50"></textarea>
+<textarea class="prevent-default" id="input2" name="input1" rows="2" cols="50"></textarea>
 ```
 
-<textarea id="input2" name="input1" rows="2" cols="50"></textarea>
+<textarea class="prevent-default" id="input2" name="input1" rows="2" cols="50"></textarea>
 
 #### Nombre
 
 ```html
-<input id="input3" name="input3" type="number">
+<input class="prevent-default" id="input3" name="input3" type="number">
 ```
 
-<input id="input3" name="input3" type="number">
+<input class="prevent-default" id="input3" name="input3" type="number">
 
 ---
 
 #### Date
 
 ```html
-<input id="input4" name="input4" type="date">
+<input class="prevent-default" id="input4" name="input4" type="date">
 ```
 
-<input id="input4" name="input4" type="date">
+<input class="prevent-default" id="input4" name="input4" type="date">
 
 #### Menu déroulant
 
@@ -462,10 +463,7 @@ Pour inclure une librairie dans un projet, on peut utiliser un CDN (*Content Del
 ```html
 <head>
   <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" 
-    rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-    crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   ...
 
 ```
@@ -474,7 +472,7 @@ Pour inclure une librairie dans un projet, on peut utiliser un CDN (*Content Del
 
 #### Variante 2 - Téléchargement
 
-Vous pouvez également [télécharger ici](https://getbootstrap.com/docs/5.2/getting-started/download/) la dernière version de Bootstrap et l'inclure comme n'importe quel autre fichier css:
+Vous pouvez également [télécharger ici](https://getbootstrap.com/docs/5.3/getting-started/download/) la dernière version de Bootstrap et l'inclure comme n'importe quel autre fichier css:
 
 ```html
 <head>

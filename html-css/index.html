@@ -24,6 +24,21 @@
       document.getElementById('clickerCount').innerText++;
     }
 
+    function preventDefaultListeners() {
+      const els = document.getElementsByClassName('prevent-default');
+      console.log(Array.from(els));
+      Array.from(els).forEach((element) => {
+        element.addEventListener('keypress', (e) => {
+          e.stopPropagation();
+        }, false);
+        element.addEventListener('keydown', (e) => {
+          e.stopPropagation();
+        }, false);
+      });
+    }
+
+    setTimeout(preventDefaultListeners, 500);
+
 
   </script>
 </body>
