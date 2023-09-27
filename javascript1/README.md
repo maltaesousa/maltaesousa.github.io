@@ -152,7 +152,7 @@ Le caractère <kbd>&#96;</kbd> est en fait l'accent grave d'un clavier QWERTZ. P
 
 <kbd>Maj</kbd> + <kbd>&#96;</kbd> suivi d'un espace.
 
-*Voir: js-01_variables.html*
+*Voir: [js-01_variables.html](exemples/js-01_variables.html)*
 
 ---
 
@@ -193,7 +193,7 @@ console.log(false == 0); // true
 console.log(false === []); // false
 ```
 
-*Voir: js-02_operateurs.html*
+*Voir: [js-02_operateurs.html](exemples/js-02_operateurs.html)*
 
 ---
 
@@ -208,7 +208,7 @@ En plus des opérations arithmétiques standards `+`, `-`, `*` et `/`, JavaScrip
 | Reste `%`           | Renvoie le reste entier de la division         |
 | Exponentiation `**` | Calcule un nombre élevé à une puissance donnée |
 
-*Voir: js-03_math.html*
+*Voir: [js-03_math.html](exemples/js-03_math.html)*
 
 ---
 
@@ -235,7 +235,7 @@ if (temperature > 5 && temperature < 10) {
 }
 ```
 
-*Voir: js-04_if.html*
+*Voir: [js-04_if.html](exemples/js-04_if.html)*
 
 ---
 
@@ -264,7 +264,7 @@ On peut également supprimer une propriété:
 delete car.year;
 ```
 
-*Voir: js-05_objets.html*
+*Voir: [js-05_objets](exemples/js-05_objets.html)*
 
 ---
 
@@ -342,7 +342,7 @@ while (cityPosition < cities.length) { // tant que cityPosition et plus petit qu
 }
 ```
 
-*Voir: js-06_while.html*
+*Voir: [js-06_while.html](exemples/js-06_while.html)*
 
 ---
 
@@ -370,7 +370,7 @@ for (let i = 0; i < 3; i += 1) {
 console.log('Le tableau topCities:', topCities);
 ```
 
-*Voir: js-07_for.html*
+*Voir: [js-07_for.html](exemples/js-07_for.html)*
 
 ---
 
@@ -395,7 +395,7 @@ function doSomething() {
 doSomething();
 ```
 
-*Voir: js-08_fonctions_1.html*
+*Voir: [js-08_fonctions_1.html](exemples/js-08_fonctions_1.html)*
 
 ---
 
@@ -434,7 +434,7 @@ let car = {
 console.log("Car will start:", car.start());
 ```
 
-*Voir: js-09_fonctions_2.html*
+*Voir: [js-09_fonctions_2.html](exemples/js-09_fonctions_2.html)*
 
 ---
 
@@ -530,7 +530,7 @@ function showCity() {
 }
 ```
 
-*Voir: js-10_scope.html*
+*Voir: [js-10_scope.html](exemples/js-10_scope.html)*
 
 ---
 
