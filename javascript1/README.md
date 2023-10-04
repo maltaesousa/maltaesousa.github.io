@@ -20,9 +20,7 @@ Selon [@MDN:](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 
 <img src="img/eshistory.svg" width="95%"/>
 
-Dans ce cours les exemples utiliseront la spécification ES6 largement supporté par les navigateurs récents.
-
-En cas de doute:
+En cas de doute si l'on peut utiliser une fonctionnalité ou pas:
 
 [https://caniuse.com/](https://caniuse.com/)
 
@@ -91,7 +89,7 @@ Les instructions telles que `console.log('blabla')` ou `console.error('blabla')`
 Il y a plusieurs façons de déclarer des variables.
 
 ```js
-// Avant ES6
+// Avant 2015
 name = "Rincevent"; // équivaut à var name = "Rincevent";
 var age = 35;
 
@@ -100,7 +98,7 @@ const vat = 7.8;
 let price = null;
 ```
 
-Les variables déclarées à l'aide de `var` et `let` sont dynamiques: leurs valeurs peuvent changer. Les variables déclarées avec avec `const` ne peuvent être affectées qu'une fois. Ce sont des **constantes**.
+Les variables déclarées avec `var` et `let` sont dynamiques: leurs valeurs peuvent changer. Les variables déclarées avec `const` ne peuvent être affectées qu'une fois. Ce sont des **constantes**.
 
 💡 De manière générale, `let` et `const` sont recommandés pour déclarer les variables dans ce cours.
 
@@ -134,15 +132,15 @@ En JavaScript, il y a 3 façons d'écrire des chaînes de caractères:
 
 ```js
 // Entre apostrophes ou "quote" en anglais.
-// Si vous avez besoin d'une apostrophe dans la châine finale, il faut l'échaper
+// Si vous avez besoin d'une apostrophe dans la châine finale, il faut l'échapper
 let strQuote = 'I\'m a ' + 'string.';
 
 // Entre guillemets ou "double quotes" en anglais.
-// Si vous avez besoin d'un guillemet, il faut l'échaper.
+// Si vous avez besoin d'un guillemet, il faut l'échapper.
 let strDouble = "This is a \"double quoted\" " + "string.";
 
 // Entre "backticks" où il n'y a plus besoin d'utiliser "+" pour concaténer.
-// On peut directement y utiliser des expressions qui seront évaluées avant d'êtres concaténées.
+// On peut directement y utiliser des expressions qui seront évaluées avant d'être concaténées.
 let result = 5;
 let strTemplate = `This string has ${result} words`;
 
@@ -158,7 +156,7 @@ Le caractère <kbd>&#96;</kbd> est en fait l'accent grave d'un clavier QWERTZ. P
 
 ## Les opérateurs de comparaison
 
-L'opérateur `==` compare si les valeurs sont égales tandis que l'opérateur `===` compare si les valeurs et le type (comparaison stricte) sont égaux. Cela vaut aussi pour `!=` et `!==` (pas égal et strictement pas égal).
+L'opérateur `==` compare si les valeurs sont égales alors que l'opérateur `===` compare si les valeurs et le type (comparaison stricte) sont égaux. Cela vaut également pour `!=` et `!==` (pas égal et strictement pas égal).
 
 ```js
 console.log(2.3 == "2.3"); // true
@@ -169,7 +167,7 @@ console.log(2.3 === aNumber); // true
 
 Les autres opérateurs de comparaison sont `>`, `<`, `>=` et `<=`.
 
-Même si le type entier n'existe pas, on peut vérifier si un nombre est un entier:
+Même si le type entier n'existe pas en tant que type distinct, on peut vérifier si un nombre est un entier:
 ```js
 console.log(Number.isInteger(aNumber)); // false
 console.log(typeof 4); // "number"
@@ -329,7 +327,7 @@ while (condition_est_vraie) {
 }
 ```
 
-On l'utilise quand on ne connaît pas la longueur d'un tableau. Imaginez dans l'exemple qu'au lieu des trois villes, il y ait toutes les villes de Suisse:
+On l'utilise lorsqu'on ne connaît pas la longueur d'un tableau. Imaginez dans l'exemple qu'au lieu des trois villes, il y ait toutes les villes de Suisse:
 
 ```js
 let cities = ["Neuchâtel", "Fribourg", "Bern"];
@@ -401,7 +399,7 @@ doSomething();
 
 On peut stocker une fonction dans une variable. 
 
-Les fonctions peuvent renvoyer une valeur à l'aide du mot clé `return`:
+Les fonctions peuvent renvoyer une valeur avec le mot clé `return`:
 
 ```js
 let addNumbers = function(num1, num2) { // la fonction s'attend à recevoir deux arguments num1 et num2
