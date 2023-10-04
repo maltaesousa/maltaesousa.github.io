@@ -108,15 +108,16 @@ Les variables déclarées à l'aide de `var` et `let` sont dynamiques: leurs val
 
 ## Les primitives
 
-JavaScript compte 6 types de données.
+JavaScript compte 7 types de données de base (primitives).
 
 ```js
-let aString = "JavaScript";
-let aNumber = 3.14; // pas d'entiers 
-let aBoolean = true;
-let nullValue = null;
-let undefinedValue;
-let aSymbol = Symbol("foo"); // ES6, pas utile dans ce cours
+const aString = "JavaScript"; // string
+const aNumber = 3.14; // number avec une limite
+const aBigInt = BigInt(Number.MAX_SAFE_INTEGER) + 2n; // bigint, entiers sans limites
+const aBoolean = true; // boolean
+const nullValue = null; // null
+const undefinedValue; // undefined
+const aSymbol = Symbol("foo"); // symbol, pas utile dans ce cours
 ```
 
 L'instruction `typeof` révèle le type de la variable:
@@ -140,7 +141,6 @@ let strQuote = 'I\'m a ' + 'string.';
 // Si vous avez besoin d'un guillemet, il faut l'échaper.
 let strDouble = "This is a \"double quoted\" " + "string.";
 
-// Nouveauté ES6
 // Entre "backticks" où il n'y a plus besoin d'utiliser "+" pour concaténer.
 // On peut directement y utiliser des expressions qui seront évaluées avant d'êtres concaténées.
 let result = 5;
@@ -438,7 +438,7 @@ console.log("Car will start:", car.start());
 
 ---
 
-## Portée (scope) des variables déclarées avec `var` <a name="var-scope"></a>
+## Portée (scope) de `var` <a name="var-scope"></a>
 
 Les variables déclarés avec `var` dans une fonction sont utilisables / modifiables dans toute la fonction:
 
@@ -468,7 +468,7 @@ console.log(`Il y a ${numberOfCities} villes.`); // erreur
 
 ---
 
-## Portée (scope) des variables déclarées avec `let` ou `const`
+## Portée (scope) de `let` ou `const`
 
 Les variables déclarés avec `let` et `const` ont une portée de bloc
 
@@ -516,9 +516,7 @@ showCity();
 ```
 ---
 
-Il est fortement recommandé de ne pas utilisé `var` si vous le pouvez. Les seules raisons d'utiliser `var` sont:
-* Votre code doit être compatible avec une version ECMAscript inférieure à 6.
-* Vous créez votre propre librairie.
+Il est fortement recommandé de ne pas utiliser `var` si vous le pouvez. La seule raison valable d'utiliser `var` est la création de votre propre librairie ce qui sort du cadre de ce cours.
 
 Utilisez `let` et `const`:
 
