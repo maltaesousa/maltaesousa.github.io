@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head><!--head est un enfant de html-->
-    <title>Document</title>
-    <link rel="icon" href="favicon.png" />
-  </head>
-  <body>
-    <h1>My Header</h1>
-    <a href="">My link</a>
-    <script>
-      const allH1Elements = document.getElementsByTagName('h1');
-      console.log(allH1Elements);
-      const firstH1Element = allH1Elements[0];
-      firstH1Element.textContent = "Ce titre a été modifié par du JavaScript!";
-    </script>
-  </body>
+
+<head><!--head est un enfant de html-->
+  <title>Document</title>
+  <link rel="icon" href="favicon.png" />
+</head>
+
+<body>
+  <h1>My Header</h1>
+  <a href="">My link</a>
+  <script>
+    const allH1Elements = document.getElementsByTagName('h1');
+    console.log(allH1Elements);
+    const firstH1Element = allH1Elements[0];
+    firstH1Element.textContent = "Ce titre a été modifié par du JavaScript!";
+  </script>
+</body>
+
 </html>

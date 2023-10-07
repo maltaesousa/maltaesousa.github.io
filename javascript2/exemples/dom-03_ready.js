@@ -2,6 +2,7 @@
 const myContent = {
   alertText: "Le document est chargé",
   alertLink: "https://developer.mozilla.org/fr/docs/Web/API",
+  alertLink2: "https://www.w3schools.com/tags",
 };
 
 // Utilisation du DOM!
@@ -13,5 +14,6 @@ document.onreadystatechange = function() {
   if (document.readyState === "complete") {
     console.log(myContent.alertText);
     console.log(myContent.alertLink);
+    console.log(myContent.alertLink2);
   }
 };

@@ -1,12 +1,15 @@
-const welcomeMessage = "Mon JavaScript fonctionne. Jusqu'ici tout va bien.";
+const welcomeMessage = "ℹ️ Mon JavaScript fonctionne. Jusqu'ici tout va bien.";
 
 function showMessage() {
   // création d'un élément div
   const newDiv = document.createElement("div");
+
   // on ajoute au div des "attributs", ici l'attribut class qui contiendra 2 classes css
-  newDiv.setAttribute("class", "alert alert-warning");
+  newDiv.setAttribute("class", "alert alert-info");
+
   // on crée un TextNode, c'est le texte qui sera dans la balise div
   const newText = document.createTextNode(welcomeMessage);
+
   // on met le texte dans la balise div
   newDiv.appendChild(newText);
 
@@ -14,6 +17,7 @@ function showMessage() {
   // il y a potentiellement plusieurs éléments qui peuvent avoir cette classe, on
   // prend le premier avec .item(0)
   const mainContainer = document.getElementsByClassName("container").item(0);
+
   // on y ajoute le div précédemment créé
   mainContainer.appendChild(newDiv);
 }
