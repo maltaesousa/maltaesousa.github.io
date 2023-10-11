@@ -157,53 +157,83 @@ https://www.w3schools.com/tags/default.asp
 
 ## npm
 
-npm est un gestionnaire de paquets. Il facilite l'installation et la gestion des librairies dont dépend notre projet. Il est courant qu'un
-projet en JavaScript dépende de plusieurs librairies qui elles-mêmes ont des dépendances résultant parfois sur des milliers de dépendances.
+.center[<img src="img/npm-logo.svg" height="100em"/>]
+
+npm est un gestionnaire de paquets. Il facilite l'installation et la gestion des librairies dont dépend notre projet. Il est courant qu'un projet en JavaScript dépende de plusieurs librairies qui elles-mêmes ont des dépendances résultant parfois sur des milliers de dépendances.
 
 npm s'utilise en tapant `npm` en ligne de commande pour autant que:
 
-* Node.js doit être installé
-* npm doit être présent dans le `PATH` (c'est une question posée à l'installation)
+* Node.js doit être installé sur la machine
+* npm doit être présent dans le `Path` (c'est une question posée à l'installation)
 
 ---
 
-### npm
+### Hors série: qu'est ce que le `Path` ?
 
-Apparté c'est quoi le PATH
+`Path` est une variable d'environnement disponible sur les systèmes Windows, Linux et Unix. Elle permet de mettre au courant le système de l'existance d'un programme ainsi que de l'endroit où il se trouve. Une fois le sytème au courant, on pourra taper directement le nom dudit programme dans un terminal, sans avoir à taper son chemin complet.
+
+Les programmes concernés dans ce cours sont `npm`, `python` et `psql`.
+
+Sur windows, le `Path` existe à deux niveaux:
+
+* Au niveau du système, pour tous les utilisateurs. Privilèges d'administration nécessaires pour le changer
+* Au niveau de l'utilisateur courant.
+
+Pour ajouter un programme au `Path` sur Windows:
+
+1. Cliquer sur le menu démarrer ou presser la touche <kbd>🪟</kbd> (windows)
+2. Taper *"variables"* et choisir *"Modifier les variables d'environnement pour votre compte"*
+3. Cliquer sur `Path` puis *"Modifier"*
+4. Ajouter le chemin du dossier contenant le programme à la fin de la liste.
 
 ---
 
 ### npm init
 
-Pour démarrer un projet avec npm:
+Pour démarrer un projet avec npm que ce soit dans un répertoire vide ou dans lequel du code est déjà présent, lancez cette commande à la racine de votre projet:
 
-```
+> ℹ️ Si la fenêtre de terminal n'est pas encore affichée dans votre Visual Studio Code: cliquez sur le menu *Terminal* > *New Terminal*
+
+```shell
 npm init -y
 ```
+
+L'option `-y` permet de répondre à toutes les questions par oui.
 
 Un fichier package.json est créé:
 
 * Il contient toutes les infos nécessaires à publier notre projet en tant que `package`.
-* Les dépendances à d'autres librairies y seront listées
+* Les dépendances à d'autres librairies y seront listées.
+
+---
 
 ### npm install
 
 L'instruction `install` que l'on peut abréger en `i` permet d'installer un paquet.
 
-```
-npm i bootstrap@5.3.2
+```sh
+npm i bootstrap@5.3.2 @popperjs/core
 ```
 
-Il est recommandé de spécifier une version, ici `@5.3.2`. Cela afin d'éviter des mises à jours automatiques pouvant casser
+> ℹ️ Il est recommandé de spécifier une version, ici `@5.3.2`. Cela afin d'éviter des mises à jours automatiques pouvant casser
 votre projet.
 
-Que s'est-il passé?
+<table>
+<tr>
+  <td>
+Le fichier <code>package.json</code> a été modifié: une section <code>depedencies</code> s'est créée<br><br>
+Un fichier <code>package-lock.json</code> est arrivé: il contient l'arbre des dépendances<br><br>
+Un dossier <code>node_modules</code> s'est créé: il contient les fichiers téléchargés prêts à être utilisés, dans ce cas: bootsrap et popperjs<br><br>
+  </td>
+  <td>
+    <img style="margin: 0 2em;" src="img/file-structure.png"/>
+  </td>
+</tr>
+</table>
 
-* Le fichier package.json a été modifié: une section `depedencies` s'est créée
-* Un fichier package-lock.json est arrivé: il contient l'arbre des dépendances
-* Un dossier node_modules s'est créé: il contient les fichiers téléchargés
+---
 
-### Exercices
+### Exercice
 
-Parcourez les exemples préfixés `jq-` et faites l'exercice jq-chat.
+
 
