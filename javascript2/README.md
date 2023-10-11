@@ -155,20 +155,7 @@ https://www.w3schools.com/tags/default.asp
 
 ---
 
-## npm
-
-.center[<img src="img/npm-logo.svg" height="100em"/>]
-
-npm est un gestionnaire de paquets. Il facilite l'installation et la gestion des librairies dont dépend notre projet. Il est courant qu'un projet en JavaScript dépende de plusieurs librairies qui elles-mêmes ont des dépendances résultant parfois sur des milliers de dépendances.
-
-npm s'utilise en tapant `npm` en ligne de commande pour autant que:
-
-* Node.js doit être installé sur la machine
-* npm doit être présent dans le `Path` (c'est une question posée à l'installation)
-
----
-
-### Hors série: qu'est ce que le `Path` ?
+# Hors série: qu'est ce que le `Path` ?
 
 `Path` est une variable d'environnement disponible sur les systèmes Windows, Linux et Unix. Elle permet de mettre au courant le système de l'existance d'un programme ainsi que de l'endroit où il se trouve. Une fois le sytème au courant, on pourra taper directement le nom dudit programme dans un terminal, sans avoir à taper son chemin complet.
 
@@ -185,6 +172,17 @@ Pour ajouter un programme au `Path` sur Windows:
 2. Taper *"variables"* et choisir *"Modifier les variables d'environnement pour votre compte"*
 3. Cliquer sur `Path` puis *"Modifier"*
 4. Ajouter le chemin du dossier contenant le programme à la fin de la liste.
+
+---
+
+.center[<img src="img/npm-logo.svg" height="100em"/>]
+
+npm est un gestionnaire de paquets. Il facilite l'installation et la gestion des librairies dont dépend notre projet. Il est courant qu'un projet en JavaScript dépende de plusieurs librairies qui elles-mêmes ont des dépendances résultant parfois sur des milliers de dépendances.
+
+npm s'utilise en tapant `npm` en ligne de commande mais:
+
+* Node.js doit être installé sur la machine
+* npm doit être présent dans le `Path` (c'est une question posée à l'installation)
 
 ---
 
