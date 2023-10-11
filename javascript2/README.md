@@ -231,7 +231,71 @@ Un dossier <code>node_modules</code> s'est créé: il contient les fichiers tél
 
 ---
 
+### npm install --save-dev
+
+L'option `--save-dev` ou `-D` permet d'installer des dépendances pour le développement.
+
+On parle d'outils qui vont nous aider pour le développement mais qui ne seront pas dans le code final en production quand l'application JavaScript sera terminée.
+
+---
+
+### Vite
+
+Vite permet d'utiliser des fonctions JavaScript qui ne sont pas encore supportées par les navigateurs. Vite se chargera de transformer (transpiler) notre code vers un code compréhensible par le navigateur. Il va également réduire la taille du code par deux méchanismes principaux:
+
+* La minification: tous les espaces blancs sont réduits à leur strict minimum et les variables et fonctions sont renommées quand cela est possible
+* Seules les parties des librairies qui sont utilisées dans notre code seront importées dans le fichier final.
+
+Pour installer Vite:
+
+```sh
+npm i -D vite
+```
+
+---
+
+### Vite - configuration
+
+Dans le fichier `package.json`, remplacer les lignes `"scripts"`
+
+```json
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+```
+
+par celles-ci:
+
+```json
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+  },
+```
+
+Ces "scripts" sont des raccourcis de commandes communs à la plupart des projets JavaScript. Ils permettent de lancer les commandes Vite sans avoir à toucher au Path.
+
+Lancer la commande `npm run start` permet de lancer le mini serveur vite qui lui, contrairement au "Go Live" de Visual Studio Code, se chargera de transpiler le code.
+
+---
+
+### Sass
+
+Sass répond à une limitation du langage CSS: il est difficile d'y gérer des variables et CSS ne dispose pas de fonctions ni d'héritage.
+
+Par exemple, changer les couleurs par défaut de Bootstrap sans Sass est un enfer.
+
+Pour installer Sass:
+
+```sh
+npm i -D sass
+```
+
+---
+
 ### Exercice
 
+Suivre le "Quick Start" d'OpenLayers:
 
-
+https://openlayers.org/doc/quickstart.html
