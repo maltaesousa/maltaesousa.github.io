@@ -282,20 +282,6 @@ Lancer la commande `npm run start` permet de lancer le mini serveur vite qui lui
 
 ---
 
-### Sass
-
-Sass répond à une limitation du langage CSS: il est difficile d'y gérer des variables et CSS ne dispose pas de fonctions ni d'héritage.
-
-Par exemple, changer les couleurs par défaut de Bootstrap sans Sass est un enfer.
-
-Pour installer Sass:
-
-```sh
-npm i -D sass
-```
-
----
-
 ### Exercice
 
 Suivre le "Quick Start" d'OpenLayers:
