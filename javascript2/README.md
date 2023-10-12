@@ -241,7 +241,7 @@ On parle d'outils qui vont nous aider pour le développement mais qui ne seront 
 
 ### Vite
 
-Vite permet d'utiliser des fonctions JavaScript qui ne sont pas encore supportées par les navigateurs. Vite se chargera de transformer (transpiler) notre code vers un code compréhensible par le navigateur. Il va également réduire la taille du code par deux méchanismes principaux:
+Vite permet d'utiliser des fonctions JavaScript qui ne sont pas encore supportées par les navigateurs. Vite se chargera de transformer (transpiler) notre code vers un code compréhensible par le navigateur. Il va également réduire la taille du code par deux mécanismes principaux:
 
 * La minification: tous les espaces blancs sont réduits à leur strict minimum et les variables et fonctions sont renommées quand cela est possible
 * Seules les parties des librairies qui sont utilisées dans notre code seront importées dans le fichier final.
