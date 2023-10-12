@@ -175,6 +175,8 @@ Pour ajouter un programme au `Path` sur Windows:
 
 ---
 
+## npm
+
 .center[<img src="img/npm-logo.svg" height="100em"/>]
 
 npm est un gestionnaire de paquets. Il facilite l'installation et la gestion des librairies dont dépend notre projet. Il est courant qu'un projet en JavaScript dépende de plusieurs librairies qui elles-mêmes ont des dépendances résultant parfois sur des milliers de dépendances.
