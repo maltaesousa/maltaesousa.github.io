@@ -282,6 +282,24 @@ Lancer la commande `npm run start` permet de lancer le mini serveur vite qui lui
 
 ---
 
+## Vite - changements par rapport à la méthode traditionnelle
+
+On peut continuer à inclure les CSS et JavaScript avec la méthode traditionnelle mais on ne profitera pas du travail d'optimisation de Vite.
+
+Pour un projet simple:
+
+* Importer les CSS tierces (telles que Bootstrap) dans le fichier CSS `@import`
+* Créer un fichier `index.js` qui importe la CSS
+* Dans le fichier `index.html`, on n'a plus d'import de CSS dans le `<head>`
+* Toujours dans `index.html`, le JavaScript est importé avec l'attribut `module`
+* On n'utilise plus "Go Live" mais `npm run start`
+
+```html
+<script type="module" src="index.js"></script>
+```
+
+---
+
 ### Exercice
 
 Suivre le "Quick Start" d'OpenLayers:
