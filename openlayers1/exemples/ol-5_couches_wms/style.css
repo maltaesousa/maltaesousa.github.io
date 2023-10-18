@@ -1,0 +1,7 @@
+@import "node_modules/ol/ol.css";
+@import "node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+#map {
+  height: 400px;
+  width: 100%;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using OpenLayers with Vite</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>OpenLayers - Couche WMS</h1>
+      <p>On peut ajouter une couche WMS de deux façons dans OpenLayers:</p>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="layerTypeSelector" id="tileSelector" value="tile" checked>
+        <label class="form-check-label" for="tileSelector">
+          <strong>TileLayer</strong> avec une source <strong>TileWMS</strong>: openlayers découpe l'étendue en
+          imagettes et fait plusieurs requêtes au serveur. Il stocke ces petites imagettes en cache. Peut générer des
+          problèmes d'affichage sur les étiquettes de couches vectorielles.
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="layerTypeSelector" id="imageSelector" value="image">
+        <label class="form-check-label" for="imageSelector">
+          <strong>ImageLayer</strong> avec <strong>ImageWMS</strong>: à chaque changement de la vue (zoom,
+          pan, rotation), openlayers demande une image de la taille de l'étendue de la vue. Pas de cache.
+        </label>
+      </div>
+      <div id="map"></div>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

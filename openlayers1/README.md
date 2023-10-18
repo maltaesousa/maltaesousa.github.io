@@ -335,12 +335,12 @@ Comme dans QGIS, une couche représente un calque, la source de la donné (modul
 
 Quelques exemples de couches tuilées `ol/layer/Tile` et leurs sources:
 
-* OpenStreetMap : `ol.source.OSM`
+* OpenStreetMap : `OSM`
   * Ne pas utiliser cette source en production! Elle est disponible à des fins de démo.
-* Bing : `ol.source.BingMaps`
+* Bing : `BingMaps`
   * `imagerySet` : *Road*, *Aerial*, *AerialWithLabels*
   * `key` : clé à obtenir sur *bingmapsportal.com*
-* Stamen : `ol.source.Stamen`
+* Stamen : `Stamen`
   * `layer` : *terrain*, *toner*, *toner-lite*, *watercolor*, *terrain-labels*
 * etc.
 
@@ -352,12 +352,12 @@ Quelques exemples de couches tuilées `ol/layer/Tile` et leurs sources:
 
 Il y a deux façons de lire du WMS avec OpenLayers:
 
-#### `ol.layer.Tile` avec `ol.source.TileWMS`
+#### `TileLayer` avec une source `TileWMS`
 * OpenLayers découpe l'étendue de la vue en une mosaïque d'imagettes carrées qu'il va demander au serveur
 * Performant sur des WMS raster, les imagettes sont mises en cache
 * Plus lent lorsque le serveur doit calculer un rendu complexe
 
-#### `ol.layer.Image` avec `ol.source.ImageWMS`
+#### `ImageLayer` avec une source `ImageWMS`
 * OpenLayers demande au serveur WMS une image de la taille de la carte
 * Pas de cache, à chaque zoom, une nouvelle image est demandée
 * Intéressant quand le rendu d'une couche est complexe
