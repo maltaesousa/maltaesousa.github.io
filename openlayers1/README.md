@@ -371,13 +371,16 @@ Une source WMS demandra toujours:
 
 ---
 
-## Exercice
+### Exercice
 
 1. Créez un projet openlayers à l'aide du [quickstart](https://openlayers.org/doc/quickstart.html)
 2. Installez Bootstrap et importez bootstrap dans votre fichier `style.css`
-3. Passez la carte à 400px de hauteur.
-4. Ajoutez deux couches supplémentaires à votre carte. Choisissez-les parmis les exemples des couches tuilées présentées en cours. Rendez-les invisibles à l'aide de la propriété `visible` disponible sur un `TileLayer`
-5. Crééez un sélecteur de carte avec le style de boutons de votre choix. Ça peut être trois boutons, des boutons radio, etc. Votre sélecteur de carte appelera une fonction qui changera la visibilité d'un layer.
-6. Vous apprenez que l'HEIG-VD dispose d'un serveur WMS:
+3. Passez la carte à 400px de hauteur. Centrez votre carte sur 6.74°, 46.805° à un zoom 15.
+4. Créez un objet Javascript avec deux propriétés. Chacune contient un `TileLayer` avec une source de votre choix à condition que ce ne soit pas `OSM`. Choisissez-les parmis les exemples des couches tuilées présentées en cours.
+5. Ajoutez les deux couches précédemment créés à votre carte. Rendez-les invisibles à l'aide de la propriété `visible` disponible sur un `TileLayer`
+6. Ajoutez une troisième propriété à votre objet et nommez-la `osm`. Elle contient une couche OSM. Effacez la couche OSM définie dans la map afin de laisser la propriété `layers` sur un tableau vide et enfin, ajoutez ce layer à la carte comme vous l'avez fait pour les couches précédentes.
+7. Créez un sélecteur de carte avec l'HTML de votre choix. Ça peut être trois boutons, des boutons radio, un dropdown, etc. Votre sélecteur de carte appelera une fonction qui se contente dans un premier temps de console.log() l'option choisie.
+8. La fonction appelée par votre sélecteur de carte passe toutes les couches en `setVisible(false)` et change la visibilité de la couche choisie en `true`.
+9. Vous apprenez que l'HEIG-VD dispose d'un serveur WMS:
   * lien: `https://ogc.heig-vd.ch/qgis?service=WMS&request=getcapabilities&version=1.3.0`
-  * Ajoutez la couche `120307_Yvonand_Plage_25cm` disponible sur ce serveur.
+  * Ajoutez la couche `120307_Yvonand_Plage_25cm` disponible sur ce serveur à votre application.
