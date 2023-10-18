@@ -2,6 +2,7 @@ import './style.css';
 import {Map, View} from 'ol';
 import TileLayer from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
+import Stamen from 'ol/source/Stamen';
 
 const map = new Map({
   target: 'map',
@@ -13,5 +14,17 @@ const map = new Map({
   view: new View({
     center: [0, 0],
     zoom: 2
+  })
+});
+
+const myLayer1 = new TileLayer({
+  source: new Stamen({
+    layer: "toner-lite"
+  })
+});
+
+const myLayer2 = new TileLayer({
+  source: new Stamen({
+    layer: "watercolor"
   })
 });
