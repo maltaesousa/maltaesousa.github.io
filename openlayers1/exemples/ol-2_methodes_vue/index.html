@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quelques méthodes de Vue</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Quelques méthodes de Vue</h1>
+  
+      <!--Boutons d'affichage d'informations-->
+      <div class="row my-4">
+        <div class="col-md-12">
+          <div id="affichage" class="btn-group d-flex">
+            <button class="btn btn-outline-dark" type="button" id="afficheCentre">Affiche le
+              centre</button>
+            <button class="btn btn-outline-dark" type="button" id="afficheZoom">Affiche le zoom</button>
+            <button class="btn btn-outline-dark" type="button" id="afficheRotation">Affiche la
+              rotation</button>
+            <button class="btn btn-outline-dark" type="button" id="afficheProjection">Affiche la
+              projection</button>
+          </div>
+        </div>
+      </div>
+  
+      <!--Boutons de modification Lat Long-->
+      <form class="row row-cols-lg-auto g-3 align-items-end mb-3">
+        <div class="col-12">
+          <label class="my-1 mr-2" for="long">Long.</label>
+          <input id="long" class="form-control mr-2" type="number" step="0.0000001" value="6.66">
+        </div>
+        <div class="col-12">
+          <label class="my-1 mr-2" for="lat">Lat.</label>
+          <input id="lat" class="form-control" type="number" step="0.0000001" value="46.78">
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="button" id="changeCentre">Recentrer la carte!</button>
+        </div>
+      </form>
+  
+      <!--Boutons de modification curseurs de zoom et rotation-->
+      <div class="row">
+        <div class="col-md-6">
+          <label for="rotation">Change zoom</label>
+          <input type="range" class="form-range" min="6" max="21" value="10" step="0.1" id="changeZoom">
+        </div>
+        <div class="col-md-6">
+          <label for="rotation">Change la rotation</label>
+          <input type="range" class="form-range" min="-90" max="90" id="changeRotation">
+        </div>
+      </div>
+  
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <!--LA CARTE VIENT ICI-->
+          <div id="map"></div>
+        </div>
+      </div>
+  
+      <!--Cette partie n'est pas visible grâce à style="display:none;" mais avec jQuery, on fait un show() et cela
+        enlève ce style.-->
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <div id="result" class="alert alert-primary" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
