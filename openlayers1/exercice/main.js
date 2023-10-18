@@ -33,3 +33,5 @@ const myLayer2 = new TileLayer({
 
 map.addLayer(myLayer1);
 map.addLayer(myLayer2);
+
+document.getElementById('layerselector').onchange = (event) => console.log(event.target.value);

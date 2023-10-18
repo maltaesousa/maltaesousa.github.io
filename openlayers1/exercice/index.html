@@ -7,7 +7,14 @@
     <title>Exercice sélecteur de carte</title>
   </head>
   <body>
-    <div id="map"></div>
-    <script type="module" src="./main.js"></script>
+    <div class="container">
+      <select class="form-select mb-2" name="layerselector" id="layerselector">
+        <option value="osm">OSM</option>
+        <option value="toner">Toner</option>
+        <option value="water">Water</option>
+      </select>
+      <div id="map"></div>
+      <script type="module" src="./main.js"></script>
+    </div>
   </body>
 </html>
