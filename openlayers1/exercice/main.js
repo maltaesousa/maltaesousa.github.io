@@ -18,13 +18,18 @@ const map = new Map({
 });
 
 const myLayer1 = new TileLayer({
+  visible: false,
   source: new Stamen({
     layer: "toner-lite"
   })
 });
 
 const myLayer2 = new TileLayer({
+  visible: false,
   source: new Stamen({
     layer: "watercolor"
   })
 });
+
+map.addLayer(myLayer1);
+map.addLayer(myLayer2);
