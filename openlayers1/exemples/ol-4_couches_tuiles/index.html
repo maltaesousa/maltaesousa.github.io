@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using OpenLayers with Vite</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>OpenLayers - Couches tuilées</h1>
+      <div class="row my-4">
+        <div class="col-md-12">
+          <div class="btn-group d-flex">
+            <button class="btn btn-outline-dark" id="bingRoadSource">Bing road</button>
+            <button class="btn btn-outline-dark" id="bingAerialSource">Bing Aerial</button>
+            <button class="btn btn-outline-dark" id="bingAerialWithLabelsSource">Bing Aerial With Labels</button>
+            <button class="btn btn-outline-dark" id="stamenTerrainSource">Stamen Terrain</button>
+            <button class="btn btn-outline-dark" id="stamenTonerLiteSource">Stamen Toner Lite</button>
+            <button class="btn btn-outline-dark" id="stamenWatercolorSource">Stamen Watercolor</button>
+            <button class="btn btn-outline-dark" id="osmSource">OSM</button>
+          </div>
+        </div>
+      </div>
+      <div id="map"></div>
+      <p>Remarquez les copyrights (attributions) qui se mettent à jour automatiquement!</p>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

@@ -319,21 +319,21 @@ Il est même possible de créer ses propres contrôles!
 
 ## Couches
 
-Le nombre possible de types de couches sont nombreux mais peuvent être divisés en 2 catégories:
+Le nombre possible de types de couches (module `ol/layer`) sont nombreux mais peuvent être divisés en 2 catégories:
 
-* Raster (par ex: `ol.layer.Tile`, `ol.layer.Image`)
-* Vectoriel (par ex: `ol.layer.Vector`, `ol.layer.VectorTile`)
+* Raster (par ex: `TileLayer`, `ImageLayer`)
+* Vectoriel (par ex: `VectorLayer`, `VectorTileLayer`)
 
-Comme dans QGIS, une couche représente une donnée, la source de la donnée est par conséquent une propriété d'un `ol.layer` et on peut à nouveau les séparer en 2 catégories:
+Comme dans QGIS, une couche représente un calque, la source de la donné (module `ol/source`) est par conséquent une propriété d'un `layer` et on peut à nouveau les séparer en 2 catégories:
 
-* Raster (par ex: `ol.source.Tile`, `ol.source.Image`)
-* Vectoriel (par ex: `ol.source.Vector`, `ol.source.VectorTile`)
+* Raster (par ex: `TileSource`, `ImageSource`)
+* Vectoriel (par ex: `VectorSource`, `VectorTile`)
 
 ---
 
 ## Couches tuilées
 
-Quelques exemples de couches tuilées `ol.layer.Tile` et leurs sources:
+Quelques exemples de couches tuilées `ol/layer/Tile` et leurs sources:
 
 * OpenStreetMap : `ol.source.OSM`
   * Ne pas utiliser cette source en production! Elle est disponible à des fins de démo.
