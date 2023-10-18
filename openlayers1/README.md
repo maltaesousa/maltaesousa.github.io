@@ -297,23 +297,23 @@ En règle générale, dans des librairies complexes, on attribue pas des valeurs
 
 Les contrôles sont des éléments permettant de manipuler la carte ou d'afficher une information.
 
-Par défaut, `ol.Map` en charge 3:
-* Zoom `ol.control.Zoom`
-* Orientation `ol.control.Rotate` (apparaît dès que la carte est tournée)
-* Attribution `ol.control.Attribution`
+Par défaut, `Map` en charge 3:
+* `Zoom`
+* Orientation `Rotate` (apparaît dès que la carte est tournée)
+* Attribution `Attribution`
 
 De nombreux autres contrôles existent:
-* Barre d’échelle : `ol.control.ScaleLine`
-* Carte d'aperçu : `ol.control.OverviewMap`
-* Position curseur : `ol.control.MousePosition`
-* Plein écran : `ol.control.FullScreen`
-* Zoom sur étendue max : `ol.control.ZoomToExtent`
-* Curseur de zoom : `ol.control.ZoomSlider`
+* Barre d’échelle : `ScaleLine`
+* Carte d'aperçu : `OverviewMap`
+* Position curseur : `MousePosition`
+* Plein écran : `FullScreen`
+* Zoom sur étendue max : `ZoomToExtent`
+* Curseur de zoom : `ZoomSlider`
 
 
 Il est même possible de créer ses propres contrôles!
 
-*Voir ol-3_controles.html*
+*Voir ol-3_controles*
 
 ---
 
@@ -344,7 +344,7 @@ Quelques exemples de couches tuilées `ol.layer.Tile` et leurs sources:
   * `layer` : *terrain*, *toner*, *toner-lite*, *watercolor*, *terrain-labels*
 * etc.
 
-*Voir ol-4_couches_tuiles.html*
+*Voir ol-4_couches_tuiles*
 
 ---
 
@@ -367,7 +367,7 @@ Une source WMS demandra toujours:
 * les `params` standards WMS, c'est-à-dire les paramètres GetMap tels que `LAYERS`, `FORMAT`, etc.
 * si le WMS est soumis à des droits d'utilisation, il faut indiquer les `attributions`
 
-*Voir ol-5_couches_wms.html*
+*Voir ol-5_couches_wms*
 
 ---
 

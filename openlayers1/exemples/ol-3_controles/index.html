@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using OpenLayers with Vite</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>OpenLayers - Contrôles</h1>
+      <div class="row mb-2">
+        <div class="col-auto">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="scaleline">
+            <label class="form-check-label" for="scaleline">ScaleLine</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="overviewmap">
+            <label class="form-check-label" for="overviewmap">OverviewMap</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="mouseposition">
+            <label class="form-check-label" for="mouseposition">MousePosition</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="fullscreen">
+            <label class="form-check-label" for="fullscreen">FullScreen</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="zoomtoextent">
+            <label class="form-check-label" for="zoomtoextent">ZoomToExtent</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="zoomslider">
+            <label class="form-check-label" for="zoomslider">ZoomSlider</label>
+          </div>
+        </div>
+      </div>
+      <div id="map"></div>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
