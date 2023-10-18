@@ -371,6 +371,13 @@ Une source WMS demandra toujours:
 
 ---
 
-## Exercices
+## Exercice
 
-Exercice *ol-1_fond_plan.html*. Inspirez-vous des exemples!
+1. Créez un projet openlayers à l'aide du [quickstart](https://openlayers.org/doc/quickstart.html)
+2. Installez Bootstrap et importez bootstrap dans votre fichier `style.css`
+3. Passez la carte à 400px de hauteur.
+4. Ajoutez deux couches supplémentaires à votre carte. Choisissez-les parmis les exemples des couches tuilées présentées en cours. Rendez-les invisibles à l'aide de la propriété `visible` disponible sur un `TileLayer`
+5. Crééez un sélecteur de carte avec le style de boutons de votre choix. Ça peut être trois boutons, des boutons radio, etc. Votre sélecteur de carte appelera une fonction qui changera la visibilité d'un layer.
+6. Vous apprenez que l'HEIG-VD dispose d'un serveur WMS:
+  * lien: `https://ogc.heig-vd.ch/qgis?service=WMS&request=getcapabilities&version=1.3.0`
+  * Ajoutez la couche `120307_Yvonand_Plage_25cm` disponible sur ce serveur.
