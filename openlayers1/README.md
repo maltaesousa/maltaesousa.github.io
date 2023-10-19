@@ -1,3 +1,61 @@
+background-image: url(img/background.png)
+background-size: cover
+# OpenLayers 1
+
+---
+
+### Librairies JavaScript de Webmapping
+
+Deux librairies principales pour du webmapping 2D open source:
+
+<table>
+  <tr>
+    <th style="width:50%">
+      <img class="centered" src="img/leaflet.png" width="200px">
+    </th>
+    <th style="width:50%">
+      <img class="centered" src="img/ol.svg" height="70px" width="200px"/>
+    </th>
+  </tr>
+  <tr>
+    <td>Simple de base mais peut-être étendue par des plugins</td>
+    <td>Beaucoup de fonctionnalités de base + plugins</td>
+  </tr>
+  <tr>
+    <td>Grande communauté, beaucoup d'exemples sur le web</td>
+    <td>Moins grande communauté mais évolue rapidement</td>
+  </tr>
+  <tr>
+    <td>Projection suisse peu supportée</td>
+    <td>Très présente sur le marché Suisse</td>
+  </tr>
+</table>
+
+D'autres librairies existent:
+
+* Mapbox et MapLibre: plutôt pour des vector tiles
+* Cesium: globe 3D
+* Here Maps API, Google Maps API: propriétaire
+* Carto: styliser des cartes avec CSS
+
+---
+
+## OpenLayers: exemples d'utilisation
+
+* GeoAdmin : [map.geo.admin.ch](https://map.geo.admin.ch)
+* SuisseMobile : [map.wanderland.ch](https://map.wanderland.ch)
+* Luxembourg : [map.geoportail.lu](https://map.geoportail.lu)
+* EPFL : [plan.epfl.ch](https://plan.epfl.ch)
+* Transports publics en temps réel : [tracker.geops.ch](https://tracker.geops.ch)
+* Saint-Pierre de la Réunion : [https://geo.saintpierre.re](https://geo.saintpierre.re)
+* Région de Nyon : [map.cartolacote.ch](https://map.cartolacote.ch)
+
+### C'est parti
+
+https://openlayers.org/doc/quickstart.html
+
+---
+
 ## npm
 
 .center[<img src="img/npm-logo.svg" height="100em"/>]
@@ -145,61 +203,7 @@ import './style.css';
 
 ---
 
-background-image: url(img/background.png)
-background-size: cover
-# OpenLayers 1
-
----
-
-### Librairies JavaScript de Webmapping
-
-Deux librairies principales pour du webmapping 2D open source:
-
-<table>
-  <tr>
-    <th style="width:50%">
-      <img class="centered" src="img/leaflet.png" width="200px">
-    </th>
-    <th style="width:50%">
-      <img class="centered" src="img/ol.svg" height="70px" width="200px"/>
-    </th>
-  </tr>
-  <tr>
-    <td>Simple de base mais peut-être étendue par des plugins</td>
-    <td>Beaucoup de fonctionnalités de base + plugins</td>
-  </tr>
-  <tr>
-    <td>Grande communauté, beaucoup d'exemples sur le web</td>
-    <td>Moins grande communauté mais évolue rapidement</td>
-  </tr>
-  <tr>
-    <td>Projection suisse peu supportée</td>
-    <td>Très présente sur le marché Suisse</td>
-  </tr>
-</table>
-
-D'autres librairies existent:
-
-* Mapbox et MapLibre: plutôt pour des vector tiles
-* Cesium: globe 3D
-* Here Maps API, Google Maps API: propriétaire
-* Carto: styliser des cartes avec CSS
-
----
-
-## OpenLayers: exemples d'utilisation
-
-* GeoAdmin : [map.geo.admin.ch](https://map.geo.admin.ch)
-* SuisseMobile : [map.wanderland.ch](https://map.wanderland.ch)
-* Luxembourg : [map.geoportail.lu](https://map.geoportail.lu)
-* EPFL : [plan.epfl.ch](https://plan.epfl.ch)
-* Transports publics en temps réel : [tracker.geops.ch](https://tracker.geops.ch)
-* Saint-Pierre de la Réunion : [https://geo.saintpierre.re](https://geo.saintpierre.re)
-* Région de Nyon : [map.cartolacote.ch](https://map.cartolacote.ch)
-
----
-
-## Première carte!
+## OpenLayers - Première carte!
 
 Suivre le "Quick Start" d'OpenLayers:
 
