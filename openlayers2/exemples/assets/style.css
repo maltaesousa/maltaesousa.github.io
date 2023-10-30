@@ -1,0 +1,34 @@
+/* on importe la CSS fournit avec OL*/
+@import "../node_modules/ol/ol.css";
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('fonts/FiraSans-Regular.ttf');
+}
+
+body {
+  font-family: 'Fira Sans';
+  font-style: normal;
+}
+
+img {
+  position: absolute;
+  margin: -3rem -0;
+  height: 100%;
+  left: 0em;
+}
+
+.h1-sitn {
+  font-size: 4em;
+}
+
+.jumbo-sitn {
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  img {
+    position: absolute;
+    height: 50px;
+  }
+}
