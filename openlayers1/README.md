@@ -155,7 +155,7 @@ par celles-ci:
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "serve": "vite preview",
+    "serve": "vite preview"
   },
 ```
 
