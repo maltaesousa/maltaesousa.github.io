@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr-CH">
+
+<head>
+  <title>OpenLayers - Projections</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/img/favicon.png" />
+</head>
+
+<body>
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Exemples openlayers 2</a></li>
+        <li class="breadcrumb-item active" aria-current="page">OL7</li>
+      </ol>
+    </nav>
+    <h1 class="my-2">OpenLayers - Projections</h1>
+    <label for="basic-url" class="form-label">EPSG 2056:</label>
+    <div class="input-group mb-3">
+      <span class="input-group-text">E:</span>
+      <input type="number" class="form-control" id="east" value=2600000 aria-label="Est">
+      <span class="input-group-text">N:</span>
+      <input type="number" class="form-control" id="north" value=1200000 aria-label="Nord">
+      <button class="btn btn-primary" type="button" id="towgs84">Convertir</button>
+    </div>
+    <div id="result-proj" class="alert alert-primary" style="display: none;">
+    </div>
+  </div>
+  <script type="module" src="./ol7.js"></script>
+</body>
+
+</html>
