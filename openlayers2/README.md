@@ -2,25 +2,22 @@ background-image: url(../assets/fairy.jpg)
 background-size: cover
 # OpenLayers 2
 
-
-
 ---
 
 ## JSON
 
 JSON signifie **J**ava**S**cript **O**bject **N**otation. C'est une syntaxe permettant de représenter des **objets JavaScript** sous forme de texte. Les types suivants sont reconnus:
 
-| Types   | Notation                                           |
-| :------ | :------------------------------------------------- |
-| String  | `"texte"`                                           |
-| Number  | `2`                                                |
-| Boolean | `true`, `false`                                    |
-| Null    | `null`                                             |
-| Array   | `[ "valeur1", "valeur2" ]`                           |
+| Types   | Notation                                              |
+| :------ | :---------------------------------------------------- |
+| String  | `"texte"`                                             |
+| Number  | `2`                                                   |
+| Boolean | `true`, `false`                                       |
+| Null    | `null`                                                |
+| Array   | `[ "valeur1", "valeur2" ]`                            |
 | Object  | `{ "attribut1": "valeur1", "propriété2": "valeur2" }` |
 
 ---
-
 
 ### JSON: Exemple
 
@@ -106,7 +103,6 @@ Pour définir une couche vectorielle [`ol/layer/Vector`][ol/layer/Vector], vous 
 
 *Voir ol-06_couches_vecteur*
 
-
 ---
 
 ## Projections
@@ -137,6 +133,15 @@ Pour pouvoir utiliser le système de coordonnées suisses: **EPSG 2056**, nous a
 [ol/format/KML]: https://openlayers.org/en/latest/apidoc/module-ol_format_KML-KML.html
 [ol/format/GPX]: https://openlayers.org/en/latest/apidoc/module-ol_format_GPX-GPX.html
 [ol/format/GeoJSON]: https://openlayers.org/en/latest/apidoc/module-ol_format_GeoJSON-GeoJSON.html
+
+---
+
+## OpenLayers: page des exemples
+
+De nombreux exemples fonctionnels sur https://openlayers.org/en/latest/examples/
+  - Popup
+  - Select
+  - Animation
 
 ---
 class: inverse
