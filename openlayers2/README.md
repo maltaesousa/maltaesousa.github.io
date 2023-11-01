@@ -97,14 +97,14 @@ Le **GeoJSON** est du **JSON**. Le SRID d'un GeoJSON est 4326 (WGS84). Voir [geo
 
 ## OpenLayers: couches vectorielles
 
-Pour définir une couche vectorielle [`ol.layer.Vector`][ol.layer.Vector], vous devrez fournir une source vectorielle [`ol.source.Vector`][ol.source.Vector] qui aura ces propriétés:
+Pour définir une couche vectorielle [`ol/layer/Vector`][ol/layer/Vector], vous devrez fournir une source vectorielle [`ol/source/Vector`][ol/source/Vector] qui aura ces propriétés:
   * `format`:
-    * [`ol.format.GeoJSON`][ol.format.GeoJSON]
-    * [`ol.format.KML`][ol.format.KML]
-    * [`ol.format.GPX`][ol.format.GPX]
+    * [`ol/format/GeoJSON`][ol/format/GeoJSON]
+    * [`ol/format/KML`][ol/format/KML]
+    * [`ol/format/GPX`][ol/format/GPX]
   * `url`: source du fichier
 
-*Voir [ol-06_couches_vecteur.html](exemples/ol-06_couches_vecteur.html)*
+*Voir ol-06_couches_vecteur*
 
 
 ---
@@ -120,28 +120,30 @@ Pour pouvoir utiliser le système de coordonnées suisses: **EPSG 2056**, nous a
 * Déclaration de la projection à l'aide de Proj4js et du site [epsg.io](https://epsg.io/2056), par exemple
 * Inscription de la projection auprès d'OpenLayers
 
-*Voir [ol-07_projections.html](exemples/ol-07_projections.html)*
+*Voir ol-07_projections*
 
 ---
 
 ## Quelques exemples pour aller plus loin
-* **GetFeatureInfo**: *voir [ol-08_get_feature_info_text.html](exemples/ol-08_get_feature_info_text.html)* et *[ol-09_get_feature_info_gml.html](exemples/ol-09_get_feature_info_gml.html)*
-* **Styles & Labels**: *voir [ol-10_labels.html](exemples/ol-10_labels.html)*
-* **Couche WFS**: *voir [ol-11_couches_wfs.html](exemples/ol-11_couches_wfs.html)*
+* **GetFeatureInfo**: *voir ol-08_get_feature_info_text et ol-09_get_feature_info_gml*
+* **Styles & Labels**: *voir ol-10_labels*
+* **Couche WFS**: *voir ol-11_couches_wfs*
+* **Couche WMTS de Swisstopo**: *voir ol-11_couches_wmts*
+* **Couche ArcGIS REST**: *voir ol-11_couches_arcgis*
 
 
-[ol.layer.Vector]: https://openlayers.org/en/latest/apidoc/module-ol_layer_Vector-VectorLayer.html
-[ol.source.Vector]: https://openlayers.org/en/latest/apidoc/module-ol_source_Vector-VectorSource.html
-[ol.format.KML]: https://openlayers.org/en/latest/apidoc/module-ol_format_KML-KML.html
-[ol.format.GPX]: https://openlayers.org/en/latest/apidoc/module-ol_format_GPX-GPX.html
-[ol.format.GeoJSON]: https://openlayers.org/en/latest/apidoc/module-ol_format_GeoJSON-GeoJSON.html
+[ol/layer/Vector]: https://openlayers.org/en/latest/apidoc/module-ol_layer_Vector-VectorLayer.html
+[ol/source/Vector]: https://openlayers.org/en/latest/apidoc/module-ol_source_Vector-VectorSource.html
+[ol/format/KML]: https://openlayers.org/en/latest/apidoc/module-ol_format_KML-KML.html
+[ol/format/GPX]: https://openlayers.org/en/latest/apidoc/module-ol_format_GPX-GPX.html
+[ol/format/GeoJSON]: https://openlayers.org/en/latest/apidoc/module-ol_format_GeoJSON-GeoJSON.html
 
 ---
 class: inverse
 
 ## Exercices
 
-Faites les exercices `ol-2_coordonnees.html` et `ol-3_popup.html`. Pour l'exercice 3, Visual Studio avec "Go Live" de Live Server permettra de lire le fichier GeoJSON. Sans Visual Studio, vous aurez besoin d'un serveur web.
+Faites les exercices `ol-2_coordonnees` et `ol-3_popup`.
 
 .center[<video autoplay loop>
   <source src="../assets/mercator.mp4" >

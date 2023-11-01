@@ -51,9 +51,9 @@ map.addLayer(myLayers.water);
 map.addLayer(myLayers.osm);
 map.addLayer(myLayers.yverdon);
 
-function logLayers(layername) {
+function changeLayer(layername) {
   map.getAllLayers().forEach((layer) => layer.setVisible(false));
   myLayers[layername].setVisible(true);
 }
 
-document.getElementById('layerselector').onchange = (event) => logLayers(event.target.value);
+document.getElementById('layerselector').onchange = (event) => changeLayer(event.target.value);
