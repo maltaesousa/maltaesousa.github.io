@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet" type="text/css">
+    <title>Popup</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container">
+        <h1>Campus HEIG-VD</h1>
+        <p>
+        <ul>
+          <li>Créez une carte avec un fond de votre choix.</li>
+          <li>Ajoutez le contenu du fichier ol-3_popup.geojson à la carte. (couche vectorielle de points).</li>
+          <li>Faites en sorte que quand on clique un des sites dans les boutons radios ci-dessous, la carte fait un focus
+            sur le site en questions</li>
+          <li>Faites en sorte que quand on clique sur le site sur la carte, un "popup" s'affiche avec les infos du site
+            ainsi qu'une image illustrant le site. Le nom de l'image est dans le geoJSON, les images sont fournies dans le
+            dossier /img.</li>
+          <li>Faites en sorte que le popup affiche les coordonnées suisses. Utilisez Proj4js</li>
+        </ul>
+        </p>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="heigvd-campus1" name="heigvdRadio" class="custom-control-input">
+          <label class="custom-control-label" for="heigvd-campus1">Cheseaux</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="heigvd-campus2" name="heigvdRadio" class="custom-control-input">
+          <label class="custom-control-label" for="heigvd-campus2">St-Roch</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="heigvd-campus3" name="heigvdRadio" class="custom-control-input">
+          <label class="custom-control-label" for="heigvd-campus3">Y-Parc</label>
+        </div>
+      </div>
+    </div>
+    <div id="map"></div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
