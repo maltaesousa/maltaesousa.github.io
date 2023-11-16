@@ -1,0 +1,53 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Site Cheseaux",
+                "image": "campus_cheseaux.jpg",
+                "website": "https://heig-vd.ch/a-propos/contacts-et-acces/cheseaux"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.65974,
+                    46.77931
+                ]
+            },
+            "id": "cheseaux"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Centre St-Roch",
+                "image": "campus_st-roch.jpg",
+                "website": "https://heig-vd.ch/a-propos/contacts-et-acces/st-roch"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.64718,
+                    46.78117
+                ]
+            },
+            "id": "st_roch"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Site Y-Parc",
+                "image": "campus_y-parc.jpg",
+                "website": "https://heig-vd.ch/a-propos/contacts-et-acces/y-parc"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.64698,
+                    46.76486
+                ]
+            },
+            "id": "y_parc"
+        }
+    ]
+}

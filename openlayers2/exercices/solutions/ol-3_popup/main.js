@@ -2,7 +2,10 @@ import './style.css';
 import proj4 from 'proj4';
 import { Projection } from 'ol/proj';
 import { Map, View } from 'ol';
+import { GeoJSON } from 'ol/format';
+import VectorSource from 'ol/source/Vector';
 import TileLayer from 'ol/layer/Tile';
+import VectorLayer from 'ol/layer/Vector';
 import TileWMS from 'ol/source/TileWMS';
 import { register } from 'ol/proj/proj4';
 import { defaults } from 'ol/control/defaults';
@@ -29,6 +32,13 @@ const attributions = [
   "&copy; <a href=\"https://www.geo.admin.ch/fr/home.html\">Pixelmap 1:500'000 / geo.admin.ch</a>"
 ];
 
+const vectorLayer = new VectorLayer({});
+const geojsonSource = new VectorSource({
+  format: new GeoJSON(),
+  url: "data/ol-3_popup.geojson"
+});
+vectorLayer.setSource(geojsonSource);
+
 // Couche WMS tuilée
 const tileLayer = new TileLayer({
   source: new TileWMS({
@@ -43,7 +53,8 @@ const map = new Map({
 
   // Couches
   layers: [
-    tileLayer
+    //tileLayer,
+    vectorLayer
   ],
 
   // Vue
