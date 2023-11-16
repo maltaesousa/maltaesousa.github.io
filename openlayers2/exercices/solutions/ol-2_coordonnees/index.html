@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet" type="text/css">
+    <title>Coordonnées en temps réel</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Affichage de coordonnées en temps réel</h1>
+      <ul>
+        <li>Créer une carte avec un fond de carte par défaut. Faites en sorte que la carte s'initialise en Suisse.</li>
+        <li>Afficher les coordonnées de la souris <a
+            href="https://openlayers.org/en/latest/apidoc/module-ol_control_MousePosition-MousePosition.html">ol.control.MousePosition()</a>
+          en coordonnées suisses</li>
+        <li>Styliser l'affichage des coordonnées. Soit sur la carte, soit en dehors de la carte, dans l'HTML.</li>
+        <li>Changer le format des coordonnées, par défaut, OpenLayers a tendance à mettre trop de chiffres après la virgule. Il
+          va falloir fouiller dans la documentation de l'API.
+        </li>
+      </ul>
+    </div>
+    <div id="map"></div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
