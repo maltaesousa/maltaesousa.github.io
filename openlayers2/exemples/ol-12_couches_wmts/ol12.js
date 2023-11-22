@@ -1,7 +1,7 @@
 import { Map, View } from 'ol';
 import TileLayer from 'ol/layer/Tile';
-import WMTSTileGrid from 'ol/tilegrid/WMTS';
 import Projection from 'ol/proj/Projection';
+import WMTSTileGrid from 'ol/tilegrid/WMTS';
 import WMTS from 'ol/source/WMTS';
 import proj4 from 'proj4';
 import { register } from 'ol/proj/proj4';
