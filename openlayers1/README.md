@@ -93,7 +93,7 @@ Un fichier package.json est créé:
 L'instruction `install` que l'on peut abréger en `i` permet d'installer un paquet.
 
 ```sh
-npm i bootstrap@5.3.2 @popperjs/core
+npm i bootstrap@5.3.3 @popperjs/core
 ```
 
 > ℹ️ Il est recommandé de spécifier une version, ici `@5.3.2`. Cela afin d'éviter des mises à jours automatiques pouvant casser
