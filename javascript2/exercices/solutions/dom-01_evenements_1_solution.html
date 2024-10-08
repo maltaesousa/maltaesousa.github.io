@@ -2,16 +2,16 @@
 <html>
 
 <head>
-  <title>JavaScript - Evénements</title>
+  <title>JavaScript - Événements</title>
   <meta charset="utf-8">
   <link rel="icon" href="favicon.png" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
   <div class="container">
-    <h1>JavaScript - Evénements</h1>
+    <h1>JavaScript - Événements</h1>
     <h2>Objectifs</h2>
     <ul>
       <li>Quel événement détecte le changement de la checkbox quand vous la cochez?</li>
@@ -19,23 +19,28 @@
         ou pas
       </li>
     </ul>
-    <p>Ma Checkbox <input type="checkbox" id="maCheckbox" onclick="recupereStatutCheckbox()" /></p>
+    <p>Ma Checkbox <input type="checkbox" id="maCheckbox" /></p>
     <p>Statut: <span id="resultat"></span></p>
   </div>
   <script>
+    const checkbox = document.getElementById("maCheckbox");
+
     /**
      * Récupère le statut de la checkbox et l'affiche sur la page
      */
-    function recupereStatutCheckbox() {
-      const checkbox = document.getElementById("maCheckbox");
-      const resultat = document.getElementById("resultat");
+    function getCheckboxStatus() {
+      const result = document.getElementById("resultat");
 
       if (checkbox.checked) {
-        resultat.innerHTML = "Coché";
+        result.innerHTML = "Coché";
       } else {
-        resultat.innerHTML = "Pas coché";
+        result.innerHTML = "Pas coché";
       }
     }
+    checkbox.onclick = getCheckboxStatus;
+
+    // Au chargement de la page, on peut l'exécuter une fois pour afficher le résultat.
+    getCheckboxStatus();
   </script>
 </body>
 
