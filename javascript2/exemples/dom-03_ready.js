@@ -1,4 +1,4 @@
-// Création d'un objet qui a deux propriétés de type string
+// Création d'un objet qui a trois propriétés de type string
 const myContent = {
   alertText: "Le document est chargé",
   alertLink: "https://developer.mozilla.org/fr/docs/Web/API",

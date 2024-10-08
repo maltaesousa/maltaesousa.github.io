@@ -2,12 +2,12 @@
 <html>
 
 <head>
-  <title>JavaScript - Boucles</title>
+  <title>JavaScript - Fonctions</title>
   <meta charset="utf-8">
 </head>
 
 <body>
-  <h1>JavaScript - Boucles</h1>
+  <h1>JavaScript - Fonctions</h1>
   <h2>Objectif</h2>
   <p>Le but de cet exercice est de créer une fonction:</p>
   <ul>
@@ -17,11 +17,11 @@
   </ul>
   <script>
     function calcul(nb, lim) {
-      const delta = nb;
+      let currentNumber = nb;
 
       while (nb < lim) {
-        console.log("Nombre:", nb);
-        nb += delta;
+        console.log("Nombre:", currentNumber);
+        currentNumber += nb;
       }
     }
 

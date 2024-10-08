@@ -125,7 +125,7 @@ En JavaScript, `this` se réfère au contexte dans lequel on se trouve. [Voir le
 
 Utilisé comme argument dans le *callback* d'un *event*, il permet de passer l'élément actuel au *callback*:
 
-Dans cet HTML, `doSomething()` est la fonction appelée quand `onkeyup` est fait. Autrement dit, `doSoemthing()` est le *callback* de `onkeyup`:
+Dans cet HTML, `doSomething()` est la fonction appelée quand `onkeyup` est fait. Autrement dit, `doSomething()` est le *callback* de `onkeyup`:
 ```html
 <input type="text" onkeyup="doSomething(this)">
 ```
@@ -157,7 +157,7 @@ https://www.w3schools.com/tags/default.asp
 
 # Hors série: qu'est ce que le `Path` ?
 
-`Path` est une variable d'environnement disponible sur les systèmes Windows, Linux et Unix. Elle permet de mettre au courant le système de l'existance d'un programme ainsi que de l'endroit où il se trouve. Une fois le sytème au courant, on pourra taper directement le nom dudit programme dans un terminal, sans avoir à taper son chemin complet.
+`Path` est une variable d'environnement disponible sur les systèmes Windows, Linux et Unix. Elle permet de mettre au courant le système de l’existence d'un programme ainsi que de l'endroit où il se trouve. Une fois le système au courant, on pourra taper directement le nom dudit programme dans un terminal, sans avoir à taper son chemin complet.
 
 Les programmes concernés dans ce cours sont `npm`, `python` et `psql`.
 
