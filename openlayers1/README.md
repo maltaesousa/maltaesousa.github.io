@@ -96,7 +96,7 @@ L'instruction `install` que l'on peut abréger en `i` permet d'installer un paqu
 npm i bootstrap@5.3.3 @popperjs/core
 ```
 
-> ℹ️ Il est recommandé de spécifier une version, ici `@5.3.2`. Cela afin d'éviter des mises à jours automatiques pouvant casser
+> ℹ️ Il est recommandé de spécifier une version, ici `@5.3.3`. Cela afin d'éviter des mises à jours automatiques pouvant casser
 votre projet.
 
 <table>
